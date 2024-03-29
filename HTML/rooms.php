@@ -64,14 +64,17 @@ getContactDetails(); //function call to retrieve data from the databases
         <h1 class="heading-font">Our Rooms</h1>
         <div class="rooms-container">
             <div class="search-and-filter">
-                <input type="text" name="search" id="search" placeholder="Search Rooms" list="searchItems">
-                <datalist id="searchItems">
-                    <option value="Basic Room">
-                    <option value="Deluxe Room">
-                    <option value="Standard Room">
-                    <option value="Luxury Room">
-                    <option value="Simple Room">
-                </datalist>
+                <div class="search-container">
+                    <input type="text" name="search" id="search" placeholder="Search Rooms" list="searchItems">
+                    <datalist id="searchItems">
+                        <option value="Basic Room">
+                        <option value="Deluxe Room">
+                        <option value="Standard Room">
+                        <option value="Luxury Room">
+                        <option value="Simple Room">
+                    </datalist>
+                    <span onclick="applySearch()" class="search-icon"><i class="fas fa-search"></i></span>
+                </div>
                 <span class=" filter-button text-font" id="toggle-filter"><i class="fas fa-filter"></i> Filter</span>
             </div>
 
@@ -85,7 +88,7 @@ getContactDetails(); //function call to retrieve data from the databases
             <h2 class="heading-font">Filter Rooms</h2>
             <span class="close-filter" id="close-filterbtn">&times;</span>
             <label for="room-type">Room Type:</label>
-            <select name="room-type">
+            <select name="room_type" id="room-type">
                 <option value="Luxury">Luxury Room</option>
                 <option value="delux">Delux Room</option>
                 <option value="standard">Standard Room</option>
@@ -95,14 +98,14 @@ getContactDetails(); //function call to retrieve data from the databases
             <div class="priceRange">
                 <h3 class="heading-font">Price Range:</h3>
                 <label for="min-price">Min-Price:</label>
-                <input type="number" name="minprice" id="price">
+                <input type="number" name="minprice" id="min-price">
 
                 <label for="max-price">Max-Price:</label>
-                <input type="text" name="maxprice" id="price">
-
+                <input type="number" name="maxprice" id="max-price">
             </div>
 
-            <button type="submit" class="btn-inside-filter-option">Filter</button>
+            <button onclick="applyFilters()" class="btn-inside-filter-option">Filter</button>
+
         </form>
     </div>
 
@@ -197,5 +200,21 @@ getContactDetails(); //function call to retrieve data from the databases
         function closeBookingModal(){
             document.getElementById("confirmBooking-Modal").style.display="none";
         }
+
+        function applySearch() {
+            var searchQuery = document.getElementById("search").value;
+            if (searchQuery !== "") {
+                window.location.href = 'rooms.php?search=' + searchQuery;
+            }
+        }
+
+        function applyFilters(){
+            let roomTypeFilter = document.getElementById("room-type").value;
+            let minPrice = document.getElementById("min-price").value;
+            let maxPrice = document.getElementById("max-price").value;
+
+            window.location.href = 'rooms.php?room_type=' + roomTypeFilter + '&min_price=' + minPrice + '&max_price=' + maxPrice;
+        }
+
     </script>
 </body>

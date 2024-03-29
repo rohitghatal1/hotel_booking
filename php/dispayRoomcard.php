@@ -2,7 +2,41 @@
 
 <?php
 $bookButton = '';
+
+// code to include search and filter option
+$searchQuery = isset($_GET['search']) ? $_GET['search'] : '';
+$roomTypeFilter = isset($_GET['room_type']) ? $_GET['room_type'] : '';
+$minPrice = isset($_GET['min_price']) ? $_GET['min_price'] : '';
+$maxPrice = isset($_GET['max_price']) ? $_GET['max_price'] : '';
+
+// initial query for selecting rooms with no filter and search
 $roomInfo = "SELECT * FROM rooms";
+
+// check if search query is set
+if (!empty($searchQuery)) {
+    // adding search condition to the query
+    $roomInfo .= " WHERE roomType LIKE '%$searchQuery%'";
+}
+
+// check if roomType filter is set
+if (!empty($roomTypeFilter)) {
+    // checking if query already has a WHERE clause
+    if (strpos($roomInfo, 'WHERE') !== false) {
+        $roomInfo .= " AND roomType='$roomTypeFilter'";
+    } else {
+        $roomInfo .= " WHERE roomType='$roomTypeFilter'";
+    }
+}
+
+// adding price range filter to the query
+if (!empty($minPrice) && !empty($maxPrice)) {
+    // checking if query already has a WHERE clause
+    if (strpos($roomInfo, 'WHERE') !== false) {
+        $roomInfo .= " AND roomPrice BETWEEN $minPrice AND $maxPrice";
+    } else {
+        $roomInfo .= " WHERE roomPrice BETWEEN $minPrice AND $maxPrice";
+    }
+}
 $fetchedRoomData = $conn->query($roomInfo);
 
 if ($fetchedRoomData->num_rows > 0) {
@@ -11,7 +45,7 @@ if ($fetchedRoomData->num_rows > 0) {
         // Generate unique IDs for each room card
         $moreDetailsDivID = "moreDetailsDiv_$index";
 
-        //split features and facilities string into an array
+        // split features and facilities string into an array
         $features = explode(',', $row['roomFeatures']);
         $facilities = explode(',', $row['roomFacilities']);
         $roomId = $row['roomId'];
