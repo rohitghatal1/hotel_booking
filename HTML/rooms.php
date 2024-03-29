@@ -63,18 +63,7 @@ getContactDetails(); //function call to retrieve data from the databases
     <div class="rooms-section">
         <h1 class="heading-font">Our Rooms</h1>
         <div class="rooms-container">
-            <div class="search-and-filter">
-                <div class="search-container">
-                    <input type="text" name="search" id="search" placeholder="Search Rooms" list="searchItems">
-                    <datalist id="searchItems">
-                        <option value="Basic Room">
-                        <option value="Deluxe Room">
-                        <option value="Standard Room">
-                        <option value="Luxury Room">
-                        <option value="Simple Room">
-                    </datalist>
-                    <span onclick="applySearch()" class="search-icon"><i class="fas fa-search"></i></span>
-                </div>
+            <div class="filter">
                 <span class=" filter-button text-font" id="toggle-filter"><i class="fas fa-filter"></i> Filter</span>
             </div>
 
@@ -199,13 +188,6 @@ getContactDetails(); //function call to retrieve data from the databases
         }
         function closeBookingModal(){
             document.getElementById("confirmBooking-Modal").style.display="none";
-        }
-
-        function applySearch() {
-            var searchQuery = document.getElementById("search").value;
-            if (searchQuery !== "") {
-                window.location.href = 'rooms.php?search=' + searchQuery;
-            }
         }
 
         function applyFilters(){

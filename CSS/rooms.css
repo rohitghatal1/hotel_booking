@@ -237,36 +237,12 @@ textarea{
     align-self: flex-end;
 }
 
-.search-and-filter{
+.filter{
     display: flex;
     justify-content: right;
     padding: 10px;
     background-color: #f1f1f1;
     margin-bottom: 0;
-}
-
-#search{
-    border: 1px solid #ccc;
-    padding: 10px;
-    padding-right: 30px; /* Adjust based on icon size */
-    width: 300px;
-    border-radius: 5px;
-    margin-right: 15px;
-}
-.search-container {
-    position: relative;
-}
-
-.search-icon {
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
-.search-icon i {
-    color: #888;
 }
 
 
