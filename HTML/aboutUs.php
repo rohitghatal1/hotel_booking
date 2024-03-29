@@ -4,7 +4,7 @@
 getGeneralData();
 getContactDetails(); //function call to retrieve data from the databases
 ?>
-
+<!-- jhbfjxghjshdgjhfjh -->
 <!-- to inlcude code for user session  -->
 <?php require '../php/userSession.php'?>
 
