@@ -60,9 +60,7 @@ getContactDetails(); //function call to retrieve data from the databases
     <section class="contactUs-section">
         <h1 class="heading-font">Contact Us</h1>
         <hr>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Iure, odit enim omnis doloribus deserunt necessitatibus nobis
-            a eos minima obcaecati, consectetur in error quod exercitationem.
+        <p>
         </p>
 
         <div class="contactUs-container">

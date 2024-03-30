@@ -134,49 +134,47 @@
     color: white;
 }
 
-.dashboard-content{
-    margin-top: 75px;
+.bookingContainer{
+    display: block;
+    margin-top: 85px;
     margin-left: 270px;
-    padding: 10px;
-}
-
-.cards{
-    display: flex;
-    justify-content: space-evenly;
-    transform: translateY(70%);
-}
-.cards h2,
-p{
-    text-align: center;
-}
-.card{
-    margin-left: 10px;
-    text-align: center;
-    width: 300px;
-    background-color: #eee;
+    padding: 15px;
+    width: 1150px;
+    background-color: #ccc;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.bookingDetails{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table{
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding-bottom: 20px;
+    margin-top: 15px;
+}
+th{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+}
+td{
     padding: 10px;
 }
 
-.roomCard{
-    padding: 10px;
-    background-color: yellowgreen;
-    min-height: 150px;
-}
-
-.userCard{
-    padding: 10px;
-    background-color: rgb(156, 17, 126);
-    min-height: 150px;
-}
-
-.bookingCard{
-    padding: 10px;
-    background-color: rgb(32, 114, 236);
-    min-height: 150px;
-}
-a{
-    text-decoration: none;
-    color: black;
+.cancelBookingBtn{
+text-decoration: none;
+background-color: red;
+color: white;
+padding: 4px;
+border-radius: 3px;
 }
 

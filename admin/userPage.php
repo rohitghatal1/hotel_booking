@@ -54,7 +54,7 @@ if ($fetchedUserData->num_rows > 0) {
                                         <td>{$row['username']}</td>
                                         <td>{$row['password']}</td>
                                         <td><button id="editUserInfo" class="editUserButton" onclick='openEditUserModal("$userId")'><i class="fa-solid fa-plus"></i>Edit</button></td>
-                                        <td><a href="deleteUser.php?userId=$userId" id="deleteUserBtn" class="deleteUserBtn"><i class="fa-solid fa-trash"></i>Delete</a></td>
+                                        <td><a href="deleteUser.php?userId=$userId" id="deleteUserBtn" class="deleteUserBtn"><i class="fa-solid fa-trash"></i></a></td>
                                     </tr>
                                 userdata;
         $count++;

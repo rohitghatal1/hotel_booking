@@ -65,16 +65,14 @@ getContactDetails(); //function call to retrieve data from the databases
                     <div class="founder-info">
                         <div class="founder-description">
                             <h3 class="fonder-name heading-font">Rohit Ghatal</h3>
-                            <p class="about-founder text-font">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Placeat ipsam unde impedit eaque, iure obcaecati?</p>
+                            <p class="about-founder text-font"></p>
                         </div>
                         <img src="../team/rohit.jpg">
                     </div>
                     <div class="founder-info">
                         <div class="founder-description">
                             <h3 class="fonder-name heading-font">Ilu Dangol</h3>
-                            <p class="abot-founder text-font">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Placeat ipsam unde impedit eaque, iure obcaecati?</p>
+                            <p class="abot-founder text-font"></p>
                         </div>
                         <img src="../team/ilu4.jpg">
                     </div>

@@ -58,9 +58,6 @@ getContactDetails(); //function call to retrieve data from the databases
     <div class="facilities-display">
         <div class="facility-container">
             <h2 class="facililty-heading heading-font">Our Facilities</h2>
-            <p class="facility-discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas quidem architecto, saepe ipsum commodi dicta error fugit
-                nobis nesciunt natus!</p>
 
             <div class="facility-section">
                 <!-- to include code to display facilities  -->

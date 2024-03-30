@@ -23,6 +23,7 @@
                 <ul class = "menu-items">
                     <li><a href="adminDashboard.php" class = "menu-links">Dashboard</a></li>
                     <li><a href="roomSetting.php" class = "menu-links">Rooms</a></li>
+                    <li><a href="booking.php" class = "menu-links">Bookings</a></li>
                     <li><a href="Admin_facilities.php" class = "menu-links">Facilities</a></li>
                     <li><a href="userPage.php" class = "menu-links">Users</a></li>
                     <li><a href="settings.php" class = "menu-links">Settings</a></li>
