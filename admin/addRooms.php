@@ -24,7 +24,7 @@ if (isset($_POST['roomType'], $_POST['roomDesc'], $_POST['roomPrice'], $_POST['s
     // Execute the statement
     if ($insert->execute()) {
         echo "<script>alert('Room added successfully!')</script>";
-        echo "<script>window.location.href='roomSetting.php'</script>";
+        echo "<script>window.location.href='a_roomSetting.php'</script>";
     } else {
         echo "<script>alert('Failed to add room')</script>";
     }

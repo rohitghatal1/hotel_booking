@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($updateUser->execute()) {
         echo "<script>alert('User Data updated successfully')</script>";
-        echo "<script>window.location.href ='userPage.php'</script>";
+        echo "<script>window.location.href ='a_userPage.php'</script>";
     } else {
         echo "<script>alert('Failed to update data')</script>";
-        echo "<script>window.location.href ='userPage.php'</script>";
+        echo "<script>window.location.href ='a_userPage.php'</script>";
     }
 }

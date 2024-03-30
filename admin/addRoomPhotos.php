@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $update->bind_param("ssssssi", $displayImage_path, $img1_path, $img2_path, $img3_path, $img4_path, $room_detail, $roomId);
         if ($update->execute()) {
             echo "Room photos added successfully";
-            header("Location: roomSetting.php");
+            header("Location: a_roomSetting.php");
         } else {
             echo "failed";
         }

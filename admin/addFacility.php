@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("sss", $photo, $facilityName, $description);
     if ($stmt->execute() === true) {
         echo "<script>alert('Facility added successfully')</script>";
-        echo "<script>window.location.href='Admin_facilities.php';</script>";
+        echo "<script>window.location.href='a_Admin_facilities.php';</script>";
     } else {
         die("Error: " . $sql . "<br>. $conn->error());</script>");
     }

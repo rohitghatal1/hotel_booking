@@ -4,7 +4,7 @@ session_start();
 //check if user is already logged in
 
 if (isset($_SESSION['admin_username'])) {
-    header("loction: adminDashboard.php");
+    header("loction: a_adminDashboard.php");
     exit();
 }
 ?>
@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
     }
 }
 if ($loggedIn) {
-    header("location: adminDashboard.php");
+    header("location: a_adminDashboard.php");
     exit();
 } else {
     echo '<script>alert("Wrong username or password. Please try again");</script>';

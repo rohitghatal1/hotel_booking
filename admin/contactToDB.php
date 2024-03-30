@@ -21,13 +21,12 @@ instagramLink=?,
 twitterLink=? ,
 mapLink=? ");
 
-$updateContact->bind_param("ssssssss",$faddress, $phone1, $phone2,$email, $facebookLink,$instragramLink,$twitterLink,$googleMapLink);
+$updateContact->bind_param("ssssssss", $faddress, $phone1, $phone2, $email, $facebookLink, $instragramLink, $twitterLink, $googleMapLink);
 
-if($updateContact->execute()){
-    echo"<script> alert('Contact Updated Successfully')</script>";
-    echo"<script> window.location ='settings.php'</script>";
-}
-else {
+if ($updateContact->execute()) {
+    echo "<script> alert('Contact Updated Successfully')</script>";
+    echo "<script> window.location ='a_settings.php'</script>";
+} else {
     die('Error : ' . $updateContact->error);
-    }
+}
 ?>

@@ -6,6 +6,6 @@ if (isset($_GET['roomId'])) {
     $delete->bind_param("i", $roomId);
     $delete->execute();
 
-    header("Location: roomSetting.php");
+    header("Location: a_roomSetting.php");
     exit();
 }

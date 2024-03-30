@@ -6,6 +6,6 @@ if (isset($_GET['employeeName'])) {
     $stmt->bind_param("s", $employeeName);
     $stmt->execute();
 
-    header("Location: settings.php");
+    header("Location: a_settings.php");
     exit();
 }

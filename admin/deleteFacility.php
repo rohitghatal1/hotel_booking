@@ -18,7 +18,7 @@ if (isset($_GET['facilityName'])) {
     } else {
         die("failed");
     }
-    header("Location:Admin_facilities.php");
+    header("Location:a_Admin_facilities.php");
 } else {
     // Handle case where facilityName parameter is missing
     echo "FacilityName parameter is missing.";

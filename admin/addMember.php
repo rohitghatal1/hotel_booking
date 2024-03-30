@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("sss", $memberName, $memberPosition, $photo);
     if ($stmt->execute() === true) {
         echo "<script>alert('data updated successfully')</script>";
-        echo "<script>window.location.href='settings.php';</script>";
+        echo "<script>window.location.href='a_settings.php';</script>";
     } else {
         die("Error: " . $sql . "<br>" . $conn->error());
     }
