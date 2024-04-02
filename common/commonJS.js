@@ -39,3 +39,19 @@ function togglePasswordVisibility() {
   }
 }
 
+function togglePasswordVisibility1() {
+  let passwordInput = document.getElementById("password");
+  let toggleCheckboxInput = document.querySelector(
+    "#show-password input[type='checkbox']"
+  );
+
+  // Toggle the checked state of the checkbox
+  toggleCheckboxInput.checked = !toggleCheckboxInput.checked;
+
+  // Toggle the type of the password input field
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
+}
