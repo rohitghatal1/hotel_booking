@@ -26,11 +26,11 @@
         <div class="bookingsTable">
             <table border=1>
                 <th>SN</th>
-                <th>Customer Name</th>
-                <th>Customer Number</th>
-                <th>Customer Email</th>
+                <th>User Id</th>
+                <th>Room Id</th>
                 <th>Check-in Date</th>
                 <th>Check-out Date</th>
+                <th>Booked Date</th>
                 <th colspan="2">Action</th>
 
                 <?php require '../database/databaseConnection.php'?>
@@ -40,15 +40,16 @@ $fetchedBookingData = $conn->query($getBookingData);
 $count = 1;
 if ($fetchedBookingData->num_rows > 0) {
     while ($row = $fetchedBookingData->fetch_assoc()) {
+        $roomId = $row['roomId'];
         echo <<<bookingData
                                 <tr>
                                     <td>$count</td>
-                                    <td>{$row['customerName']}</td>
-                                    <td>{$row['customerNumber']}</td>
-                                    <td>{$row['customerEmail']}</td>
+                                    <td>{$row['userId']}</td>
+                                    <td>{$row['roomId']}</td>
                                     <td>{$row['checkInDate']}</td>
                                     <td>{$row['checkOutDate']}</td>
-                                    <td><a class="cancelBookingBtn" href="cancelBooking.php">Cancel Booking</a></td>
+                                    <td>{$row['bookedDate']}</td>
+                                    <td><a class="cancelBookingBtn" href="cancelBooking.php?roomId={$roomId}">Cancel Booking</a></td>
                                 </tr>
                             bookingData;
         $count++;

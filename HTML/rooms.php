@@ -108,15 +108,6 @@ getContactDetails(); //function call to retrieve data from the databases
                 <input type="hidden" name="userId" id="user-Id" value="">
                 <input type="hidden" name="bookingDate" id="booking-Date" value="">
 
-                <label>Customer Name:</label>
-                <input type="text" name="customerName">
-
-                <label>Contact Number:</label>
-                <input type="number" name="customerNumber">
-
-                <label for="email">Email</label>
-                <input type="email" name="customerEmail">
-
                 <label for="checkin">Check-in Date:</label>
                 <input type="date" name="checkInDate" required>
 
