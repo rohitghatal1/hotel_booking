@@ -3,6 +3,7 @@ $loginSignupBtn = '<button class="login-signup-button" id="openLoginRegisterForm
 session_start();
 if (isset($_SESSION['user'])) {
     $username = $_SESSION['user'];
+    $uid = $_SESSION['userId'];
     $firstLetterAvatar = strtoupper(substr($username, 0, 1));
     $loginSignupBtn = <<<dropdown
             <div class="userDropdown">

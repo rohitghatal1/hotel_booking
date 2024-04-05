@@ -2,9 +2,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $roomId = $_POST['roomId'];
-    $cName = $_POST['customerName'];
-    $cNumber = $_POST['customerNumber'];
-    $cEmail = $_POST['customerEmail'];
+    $userId = $_POST['userId'];
+    $bookingDate = $_POST['bookingDate'];
     $checkIn = $_POST['checkInDate'];
     $checkOut = $_POST['checkOutDate'];
 
@@ -16,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit; // Stop further execution
     }
 
-    $bookingDetails = $conn->prepare("INSERT INTO bookings (customerName, customerNumber, customerEmail, checkInDate, checkOutDate) VALUES (?,?,?,?,?);");
-    $bookingDetails->bind_param("sssss", $cName, $cNumber, $cEmail, $checkIn, $checkOut);
+    $bookingDetails = $conn->prepare("INSERT INTO bookings (userId, roomId, checkInDate, checkOutDate, bookedDate) VALUES (?,?,?,?,?);");
+    $bookingDetails->bind_param("iisss", $userId, $roomId, $checkIn, $checkOut, $bookingDate);
     if ($bookingDetails->execute()) {
         $bookingDone = true;
         echo "<script>alert('Booking Successful')</script>";

@@ -5,13 +5,14 @@
 $userName = $_POST['username'];
 $pass = $_POST['password'];
 
-$getUserData = "SELECT username, password FROM users";
+$getUserData = "SELECT UID, username, password FROM users";
 $fetchedData = $conn->query($getUserData);
 if ($fetchedData->num_rows > 0) {
     while ($row = $fetchedData->fetch_assoc()) {
         if ($row['username'] == $userName && $row['password'] == $pass) {
             session_start();
             $_SESSION['user'] = $row['username'];
+            $_SESSION['userId'] = $row['UID'];
             $loggedIn = true;
             break;
         }
