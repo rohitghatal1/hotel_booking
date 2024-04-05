@@ -239,6 +239,10 @@ textarea{
     font-weight: bold;
     align-self: flex-end;
 }
+.myBooking{
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /* style for slider container */
 .slider-container{
