@@ -11,7 +11,7 @@ if (isset($_SESSION['user'])) {
                 <div class="dropdown-content" id="droppedDownContent">
                     <h3 class="heading-font">$firstLetterAvatar</h3>
                     <p class="text-font">$username</p>
-                    <p class="text-font myBooking"><a href="userBookingPage.php">My bookings</a></p>
+                    <p class="text-font myBooking"><a href="userPage.php?userId={$uid}">My bookings</a></p>
                     <a href="../php/logout.php">Log out</a>
                 </div>
             </div>

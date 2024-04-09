@@ -36,10 +36,13 @@ header {
 }
 
 .bookedRoomsSection{
+    padding: 10px;
     background-color: #eee;
 }
 
 .room-card {
+    background-color: #fff;
+    margin-top: 5px;
     display: flex;
     align-items: center;
     padding: 20px;
