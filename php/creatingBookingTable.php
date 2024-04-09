@@ -1,6 +1,6 @@
 <?php require '../database/databaseConnection.php'?>
 <?php
-$createTable = "CREATE TABLE IF NOT EXISTS bookings(
+$createTable = "CREATE TABLE bookings(
     bookingId INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     userId INT,
     roomId INT,
