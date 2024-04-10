@@ -2,7 +2,7 @@
 <?php
 // creating contact table 
 $contactTbl = "CREATE TABLE contact_details(
-    address varchar(200),
+    adddress varchar(200),
     phoneno1 varchar(50),
     phoneno2 varchar(50),
     email varchar(50),

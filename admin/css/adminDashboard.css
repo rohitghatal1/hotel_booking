@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     padding: 0;
     margin: 0;
@@ -180,3 +181,187 @@ a{
     color: black;
 }
 
+=======
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* for styling all heading with same font  */
+.heading-font{
+    font-family: 'Merienda', cursive;
+}
+
+/* for styling all texts with same font  */
+.text-font{
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container{
+    background-color: #fff;
+    color: black;
+    margin-top: 0;
+}
+
+.heading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+.heading h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.dropdowntogler{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    margin-right: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.avatar{
+    font-size: 20px;
+    font-weight: bold;
+}
+.dropdown-items{
+    background-color: black;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+}
+.close-btn:hover{
+    color: red;
+}
+.dropdown-items h3{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dropdown-items p{
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+}
+.dropdown-items a{
+    margin-top: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.sidebar{
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.sidebar_menu{
+    margin-top: 10px;
+    padding: 5px;
+}
+.menu-items{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 15px;
+}
+
+.menu-links{
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+.dashboard-content{
+    margin-top: 75px;
+    margin-left: 270px;
+    padding: 10px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateY(70%);
+}
+.cards h2,
+p{
+    text-align: center;
+}
+.card{
+    margin-left: 10px;
+    text-align: center;
+    width: 300px;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.roomCard{
+    padding: 10px;
+    background-color: yellowgreen;
+    min-height: 150px;
+}
+
+.userCard{
+    padding: 10px;
+    background-color: rgb(156, 17, 126);
+    min-height: 150px;
+}
+
+.bookingCard{
+    padding: 10px;
+    background-color: rgb(32, 114, 236);
+    min-height: 150px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+>>>>>>> origin/main

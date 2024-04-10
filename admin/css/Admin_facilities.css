@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     padding: 0;
     margin: 0;
@@ -265,4 +266,273 @@ td{
 }
 .deleteFacilityBtn:hover{
     background-color: rgb(161, 13, 13);
+=======
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* for styling all heading with same font  */
+.heading-font{
+    font-family: 'Merienda', cursive;
+}
+
+/* for styling all texts with same font  */
+.text-font{
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container{
+    background-color: #fff;
+    color: black;
+    margin-top: 0;
+}
+
+.heading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+.heading h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.dropdowntogler{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    margin-right: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.avatar{
+    font-size: 20px;
+    font-weight: bold;
+}
+.dropdown-items{
+    background-color: black;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+}
+.close-btn:hover{
+    color: red;
+}
+.dropdown-items h3{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dropdown-items p{
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+}
+.dropdown-items a{
+    margin-top: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.sidebar{
+    position: fixed;
+    top: 74px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    border-top: 2px solid white;
+}
+
+.sidebar_menu{
+    margin-top: 10px;
+    padding: 5px;
+}
+.menu-items{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 15px;
+}
+
+.menu-links{
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+/* code to set margin for facility section  */
+.facilities-container{
+    display: block;
+    margin-top: 85px;
+    margin-left: 270px;
+    padding: 15px;
+    width: 1100px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+.heading-and-add-button{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.facilitySection,
+.featuresSection{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.addFacilityBtn,
+.addFeatureBtn{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.addFacilityModal,
+.addFeatureModal{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 40%;
+    background-color: #eee;
+    width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.addFacilityBtn,
+.addFeatureBtn h2{
+    margin-bottom: 10px;
+}
+.closebtn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 24px;
+}
+.closebtn:hover{
+    color: red;
+}
+
+.addFacilityModal input[type="text"],
+input[type="file"],
+textarea{
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    padding: 3px;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.addFeatureModal input[type="text"],
+input[type="file"],
+textarea{
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    padding: 3px;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.submitBtn{
+    padding: 10px;
+    background-color: #1202f2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.submitBtn:hover{
+    background-color: #0c00d3;
+}
+
+.tableheading{
+    text-align: center;
+    padding-bottom: 20px;
+}
+table{
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding-bottom: 20px;
+}
+
+th{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+}
+td{
+    padding: 10px;
+}
+.deleteFacilityBtn{
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+}
+.deleteFacilityBtn:hover{
+    background-color: rgb(161, 13, 13);
+>>>>>>> origin/main
 }

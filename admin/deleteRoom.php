@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php require '../database/databaseConnection.php';?>
 <?php
 if (isset($_GET['roomId'])) {
@@ -9,3 +10,16 @@ if (isset($_GET['roomId'])) {
     header("Location: a_roomSetting.php");
     exit();
 }
+=======
+<?php require '../database/databaseConnection.php';?>
+<?php
+if (isset($_GET['roomId'])) {
+    $roomId = $_GET['roomId'];
+    $delete = $conn->prepare("DELETE FROM rooms where roomId =?");
+    $delete->bind_param("i", $roomId);
+    $delete->execute();
+
+    header("Location: a_roomSetting.php");
+    exit();
+}
+>>>>>>> origin/main

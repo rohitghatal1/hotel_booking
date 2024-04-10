@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     padding: 0;
     margin: 0;
@@ -240,4 +241,248 @@ input[type="password"]{
 
 label{
     font-family: 'Poppins', sans-serif;
+=======
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* for styling all heading with same font  */
+.heading-font{
+    font-family: 'Merienda', cursive;
+}
+
+/* for styling all texts with same font  */
+.text-font{
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container{
+    background-color: #fff;
+    color: black;
+    margin-top: 0;
+}
+
+.heading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+.heading h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.dropdowntogler{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    margin-right: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.avatar{
+    font-size: 20px;
+    font-weight: bold;
+}
+.dropdown-items{
+    background-color: black;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+}
+.close-btn:hover{
+    color: red;
+}
+.dropdown-items h3{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dropdown-items p{
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+}
+.dropdown-items a{
+    margin-top: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.sidebar{
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.sidebar_menu{
+    margin-top: 10px;
+    padding: 5px;
+}
+.menu-items{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 15px;
+}
+
+.menu-links{
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+.userInfo-container{
+    display: block;
+    margin-top: 85px;
+    margin-left: 270px;
+    padding: 15px;
+    width: 1150px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.userInfo{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table{
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+}
+
+td{
+    padding: 5px;
+}
+
+.editUserButton{
+    margin-left: 5px;
+    padding: 3px;
+    background-color: greenyellow;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.editUserButton:hover{
+    background-color: green;
+}
+.deleteUserBtn{
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.editUserModal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 40%;
+    width: 400px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.closebtn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 24px;
+}
+
+.closebtn:hover{
+    color: red;
+}
+
+.editUserModal input[type="text"],
+input[type="password"]{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#submitButton{
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #1202f2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#submitButton:hover{
+    background-color: #0c00d3;
+}
+
+label{
+    font-family: 'Poppins', sans-serif;
+>>>>>>> origin/main
 }
