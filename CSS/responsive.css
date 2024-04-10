@@ -1,0 +1,73 @@
+
+/* CSS for mobile */
+@media (max-width: 767px) {
+    .navbar-container{
+        padding: 5px;
+        padding-right: 10px;
+    }
+    .hamburgerMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 15px;
+    }
+
+    .line{
+        padding: 1px;
+        background-color: #fff;
+    }
+    .navbar-contents{
+        display: none;
+    }
+    .login-signup-button{
+        display: none;
+    }
+    /* style for slider container */
+    .slider-container{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+        height: 500px;
+        z-index: 1;
+    }
+
+    .slide img{
+        width: 100%;
+        min-height: 70%;
+    }
+    .prev-button,
+    .next-button{
+        position: absolute;
+        top: 35%;
+        transform: translateY(-35%);
+        background-color: #292929;
+        color: #fff;
+        opacity: 0.5;
+        border: none;
+        padding: 5px 7px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .availability-check{
+        position: relative;
+        background-color: aliceblue;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+        z-index: 2;
+        margin-top: -180px;
+        opacity: 0.7;
+    }
+
+    .reach-us-section{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 10px;
+    }
+}
