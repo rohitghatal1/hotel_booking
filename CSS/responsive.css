@@ -22,7 +22,8 @@
     .login-signup-button{
         display: none;
     }
-    /* style for slider container */
+
+    /* responsive style for slider container */
     .slider-container{
         position: relative;
         overflow: hidden;
@@ -50,6 +51,7 @@
         z-index: 2;
     }
 
+    /* responsive style for check availability form  */
     .availability-check{
         position: relative;
         background-color: aliceblue;

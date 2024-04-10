@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 require '../database/databaseConnection.php';
 
@@ -17,23 +16,3 @@ while ($row = $result->fetch_assoc()) {
     echo $featureName;
     echo '<br>';
 }
-=======
-<?php
-require '../database/databaseConnection.php';
-
-// Fetch features from the database
-$getFeaturesQuery = "SELECT featureName FROM features";
-$result = $conn->query($getFeaturesQuery);
-
-if (!$result) {
-    die("Error fetching features: " . $conn->error);
-}
-
-// Iterate over fetched features and display checkboxes
-while ($row = $result->fetch_assoc()) {
-    $featureName = $row['featureName'];
-    echo '<input type="checkbox" name="selected_features[]" value="' . $featureName . '">';
-    echo $featureName;
-    echo '<br>';
-}
->>>>>>> origin/main
