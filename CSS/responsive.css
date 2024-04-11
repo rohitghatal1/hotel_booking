@@ -23,8 +23,8 @@
     .sidebar-open .navbarforMobile {
     display: block;
     }
-    
-    .login-signup-button{
+
+    .loginSignupBtn-desktop{
         display: none;
     }
     .navbarforMobile{
@@ -38,6 +38,7 @@
         height: 100vh;
         z-index: 3;
     }
+
     .navItems{
         margin-top: 20px;
         display: flex;
@@ -45,7 +46,7 @@
         flex-direction: column;
         gap: 30px;
     }
-
+    
     .closeNavBar{
         color: #888;
         font-size: 24px;
@@ -57,6 +58,28 @@
     
     .closeNavBar:hover{
         color: #ff0000;
+    }
+    .loginSignupBtn-mobile{
+        left: 20px;
+    }
+    .login-signup-button{
+        margin-top: 15px;
+        padding: 5;
+        font-size: smaller;
+    }
+    .dropdown-content{
+        background-color: rgba(41,41,41,0.9);
+        color: white;
+        display: block;
+        position: absolute;
+        top: 320px;
+        left: 10px;
+        padding: 5px;
+        min-width: 100px;
+        max-width: 150px;
+        text-align: center;
+        border-radius: 10px;
+        z-index: 5;
     }
 
     /* responsive style for slider container */

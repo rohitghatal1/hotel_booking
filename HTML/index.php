@@ -52,10 +52,10 @@ getContactDetails(); //function call to retrieve data from the databases
             </ul>
 
             <!-- to display button when not logged in and avatar when logged in  -->
-            <?php echo $loginSignupBtn ?>
+            <span class="loginSignupBtn-desktop"><?php echo $loginSignupBtn ?></span>
         </div>
     </nav>
-    
+
    <!-- navbar for mobile  -->
    <div class="navbarforMobile" id="mobileNavbar">
         <div class="navItems">
@@ -66,8 +66,9 @@ getContactDetails(); //function call to retrieve data from the databases
             <span><a class="item-links" href="contactUs.php">Contact Us</a></span>
             <span><a class="item-links" href="aboutUs.php">About</a></span>
         </div>
+
         <!-- to display button when not logged in and avatar when logged in  -->
-        <?php echo $loginSignupBtn ?>
+        <span class="loginSignupBtn-mobile"><?php echo $loginSignupBtn ?></span>
     </div>
 
     <!-- sidebar for login and signup  -->

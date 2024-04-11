@@ -233,7 +233,7 @@ textarea{
     min-width: 150px;
     text-align: center;
     border-radius: 10px;
-    z-index: 3;
+    z-index: 4;
 }
 
 .dropdown-content h3{
