@@ -27,7 +27,7 @@ getContactDetails(); //function call to retrieve data from the databases
         <div class="navbar-container">
             <span class="HotelName heading-font"><?php echo $hotelName ?></span>
             
-            <div class="hamburgerMenu">
+            <div class="hamburgerMenu" onclick="openSidebarNav()">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -55,7 +55,22 @@ getContactDetails(); //function call to retrieve data from the databases
             <?php echo $loginSignupBtn ?>
         </div>
     </nav>
+    
+   <!-- navbar for mobile  -->
+   <div class="navbarforMobile" id="mobileNavbar">
+        <div class="navItems">
+            <span class="closeNavBar" onclick="closeSidebarNav()">&times;</span>
+            <span><a class="item-links active" href="index.php">Home</a></span>
+            <span><a class="item-links" href="rooms.php">Rooms</a></span>
+            <span><a class="item-links" href="facilities.php">Facilities</a></span>
+            <span><a class="item-links" href="contactUs.php">Contact Us</a></span>
+            <span><a class="item-links" href="aboutUs.php">About</a></span>
+        </div>
+        <!-- to display button when not logged in and avatar when logged in  -->
+        <?php echo $loginSignupBtn ?>
+    </div>
 
+    <!-- sidebar for login and signup  -->
     <?php require '../common/sidebarLoginSignup.php'?>
 
     <!-- image slider section  -->

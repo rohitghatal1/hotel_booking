@@ -1,5 +1,15 @@
-// JavaScript for Image Slider
+// script for sidebar navMenu for mobile 
+function openSidebarNav(){
+  document.getElementById("mobileNavbar").style.display = "block";
+  document.body.classList.add("sidebar-open");
+}
 
+function closeSidebarNav(){
+  document.getElementById("mobileNavbar").style.display = "none";
+  document.body.classList.remove("sidebar-open");
+}
+
+// JavaScript for Image Slider
 // Get references to HTML elements
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slide");

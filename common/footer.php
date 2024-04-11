@@ -18,7 +18,7 @@
             <div class="follow-us-links">
                 <h2 class="heading-font">Follow Us</h2>
                 <a href="https://www.facebook.com/rohit.rohit.ghatal/"><i class="fab fa-facebook"></i>Facebook</a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+                <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
                 <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
                 <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
             </div>
