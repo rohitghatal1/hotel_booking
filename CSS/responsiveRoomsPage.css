@@ -23,6 +23,7 @@
     .loginSignupBtn-desktop{
         display: none;
     }
+
     .navbarforMobile{
         background-color: #292929;
         display: none;
@@ -34,6 +35,7 @@
         height: 100vh;
         z-index: 3;
     }
+
     .navItems{
         margin-top: 20px;
         display: flex;
@@ -41,6 +43,7 @@
         flex-direction: column;
         gap: 30px;
     }
+
     .closeNavBar{
         color: #888;
         font-size: 24px;
@@ -49,12 +52,15 @@
         right: 10px;
         cursor: pointer;
     }
+
     .closeNavBar:hover{
         color: #ff0000;
     }
+
     .loginSignupBtn-mobile{
         left: 20px;
     }
+
     .login-signup-button{
         margin-top: 15px;
         padding: 5;
@@ -64,19 +70,19 @@
     .room-details {
         flex: 1; /* Take remaining space */
     }
+
     /* Room Cards */
     .room-card-withmoreDetail {
-        display: flex;
-        justify-content: flex-start;
+        display: block;
+        justify-content: left;
         width: 100%;
         margin: 0 auto 10px;
         border-radius: 10px;
         overflow: hidden;
     }
     .room-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: block;
+        justify-content: left;
         padding: 5px;
     }
     .room-card img {
@@ -90,6 +96,9 @@
     margin-top: 8px;
     padding: 10px;
     border-radius: 5px;
+    }
+    .carousel-item img{
+        height: 150px;
     }
 
     .booking {
