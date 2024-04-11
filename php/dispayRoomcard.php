@@ -67,7 +67,7 @@ if ($fetchedRoomData->num_rows > 0) {
 roomData;
         // Output each feature
         foreach ($features as $feature) {
-            echo "<span>$feature</span>";
+            echo "<span>$feature</span> ";
         }
         echo <<<roomData
                             </div>
@@ -78,7 +78,7 @@ roomData;
 roomData;
         // Output each facility
         foreach ($facilities as $facility) {
-            echo "<span>$facility</span>";
+            echo "<span>$facility</span> ";
         }
         echo <<<roomData
                             </div>

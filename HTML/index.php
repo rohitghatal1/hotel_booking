@@ -15,7 +15,7 @@ getContactDetails(); //function call to retrieve data from the databases
     <title>Hotel Website</title>
 </head>
 <link rel="stylesheet" href="../CSS/style.css">
-<link rel = "stylesheet" href ="../CSS/responsive.css">
+<link rel = "stylesheet" href ="../CSS/responsiveHomePage.css">
 <link
     href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet">

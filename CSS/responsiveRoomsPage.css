@@ -1,0 +1,197 @@
+@media (max-width:767px){
+    /* Navigation */
+    .navigationbar-container{
+        padding: 5px;
+        padding-right: 10px;
+    }
+    .hamburgerMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 15px;
+    }
+    .line{
+        padding: 1px;
+        background-color: #fff;
+    }
+    .navigationbar-contents{
+        display: none;
+    }
+    .sidebar-open .navbarforMobile {
+        display: block;
+    }
+    .loginSignupBtn-desktop{
+        display: none;
+    }
+    .navbarforMobile{
+        background-color: #292929;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        width: 30%;
+        height: 100vh;
+        z-index: 3;
+    }
+    .navItems{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .closeNavBar{
+        color: #888;
+        font-size: 24px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+    .closeNavBar:hover{
+        color: #ff0000;
+    }
+    .loginSignupBtn-mobile{
+        left: 20px;
+    }
+    .login-signup-button{
+        margin-top: 15px;
+        padding: 5;
+        font-size: smaller;
+    }
+
+    .room-details {
+        flex: 1; /* Take remaining space */
+    }
+    /* Room Cards */
+    .room-card-withmoreDetail {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 0 auto 10px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .room-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+    }
+    .room-card img {
+        width: 100%;
+        height: auto; /* Adjust height automatically */
+        border-radius: 10px;
+        margin-bottom: 10px; /* Add some space between image and details */
+    }
+    .room-features,
+    .room-facilities {
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    }
+
+    .booking {
+        display: block;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .booking h4 {
+        margin: 0;
+        font-size: 15px;
+        color: #333;
+    }
+    
+    .book-button,
+    .more-details-button {
+        margin-top: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* Footer */
+    .footer-container{
+        padding: 5px;
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    .about-hotel{
+        font-size: smaller;
+        color: #fff;
+        width: 30%;
+        margin-left: 15px;
+        padding: 5px;
+    }
+    .links{
+        font-size: smaller;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+    .links a{
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+    .follow-us-links{
+        font-size: smaller;
+        color: #fff;
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .follow-us-links a{
+        margin-right: 3px;
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+    .privacy-container{
+        font-size: smaller;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 5px;
+        padding: 5px;
+        color: #fff;
+    }
+    .copyright-info{
+        max-width: 35%;
+        text-align: center;
+
+    }
+    .privacy-policy{
+        max-width: 30%;
+        text-align: center;
+        margin-left: 15px;
+    }
+    .terms-and-conditions{
+        max-width: 30%;
+        text-align: center;
+        margin-left: 15px;
+    }
+    .privacy-container a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .privacy-container a:hover{
+        color: rgb(37, 37, 248);
+    }
+}

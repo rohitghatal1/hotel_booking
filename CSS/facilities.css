@@ -27,10 +27,28 @@ body {
     z-index: 2;
 }
 
+/* initially hide mobile nabvar  */
+.navbarforMobile{
+    display: none;
+}
+
+
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.hamburgerMenu {
+    display: none; /* Initially hidden */
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
 }
 
 .HotelName {
