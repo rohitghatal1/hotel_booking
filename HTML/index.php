@@ -140,16 +140,10 @@ getContactDetails(); //function call to retrieve data from the databases
         <div class="modalContent">
             <h3 class="heading-font">Confirm Booking</h3>
             <form action="../php/confirmBooking.php" method="post">
+
                 <input type="hidden" name="roomId" id="room-Id" value="">
-
-                <label>Customer Name:</label>
-                <input type="text" name="customerName">
-
-                <label>Contact Number:</label>
-                <input type="number" name="customerNumber">
-
-                <label for="email">Email</label>
-                <input type="email" name="customerEmail">
+                <input type="hidden" name="userId" id="user-Id" value="">
+                <input type="hidden" name="bookingDate" id="booking-Date" value="">
 
                 <label for="checkin">Check-in Date:</label>
                 <input type="date" name="checkInDate" required>

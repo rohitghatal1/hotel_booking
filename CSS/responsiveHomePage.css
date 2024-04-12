@@ -126,6 +126,24 @@
         opacity: 0.7;
     }
 
+    .confirmBookingModal{
+        left: 5%;
+        width: 350px;
+        padding: 8px;
+        background-color: #eee;
+        z-index: 3;
+    }
+    
+    .confirmBookingModal input[type="text"],
+    input[type="number"],
+    input[type="email"]{
+        display: block;
+        width: 100%;
+        padding: 3px;
+        border-radius: 5px;
+        border: none;
+    }
+
     .reach-us-section{
         display: flex;
         flex-direction: column;

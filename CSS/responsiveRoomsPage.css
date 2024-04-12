@@ -4,6 +4,8 @@
         padding: 5px;
         padding-right: 10px;
     }
+
+    /* for three line icon  */
     .hamburgerMenu{
         display: flex;
         flex-direction: column;
@@ -14,16 +16,23 @@
         padding: 1px;
         background-color: #fff;
     }
+
+    /* to hide the navbar of big screen  */
     .navigationbar-contents{
         display: none;
     }
+
+    /* to show the nabvar for mobile on smaller screen  */
     .sidebar-open .navbarforMobile {
         display: block;
     }
+
+    /* hiding the loginsignup button of big screen  */
     .loginSignupBtn-desktop{
         display: none;
     }
 
+    /* for nabigation bar of moble devices  */
     .navbarforMobile{
         background-color: #292929;
         display: none;
@@ -35,7 +44,6 @@
         height: 100vh;
         z-index: 3;
     }
-
     .navItems{
         margin-top: 20px;
         display: flex;
@@ -44,6 +52,7 @@
         gap: 30px;
     }
 
+    /* close navbar button  */
     .closeNavBar{
         color: #888;
         font-size: 24px;
@@ -52,15 +61,14 @@
         right: 10px;
         cursor: pointer;
     }
-
     .closeNavBar:hover{
         color: #ff0000;
     }
 
+    /* for loginsignup button of mobile  */
     .loginSignupBtn-mobile{
         left: 20px;
     }
-
     .login-signup-button{
         margin-top: 15px;
         padding: 5;
@@ -118,18 +126,35 @@
         height: 150px;
     }
 
+    /* for the booking confirmation modal  */
+    .confirmBookingModal{
+        left: 5%;
+        width: 350px;
+        padding: 8px;
+        background-color: #eee;
+        z-index: 3;
+    }
+    .confirmBookingModal input[type="text"],
+    input[type="number"],
+    input[type="email"]{
+        display: block;
+        width: 100%;
+        padding: 3px;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    /* for booking div (contains book & more details button) */
     .booking {
         display: block;
         align-items: center;
         margin-top: 20px;
     }
-    
     .booking h4 {
         margin: 0;
         font-size: 15px;
         color: #333;
     }
-    
     .book-button,
     .more-details-button {
         font-size: smaller;
@@ -163,6 +188,8 @@
         margin-left: 15px;
         padding: 5px;
     }
+
+    /* for navbar link on footer  */
     .links{
         font-size: smaller;
         color: #fff;
@@ -175,6 +202,8 @@
         color: #fff;
         margin-bottom: 5px;
     }
+
+    /* for social links in footer  */
     .follow-us-links{
         font-size: smaller;
         color: #fff;
@@ -182,7 +211,6 @@
         display: flex;
         flex-direction: column;
     }
-    
     .follow-us-links a{
         margin-right: 3px;
         font-family: 'Poppins', sans-serif;
@@ -191,6 +219,7 @@
         margin-bottom: 5px;
     }
 
+    /* for the privacy policy container div  */
     .privacy-container{
         font-size: smaller;
         display: flex;

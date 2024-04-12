@@ -20,7 +20,7 @@ if ($fetchedData->num_rows > 0) {
 }
 if ($loggedIn) {
     echo "<script>alert('LoginSuccessful')</script>";
-    header("Location: ../HTML/index.php");
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 } else {
     echo "<script>alert('User Not found')</script>";
     echo "<script>window.history.back()</script>";

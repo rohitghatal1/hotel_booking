@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Page</title>
     <link rel="stylesheet" href="../CSS/userPage.css">
+    <link rel="stylesheet" href="../CSS/responsiveUserPage.css">
 
     <!-- link for google fonts -->
     <link

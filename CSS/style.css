@@ -209,7 +209,7 @@ textarea{
     color: red;
 }
 
-
+/* style for first name avatar  */
 .avatar{
     padding: 5px;
     background-color: red;
@@ -222,6 +222,8 @@ textarea{
     border-radius: 50%;
     cursor: pointer;
 }
+
+/* style for the dropdown content after clicking avatar  */
 .dropdown-content{
     background-color: rgba(41,41,41,0.9);
     color: white;
@@ -235,7 +237,6 @@ textarea{
     border-radius: 10px;
     z-index: 4;
 }
-
 .dropdown-content h3{
     background-color: red;
     color: white;
@@ -271,7 +272,6 @@ textarea{
     height: 700px;
     z-index: 1;
 }
-
 /* style for the slider  */
 .slider {
     display: flex;
@@ -281,7 +281,6 @@ textarea{
     -ms-transition: transform 0.5s;
     -o-transition: transform 0.5s;
 }
-
 .slide{
     margin-top: 80px;
     flex: 0 0 100%;
@@ -324,20 +323,17 @@ textarea{
     margin-top: -60px;
     opacity: 0.7;
 }
-
 .availability-title{
     font-family: 'Merienda', cursive;
     font-size: 24px;
     margin-bottom: 10px;
 }
-
 .booking-form{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
 }
-
 .form-row{
     flex: 1;
     min-width: 180px;
@@ -351,14 +347,12 @@ textarea{
     text-align: left;
     margin-bottom: 5px;
 }
-
 .form-row input, select{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 .check-availability-btn {
     width: 100px;
     height: 50px;
@@ -369,12 +363,11 @@ textarea{
     cursor: pointer;
     border-radius: 3px;
 }
-
 .check-availability-btn:hover {
     background-color: #35f5fb;
 }
 
-
+/* style for room card seciton  */
 .roomCards-and-link{
     display: block;
     text-align: center;
@@ -414,7 +407,6 @@ textarea{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-
 .room-card h3{
     font-family: 'Merienda', cursive;
     font-size: 24px;
@@ -424,17 +416,18 @@ textarea{
     font-family: 'Poppins', sans-serif;
     margin: 10px 0;
 }
-
 .room-card strong{
     font-weight: bold;
 }
 
+/* style for room features & facility div  */
 .room-features,
 .room-facilities{
     margin-top: 15px;
     text-align: left;
 }
 
+/* style for each facility & feature  */
 .feature,
 .facility{
     display: inline-block;
@@ -445,13 +438,11 @@ textarea{
     box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     margin-right: 5px;
 }
-
 .room-features h4,
 .room-facilities h4{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
-
 .room-features .feature span,
 .room-facilities .facility span{
     font-family: 'Poppins', sans-serif;
@@ -460,7 +451,7 @@ textarea{
     margin-right: 10px;
 }
 
-
+/* button inside room card  */
 .book-button{
     margin-top: 5px;
     background-color: #007bff;
@@ -471,10 +462,11 @@ textarea{
     cursor: pointer;
     font-weight: bold;
 }
-
 .book-button:hover{
     background-color: #0056b3;
 }
+
+/* for show more rooms button  */
 .show-more-link{
     text-align: center;
     margin-top: 20px;
@@ -487,13 +479,13 @@ textarea{
     padding: 5px;
     text-decoration: none;
 }
-
 .show-more-link a:hover{
     background-color: black;
     border: 1px solid black;
     color: white;
 }
 
+/* for booking confirmation modal  */
 .confirmBookingModal{
     display: none;
     position: fixed;
@@ -504,7 +496,6 @@ textarea{
     background-color: #eee;
     z-index: 3;
 }
-
 .confirmBookingModal input[type="text"],
 input[type="number"],
 input[type="email"]{
