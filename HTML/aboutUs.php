@@ -16,6 +16,7 @@ getContactDetails(); //function call to retrieve data from the databases
     <title>Hotel Website-About us
     </title>
     <link rel="stylesheet" href="../CSS/aboutUs.css">
+    <link rel="stylesheet" href="../CSS/responsiveAboutPage.css">
 
     <!-- link for google fonts -->
     <link
@@ -31,6 +32,14 @@ getContactDetails(); //function call to retrieve data from the databases
     <nav class="navbar">
         <div class="navbar-container">
             <span class="HotelName heading-font"><?php echo $hotelName ?></span>
+
+            <!-- to add three line icon  -->
+            <div class="hamburgerMenu" onclick="openSidebarNav()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
             <ul class="navbar-contents">
                 <li class="nav-item">
                     <a class="item-links" href="index.php">Home</a>
@@ -50,12 +59,28 @@ getContactDetails(); //function call to retrieve data from the databases
             </ul>
 
             <!-- to display button when not logged in and avatar when logged in  -->
-            <?php echo $loginSignupBtn ?>
+            <span class="loginSignupBtn-desktop"><?php echo $loginSignupBtn ?></span>
         </div>
     </nav>
 
+   <!-- navbar for mobile  -->
+   <div class="navbarforMobile" id="mobileNavbar">
+        <div class="navItems">
+            <span class="closeNavBar" onclick="closeSidebarNav()">&times;</span>
+            <span><a class="item-links active" href="index.php">Home</a></span>
+            <span><a class="item-links" href="rooms.php">Rooms</a></span>
+            <span><a class="item-links" href="facilities.php">Facilities</a></span>
+            <span><a class="item-links" href="contactUs.php">Contact Us</a></span>
+            <span><a class="item-links" href="aboutUs.php">About</a></span>
+        </div>
+
+        <!-- to display button when not logged in and avatar when logged in  -->
+        <span class="loginSignupBtn-mobile"><?php echo $loginSignupBtn ?></span>
+    </div>
+
     <?php require '../common/sidebarLoginSignup.php'?>
 
+    <!-- about us section starts form here  -->
     <div class="about-us-section">
         <div class="about-us-container">
             <h2 class="heading-font">About Us</h2>
@@ -65,14 +90,12 @@ getContactDetails(); //function call to retrieve data from the databases
                     <div class="founder-info">
                         <div class="founder-description">
                             <h3 class="fonder-name heading-font">Rohit Ghatal</h3>
-                            <p class="about-founder text-font"></p>
                         </div>
                         <img src="../team/rohit.jpg">
                     </div>
                     <div class="founder-info">
                         <div class="founder-description">
                             <h3 class="fonder-name heading-font">Ilu Dangol</h3>
-                            <p class="abot-founder text-font"></p>
                         </div>
                         <img src="../team/ilu4.jpg">
                     </div>
@@ -110,6 +133,17 @@ getContactDetails(); //function call to retrieve data from the databases
     function toggleDropdown(){
         let dropdown = document.querySelector('.dropdown-content');
         dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    }
+
+    // script for sidebar navMenu for mobile 
+    function openSidebarNav(){
+        document.getElementById("mobileNavbar").style.display = "block";
+        document.body.classList.add("sidebar-open");
+    }
+
+    function closeSidebarNav(){
+        document.getElementById("mobileNavbar").style.display = "none";
+        document.body.classList.remove("sidebar-open");
     }
     </script>
 

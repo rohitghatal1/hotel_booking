@@ -33,6 +33,20 @@ body {
     align-items: center;
 }
 
+/* style for three line icon  */
+.hamburgerMenu {
+    display: none; /* Initially hidden */
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+
 .HotelName {
     color: white;
     font-size: larger;
@@ -62,6 +76,11 @@ body {
 
 .item-links:hover {
     color: rgb(89, 245, 107);
+}
+
+/* initially hide mobile nabvar  */
+.navbarforMobile{
+    display: none;
 }
 
 .login-signup-button{
@@ -278,6 +297,12 @@ legend {
     border-radius: 10%;
     padding-left: 5px;
 }
+
+.founder-info img{
+    width: 300px;
+    height: 400px;
+    border-radius: 10%;
+}
 .founder-info:hover img{
     transform: scale(1.15);
     transition: all ease 0.8s;
@@ -291,11 +316,6 @@ legend {
     margin:auto;
     width: 250px;
     align-items: center;
-}
-.founder-info img{
-    width: 300px;
-    height: 400px;
-    border-radius: 10%;
 }
 
 .team-member-details{
