@@ -30,7 +30,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        padding: 10px;
+        padding: 3px;
         width: 30%;
         height: 100vh;
         z-index: 3;
@@ -69,16 +69,17 @@
     
     /* to display dropodwon content fir user id and logout in mobile navabar  */
     .dropdown-content{
-        background-color: rgba(41,41,41,0.9);
+        background-color: rgba(78, 37, 17, 0.9);
         color: white;
         display: block;
         position: absolute;
         top: 320px;
-        left: 10px;
-        padding: 5px;
+        left: 5px;
+        padding: 2px;
         min-width: 100px;
         max-width: 150px;
         text-align: center;
+        font-size: smaller;
         border-radius: 10px;
         z-index: 5;
     }

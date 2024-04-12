@@ -27,6 +27,7 @@ getContactDetails(); //function call to retrieve data from the databases
         <div class="navbar-container">
             <span class="HotelName heading-font"><?php echo $hotelName ?></span>
             
+            <!-- to add three line icon  -->
             <div class="hamburgerMenu" onclick="openSidebarNav()">
                 <div class="line"></div>
                 <div class="line"></div>

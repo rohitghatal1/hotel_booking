@@ -1,49 +1,44 @@
-@media (max-width:767px){
-    /* decreasing padding and margin of navbar for smaller screen  */
+@media (max-width: 767px){
+
+    /* CSS for mobile */
     .navbar-container{
         padding: 5px;
         padding-right: 10px;
     }
-
-    /* to display three line icon on smaller screen  */
     .hamburgerMenu{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         height: 15px;
     }
+
     .line{
         padding: 1px;
         background-color: #fff;
     }
-
-    /* hiding the nabvar of big screen */
     .navbar-contents{
         display: none;
     }
-
     /* Add styles for open sidebar */
     .sidebar-open .navbarforMobile {
     display: block;
     }
 
-    /* to hide login signup button of big screen when on smaller screen  */
     .loginSignupBtn-desktop{
         display: none;
     }
-
-    /* intially hide mobile navbar  */
     .navbarforMobile{
         background-color: #292929;
         display: none;
         position: fixed;
         top: 0;
         right: 0;
-        padding: 10px;
+        padding: 5px;
         width: 30%;
         height: 100vh;
         z-index: 3;
     }
+
     .navItems{
         margin-top: 20px;
         display: flex;
@@ -52,7 +47,6 @@
         gap: 30px;
     }
     
-    /* to style close navbar button  */
     .closeNavBar{
         color: #888;
         font-size: 24px;
@@ -65,8 +59,6 @@
     .closeNavBar:hover{
         color: #ff0000;
     }
-
-    /* to display login signup button for mobile navbar  */
     .loginSignupBtn-mobile{
         left: 20px;
     }
@@ -75,8 +67,6 @@
         padding: 5;
         font-size: smaller;
     }
-
-    /* style dropdown contents in the navbar menu on mobile */
     .dropdown-content{
         background-color: rgba(78, 37, 17, 0.9);
         color: white;
@@ -92,20 +82,52 @@
         border-radius: 10px;
         z-index: 5;
     }
-    
-    /* to decrease size of facility card  */
-    .facility-items{
-        max-width: 200px;
+
+    /* to display map and senm message form in block  */
+    .contactUs-container{
+        font-size: small;
+        margin-top: 15px;
+        padding: 10px;
+        display: block;
     }
 
-    /* footer */
-    footer {
-        position: relative;
+    .address-section{
+        margin: 5px 10px;
+        padding: 8px;
+        background-color: #fff;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
         width: 100%;
-        background-color: #262626;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    }
+    .address-section iframe{
+        width: 100%;
+        height: 200px;
+    }
+
+    .send-message-section{
+        width: 100%;
+        margin: 10px 8px;
+        padding: 8px;
+    }
+
+    .send-message-section label{
+        font-family: 'Poppins', sans-serif;
+        margin-top: 10px;
+        font-size: 15px;
+        display: block;
     }
     
+    .send-message-section input[type = "text"],
+    input[type="email"],
+    textarea{
+        width: 99%;
+        margin: 5px 0;
+        padding: 3px;
+        border: 1px solid #ccc;
+        outline: none;
+        border-radius: 5px;
+    }
+
+    /* footer  */
     .footer-container{
         padding: 5px;
         margin-top: 15px;
@@ -122,7 +144,7 @@
         font-size: smaller;
         color: #fff;
         width: 30%;
-        margin-left: 15px;
+        margin-left: 10px;
         padding: 5px;
     }
     .links{
@@ -140,7 +162,7 @@
     .follow-us-links{
         font-size: smaller;
         color: #fff;
-        margin-right: 15px;
+        margin-right: 10px;
         display: flex;
         flex-direction: column;
     }
@@ -167,14 +189,14 @@
 
     }
     .privacy-policy{
-        max-width: 30%;
+        max-width: 32%;
         text-align: center;
         margin-left: 15px;
     }
     .terms-and-conditions{
-        max-width: 30%;
+        max-width: 32%;
         text-align: center;
-        margin-left: 15px;
+        margin-left: 20px;
     }
     .privacy-container a{
         text-decoration: none;
