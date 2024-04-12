@@ -1,9 +1,11 @@
 @media (max-width:767px){
-    /* Navigation */
-    .navigationbar-container{
+    /* decreasing padding and margin of navbar for smaller screen  */
+    .navbar-container{
         padding: 5px;
         padding-right: 10px;
     }
+
+    /* to display three line icon on smaller screen  */
     .hamburgerMenu{
         display: flex;
         flex-direction: column;
@@ -14,16 +16,23 @@
         padding: 1px;
         background-color: #fff;
     }
-    .navigationbar-contents{
+
+    /* hiding the nabvar of big screen */
+    .navbar-contents{
         display: none;
     }
+
+    /* Add styles for open sidebar */
     .sidebar-open .navbarforMobile {
-        display: block;
+    display: block;
     }
+
+    /* to hide login signup button of big screen when on smaller screen  */
     .loginSignupBtn-desktop{
         display: none;
     }
 
+    /* intially hide mobile navbar  */
     .navbarforMobile{
         background-color: #292929;
         display: none;
@@ -35,7 +44,6 @@
         height: 100vh;
         z-index: 3;
     }
-
     .navItems{
         margin-top: 20px;
         display: flex;
@@ -43,7 +51,8 @@
         flex-direction: column;
         gap: 30px;
     }
-
+    
+    /* to style close navbar button  */
     .closeNavBar{
         color: #888;
         font-size: 24px;
@@ -52,22 +61,22 @@
         right: 10px;
         cursor: pointer;
     }
-
+    
     .closeNavBar:hover{
         color: #ff0000;
     }
 
+    /* to display login signup button for mobile navbar  */
     .loginSignupBtn-mobile{
         left: 20px;
     }
-
     .login-signup-button{
         margin-top: 15px;
         padding: 5;
         font-size: smaller;
     }
-    
-    /* to display dropodwon content fir user id and logout in mobile navabar  */
+
+    /* style dropdown contents in the navbar menu on mobile */
     .dropdown-content{
         background-color: rgba(41,41,41,0.9);
         color: white;
@@ -83,66 +92,14 @@
         z-index: 5;
     }
 
-    .room-details {
-        flex: 1; /* Take remaining space */
-    }
-
-    /* Room Cards */
-    .room-card-withmoreDetail {
-        display: block;
-        justify-content: left;
+    /* footer */
+    footer {
+        position: relative;
         width: 100%;
-        margin: 0 auto 10px;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    .room-card {
-        display: block;
-        justify-content: left;
-        padding: 5px;
-    }
-    .room-card img {
-        width: 100%;
-        height: auto; /* Adjust height automatically */
-        border-radius: 10px;
-        margin-bottom: 10px; /* Add some space between image and details */
-    }
-    .room-features,
-    .room-facilities {
-    margin-top: 8px;
-    padding: 10px;
-    border-radius: 5px;
-    }
-    .carousel-item img{
-        height: 150px;
-    }
-
-    .booking {
-        display: block;
-        align-items: center;
-        margin-top: 20px;
+        background-color: #262626;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     }
     
-    .booking h4 {
-        margin: 0;
-        font-size: 15px;
-        color: #333;
-    }
-    
-    .book-button,
-    .more-details-button {
-        font-size: smaller;
-        margin-top: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 5px 10px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    /* Footer */
     .footer-container{
         padding: 5px;
         margin-top: 15px;

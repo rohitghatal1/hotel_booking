@@ -15,6 +15,7 @@ getContactDetails(); //function call to retrieve data from the databases
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Website - Facilities</title>
     <link rel="stylesheet" href="../CSS/facilities.css">
+    <link rel="stylesheet" href="../css/responsiveFacilitiesPage.css">
 
     <!-- link for google fonts -->
     <link
@@ -29,6 +30,14 @@ getContactDetails(); //function call to retrieve data from the databases
     <nav class="navbar">
         <div class="navbar-container">
             <span class="HotelName heading-font"><?php echo $hotelName ?></span>
+
+            <!-- hamberger menu (three linn icon) -->
+            <div class="hamburgerMenu" onclick="openSidebarNav()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
             <ul class="navbar-contents">
                 <li class="nav-item">
                     <a class="item-links" href="index.php">Home</a>
@@ -48,9 +57,24 @@ getContactDetails(); //function call to retrieve data from the databases
             </ul>
 
             <!-- to display button when not logged in and avatar when logged in  -->
-            <?php echo $loginSignupBtn ?>
+            <span class="loginSignupBtn-desktop"><?php echo $loginSignupBtn ?></span>
         </div>
     </nav>
+
+   <!-- navbar for mobile  -->
+   <div class="navbarforMobile" id="mobileNavbar">
+        <div class="navItems">
+            <span class="closeNavBar" onclick="closeSidebarNav()">&times;</span>
+            <span><a class="item-links" href="index.php">Home</a></span>
+            <span><a class="item-links" href="rooms.php">Rooms</a></span>
+            <span><a class="item-links active" href="facilities.php">Facilities</a></span>
+            <span><a class="item-links" href="contactUs.php">Contact Us</a></span>
+            <span><a class="item-links" href="aboutUs.php">About</a></span>
+        </div>
+
+        <!-- to display button when not logged in and avatar when logged in  -->
+        <span class="loginSignupBtn-mobile"><?php echo $loginSignupBtn ?></span>
+    </div>
 
     <!-- login/signup form  -->
     <?php require '../common/sidebarLoginSignup.php'?>
@@ -84,6 +108,17 @@ getContactDetails(); //function call to retrieve data from the databases
     function toggleDropdown(){
         let dropdown = document.querySelector('.dropdown-content');
         dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    }
+
+    // script for sidebar navMenu for mobile 
+    function openSidebarNav(){
+        document.getElementById("mobileNavbar").style.display = "block";
+        document.body.classList.add("sidebar-open");
+    }
+
+    function closeSidebarNav(){
+        document.getElementById("mobileNavbar").style.display = "none";
+        document.body.classList.remove("sidebar-open");
     }
     </script>
 
