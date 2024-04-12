@@ -7,5 +7,5 @@ $_SESSION = array();
 // Destroy session
 session_destroy();
 
-header("Location: ../HTML/index.php");
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 exit();

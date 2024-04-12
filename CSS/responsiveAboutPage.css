@@ -1,5 +1,9 @@
 @media (max-width: 767px){
+    body{
+        overflow-x: hidden;
+    }
     .navbar-container{
+        width: 100%;
         padding: 5px;
         padding-right: 10px;
     }
@@ -82,11 +86,11 @@
     }
 
     /* style for owner details  */
-
     fieldset{
         border: 2px solid #333;
         border-radius: 5px;
         margin: 10px;
+        margin-left: 30px;
         padding: 5px;
         max-width: 320px;
     }
@@ -116,7 +120,6 @@
     
     .founder-description{
         font-size: smaller;
-        margin:px;
         width: 100px;
         align-items: center;
     }
@@ -128,7 +131,15 @@
     }
 
     /* footer  */
+    footer {
+        position: relative;
+        background-color: #262626;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        margin-top: 10px; 
+    }
+    
     .footer-container{
+        font-size: smaller;
         padding: 5px;
         margin-top: 15px;
         display: flex;
