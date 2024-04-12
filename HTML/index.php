@@ -229,14 +229,26 @@ getContactDetails(); //function call to retrieve data from the databases
 
         <!-- script for opening and closeBookingModal on window -->
         <script>
-        function handleBooking(roomID){
+        function handleBooking(roomID) {
             <?php if (isset($_SESSION['user'])) {?>
-                document.getElementById("confirmBooking-Modal").style.display = "block";
-                document.getElementById("room-Id").value = roomID;
+                try {
+                    document.getElementById("confirmBooking-Modal").style.display = "block";
+                    let userId = <?php echo $_SESSION['userId']; ?>;
+                    if (!userId) {
+                        throw new Error('User ID not found in session.');
+                    }
+                    let currentDate = new Date().toISOString().slice(0, 10);
+                    document.getElementById("room-Id").value = roomID;
+                    document.getElementById("user-Id").value = userId;
+                    document.getElementById("booking-Date").value = currentDate;
+                } catch (error) {
+                    console.error('Error handling booking:', error.message);
+                    alert('An error occurred while processing your booking. Please try again later.');
+                }
             <?php } else {?>
                 alert('Please login first!');
-                document.getElementById("loginRegisterForm").style.display="block";
-                document.getElementById("loginRegisterForm").style.width="350px";
+                document.getElementById("loginRegisterForm").style.display = "block";
+                document.getElementById("loginRegisterForm").style.width = "350px";
             <?php }?>
         }
         function closeBookingModal(){

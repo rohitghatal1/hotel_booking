@@ -9,11 +9,11 @@
             </div>
             <div class="links">
                 <h2 class="heading-font">Links</h2>
-                <a href="#">Home</a>
-                <a href="#">Rooms</a>
-                <a href="#">Facilities</a>
-                <a href="#">Contact Us</a>
-                <a href="#">About Us</a>
+                <a href="index.php">Home</a>
+                <a href="rooms.php">Rooms</a>
+                <a href="facilities.php">Facilities</a>
+                <a href="contacttUs.php">Contact Us</a>
+                <a href="aboutUs.php">About Us</a>
             </div>
             <div class="follow-us-links">
                 <h2 class="heading-font">Follow Us</h2>
