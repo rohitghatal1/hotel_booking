@@ -159,48 +159,8 @@ getContactDetails(); //function call to retrieve data from the databases
     <!-- to include code for getting form data and send it to php to store in database  -->
     <script src = "../JS/sendRegisterDataToDb.js"></script>
 
-    <script>
-        // code for filter option
-        var filtertoggler = document.getElementById("toggle-filter");
-        var filterOptions = document.getElementById("filter-container");
-        filtertoggler.addEventListener("click", function () {
-            filterOptions.style.display = "block";
-            filterOptions.style.width = "350px";
-        })
-
-        document.getElementById("close-filterbtn").addEventListener("click", function () {
-            document.getElementById("filter-container").style.width = "0";
-        })
-
-        // script to expand room card
-        function expandRoomCard(id) {
-            document.getElementById(id).style.display = "block";
-        }
-
-        // script to collapse room card
-        function collapseRoomCard(id) {
-            document.getElementById(id).style.display = "none";
-        }
-    </script>
-
-    <!-- to toggle dropdown for user logout  -->
-    <script>
-        // script for sidebar navMenu for mobile 
-    function openSidebarNav(){
-        document.getElementById("mobileNavbar").style.display = "block";
-        document.body.classList.add("sidebar-open");
-    }
-
-    function closeSidebarNav(){
-        document.getElementById("mobileNavbar").style.display = "none";
-        document.body.classList.remove("sidebar-open");
-    }
-    function toggleDropdown(){
-        let dropdown = document.querySelector('.dropdown-content');
-        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-    }
-    </script>
-
+    <script src = ../JS/rooms.js></script>
+    
     <!-- script for opening and closeBookingModal on window -->
     <script>
         function handleBooking(roomID) {

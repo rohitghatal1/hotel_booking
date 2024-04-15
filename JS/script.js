@@ -72,3 +72,5 @@ function autoSlide() {
 // slider.addEventListener("mouseleave", () => {
 //   interval = setInterval(autoSlide, 3000);
 // });
+
+

@@ -15,6 +15,35 @@
 </head>
 
 <body>
+
+    <!-- to retrive required data to display  -->
+    <?php require '../database/databaseConnection.php';
+        $getAllRooms = "SELECT count(*) AS totalRooms FROM rooms";
+        $noOfRooms = $conn->query($getAllRooms);
+
+        $rooms = $noOfRooms->fetch_assoc();
+        $totalRooms = $rooms['totalRooms'];
+
+
+        $getAvailableRooms = "SELECT count(*) AS availableRooms FROM rooms WHERE status = 'available'";
+        $availableRoomsCount = $conn->query($getAvailableRooms);
+        $availableRoomsRes = $availableRoomsCount->fetch_assoc();
+        $availableRooms = $availableRoomsRes['availableRooms'];
+
+    
+        // for user count
+        $usersCount = "SELECT count(*) AS totalUsers FROM users";
+        $userCountRes = $conn->query($usersCount);
+        $users = $userCountRes->fetch_assoc();
+        $totalUsers = $users['totalUsers'];
+
+        //for bookings count
+        $bookingCount = "SELECT count(*) AS totalBookings FROM bookings";
+        $bookingCountRes = $conn->query($bookingCount);
+        $bookings = $bookingCountRes->fetch_assoc();
+        $totalBookings = $bookings['totalBookings'];
+    ?>
+
     <div class="dashboard-container">
 
         <!-- code to inclde common admin dashboard part -->
@@ -27,27 +56,27 @@
             <div class="cards">
                 <div class="card">
                     <div class="roomCard">
-                        <h3 class="heading-font"><a href="roomSetting.php">Rooms</a></h3>
+                        <h3 class="heading-font"><a href="a_roomSetting.php">Rooms</a></h3>
                         <p class="text-font">Total Rooms:</p>
-                        <span class="text-font" id="total_rooms">20</span>
+                        <span class="text-font" id="total_rooms"><?php echo $totalRooms?></span>
                         <p class="text-font">Available:</p>
-                        <span class="text-font">10</span>
+                        <span class="text-font"><?php echo $availableRooms?></span>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="userCard">
-                        <h3 class="heading-font"><a href="userPage.php">Users</a></h3>
+                        <h3 class="heading-font"><a href="a_userPage.php">Users</a></h3>
                         <p class="text-font">Current Users:</p>
-                        <span class="text-font" id="total_rooms">20</span>
+                        <span class="text-font" id="total_rooms"><?php echo $totalUsers?></span>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="bookingCard">
-                        <h3 class="heading-font"><a href="booking.php">Bookings</a></h3>
+                        <h3 class="heading-font"><a href="a_booking.php">Bookings</a></h3>
                         <p class="text-font">New Bookings:</p>
-                        <span class="text-font" id="total_rooms">20</span>
+                        <span class="text-font" id="total_rooms"><?php echo $totalBookings ?></span>
                     </div>
                 </div>
             </div>

@@ -162,19 +162,35 @@ p{
     padding: 10px;
     background-color: yellowgreen;
     min-height: 150px;
+    transition: background-color 1s;
+}
+
+.roomCard:hover{
+    background: radial-gradient(circle at top right, blue, green, yellow);
 }
 
 .userCard{
     padding: 10px;
     background-color: rgb(156, 17, 126);
     min-height: 150px;
+    transition: background-color 1s;
+}
+
+.userCard:hover{
+    background: radial-gradient(circle at top right, rgb(28, 236, 205), rgb(172, 4, 158), rgb(81, 23, 225));
 }
 
 .bookingCard{
     padding: 10px;
     background-color: rgb(32, 114, 236);
     min-height: 150px;
+    transition: background-color 1s;
 }
+
+.bookingCard:hover{
+    background: radial-gradient(circle at top right, rgb(12, 250, 47), rgb(54, 10, 231), rgb(214, 22, 22));
+}
+
 a{
     text-decoration: none;
     color: black;

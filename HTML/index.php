@@ -136,6 +136,8 @@ getContactDetails(); //function call to retrieve data from the databases
         </div>
         <span class="show-more-link"><a href="rooms.php">More rooms...</a></span>
     </div>
+
+    <!-- confirm bookng section  -->
     <div class="confirmBookingModal" id="confirmBooking-Modal">
         <span class="closeBookingModal" onclick="closeBookingModal()">&times;</span>
         <div class="modalContent">
@@ -217,6 +219,7 @@ getContactDetails(); //function call to retrieve data from the databases
 
     <!-- to inlcude code to validate form  -->
     <script src="../JS/formValidation.js"></script>
+
     <!-- to include code for getting form data and send it to php to store in database  -->
     <script src = "../JS/sendRegisterDataToDb.js"></script>
 
@@ -228,8 +231,8 @@ getContactDetails(); //function call to retrieve data from the databases
         }
     </script>
 
-        <!-- script for opening and closeBookingModal on window -->
-        <script>
+    <!-- script for opening and closeBookingModal on window -->
+    <script>
         function handleBooking(roomID) {
             <?php if (isset($_SESSION['user'])) {?>
                 try {
