@@ -1,5 +1,20 @@
-<link rel = "stylesheet" href="../CSS/checkBookingPage.css">
-<link rel = "stylesheet" href="../CSS/responsivecheckBooking.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking availability</title>
+    <link rel = "stylesheet" href="../CSS/checkBookingPage.css">
+    <link rel = "stylesheet" href="../CSS/responsivecheckBooking.css">
+
+    <!-- google fonts link  -->
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- font awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
 
 <?php
 require '../database/databaseConnection.php';
@@ -40,6 +55,7 @@ if ($getRoomsResult->num_rows > 0) {
 
         // Display room card
         ?>
+        <h2 class="heading-font">Available Rooms</h2>
         <div class="room-card">
             <img src="<?php echo $room['imagePath']; ?>">
             <h3 class="heading-font"><?php echo $room['roomType']; ?></h3>
@@ -58,8 +74,7 @@ if (!$roomsAvailable) {
     echo "<script>window.history.back()</script>";
 }
 ?>
-
-
+</body>
 <script>
         function handleBooking() {
             <?php if (isset($_SESSION['user'])) {?>
@@ -96,3 +111,4 @@ if (!$roomsAvailable) {
             document.getElementById("confirmBooking-Modal").style.display="none";
         }
     </script>
+</html>

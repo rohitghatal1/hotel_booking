@@ -1,10 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* for styling all heading with same font  */
+.heading-font{
+    font-family: 'Merienda', cursive;
+}
+
+/* for styling all texts with same font  */
+.text-font{
+    font-family: 'Poppins', sans-serif;
+}
+
+h2{
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
 .room-card{
     position: relative;
     border: #ccc;
     border-radius: 5px;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
     padding: 10px;
-    width: 400px;
+    max-width: 400px;
     margin: 10px;
     text-align: center;
 }
