@@ -89,7 +89,7 @@ getContactDetails(); //function call to retrieve data from the databases
     <!-- booking availability check form  -->
     <div class="availability-check">
         <h2 class="availability-title">Check Booking Availability</h2>
-        <form id="availability-form" class="booking-form">
+        <form action ="availabilityCheck.php" method="post" id="availability-form" class="booking-form">
 
             <div class="form-row">
                 <label for="check-in-date">Check-In Date:</label>
@@ -102,17 +102,18 @@ getContactDetails(); //function call to retrieve data from the databases
             </div>
 
             <div class="form-row">
-                <label for="rooms">Number of Rooms:</label>
-                <select id="rooms" name="rooms" required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                <label for="roomType">Room Type</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="Basic">Baisc</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Luxury">Luxury</option>
                 </select>
             </div>
 
             <div class="form-row">
                 <label for="persons">Number of Persons:</label>
-                <select id="persons" name="persons" required>
+                <select id="persons" name="personsCount" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
