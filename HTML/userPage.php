@@ -48,8 +48,8 @@
                 $fetechedBookingData = $conn->query($getBookingData);
 
                 if ($fetechedBookingData->num_rows > 0) {
-                    while ($row = $fetechedBookingData->fetch_assoc()) {
-                        $bookedRoomId = $row['roomId'];
+                    while ($bookingData = $fetechedBookingData->fetch_assoc()) {
+                        $bookedRoomId = $bookingData['roomId'];
 
                         $bookedRoomData = "SELECT * FROM rooms WHERE roomId = $bookedRoomId";
                         $fetchedRoomData = $conn->query($bookedRoomData);
@@ -80,6 +80,9 @@
                         echo "<div class='booking'>";
                         echo "<h4 class='heading-font'>Rs " . $row['roomPrice'] . " per day</h4>";
                         echo "<button class='cancelBooking-button' onclick='confirmCancelBooking($bookedRoomId)'><i class='fa-solid fa-xmark'></i>Cancel</button>";
+                        echo "<span class='bookingDates'>Check In: " . $bookingData['checkInDate'] ."</span>";
+                        echo "<span class='bookingDates'>Check Out: " . $bookingData['checkOutDate'] ."</span>";
+                        echo "<span class='bookingDates'>Booked On: " . $bookingData['bookedDate'] ."</span>";
                         echo "</div></div>";
                     }
                 } else {

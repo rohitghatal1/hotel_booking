@@ -20,6 +20,7 @@ if ($checkIn < $today || $checkOut < $today || $checkOut < $checkIn) {
 // Query to fetch all rooms of the specified type
 $getRoomsQuery = "SELECT * FROM rooms WHERE roomType = '$roomType'";
 $getRoomsResult = $conn->query($getRoomsQuery);
+$roomAvilable = false; //to check if room is available or not
 
 if ($getRoomsResult->num_rows > 0) {
     while ($room = $getRoomsResult->fetch_assoc()) {
@@ -29,11 +30,13 @@ if ($getRoomsResult->num_rows > 0) {
         $checkBookingQuery = "SELECT * FROM bookings WHERE roomId = $roomId AND ('$checkIn' >= checkOutDate OR '$checkOut' <= checkInDate)";
         $checkBookingResult = $conn->query($checkBookingQuery);
 
-        if ($checkBookingResult->num_rows == 0) {
+        if ($checkBookingResult->num_rows > 0) {
             // Room is available for booking because there are no conflicting bookings
             $features = explode(',', $room['roomFeatures']);
             $facilities = explode(',', $room['roomFacilities']);
             $roomId = $room['roomId'];
+
+            $roomAvilable = true; //setting true if room available
 ?>
         <!-- code to display room card  -->
             <div class="room-card">
@@ -70,6 +73,10 @@ if ($getRoomsResult->num_rows > 0) {
             </div>
 <?php
         }
+    }
+    if(!$roomAvilable){
+        echo "<script>alert('No rooms available for this time period. Please Select different date!!!')</script>";
+        echo "<script>window.history.back()</script>";
     }
 } else {
     // No rooms found for the selected room type

@@ -125,3 +125,7 @@ header {
     cursor: pointer;
 }
 
+.bookingDates{
+    margin-top: 5px;
+    font-weight: bold;
+}
