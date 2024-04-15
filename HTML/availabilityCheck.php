@@ -1,4 +1,5 @@
-<link rel = "stylesheet" href="../CSS/style.css">
+<link rel = "stylesheet" href="../CSS/checkBookingPage.css">
+<link rel = "stylesheet" href="../CSS/responsivecheckBooking.css">
 
 <?php
 require '../database/databaseConnection.php';
