@@ -187,6 +187,10 @@
         box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
     }
 
+    footer{
+        position: absolute;
+        bottom: 0;
+    }
     .footer-container{
         padding: 5px;
         margin-top: 15px;

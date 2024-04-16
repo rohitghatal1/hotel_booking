@@ -82,8 +82,8 @@ getContactDetails(); //function call to retrieve data from the databases
             <div class="slide"><img src="../rooms/room2.jpg" alt="room2"></div>
             <div class="slide"><img src="../rooms/room3.jpg" alt="room3"></div>
         </div>
-        <button class="prev-button">Previous</button>
-        <button class="next-button">Next</button>
+        <button class="prev-button"><i class="fa-solid fa-angle-left"></i></button>
+        <button class="next-button"><i class="fa-solid fa-angle-right"></i></button>
     </div>
 
     <!-- booking availability check form  -->
@@ -120,6 +120,11 @@ getContactDetails(); //function call to retrieve data from the databases
                 </select>
             </div>
             <div class="form-row">
+            <?php
+            if (isset($_GET['error'])) {
+                echo '<div style="color:red"; >' . $_GET['error'] . '</div>';
+            } 
+            ?>
                 <button type="submit" class="check-availability-btn">Check Availability</button>
             </div>
         </form>
@@ -181,11 +186,10 @@ getContactDetails(); //function call to retrieve data from the databases
         <div class="contact-container">
             <div class="call-option">
                 <h2 class="heading-font">Call Us</h2>
-                <i class="fa fa-phone"></i>
-                <a href="tel:<?php echo $contact1 ?>"><?php echo $contact1 ?></a><br>
-                <i class="fa fa-phone"></i>
-                <a href="tel:<?php echo $contact2 ?>"><?php echo $contact2 ?></a>
+                <a href="tel:<?php echo $contact1 ?>"><i class="fa fa-phone"></i><?php echo $contact1 ?></a><br><br>
+                <a href="tel:<?php echo $contact2 ?>"><i class="fa fa-phone"></i><?php echo $contact2 ?></a>
             </div>
+
             <div class="follow-us-section">
                 <h2 class="heading-font">Follow Us</h2>
                 <span class="social-icons">

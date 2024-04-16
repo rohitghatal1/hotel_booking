@@ -12,7 +12,7 @@ if (isset($_SESSION['user'])) {
                     <h3 class="heading-font">$firstLetterAvatar</h3>
                     <p class="text-font">$username</p>
                     <p class="text-font myBooking"><a href="userPage.php?userId={$uid}">My bookings</a></p>
-                    <a href="../php/logout.php">Log out</a>
+                    <a id = "logout"href="../php/logout.php">Log out</a>
                 </div>
             </div>
         dropdown;

@@ -70,8 +70,9 @@ if ($getRoomsResult->num_rows > 0) {
 
 // If no rooms are available for the specified type or dates, display appropriate message
 if (!$roomsAvailable) {
-    echo "<script>alert('No rooms available for the selected room type and dates. Please select a different room type or dates.')</script>";
-    echo "<script>window.history.back()</script>";
+    // echo "<script>alert('No rooms available for the selected room type and dates. Please select a different room type or dates.')</script>";
+    // echo "<script>window.history.back()</script>";
+    header('location:index.php?error="No rooms available for the selected room type and dates. Please select a different room type or dates"');
 }
 ?>
 </body>

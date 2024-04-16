@@ -17,10 +17,10 @@
             </div>
             <div class="follow-us-links">
                 <h2 class="heading-font">Follow Us</h2>
-                <a href="https://www.facebook.com/rohit.rohit.ghatal/"><i class="fab fa-facebook"></i>Facebook</a>
-                <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
-                <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://www.facebook.com/rohit.rohit.ghatal/"><i id ="socialIcon" class="fab fa-facebook"></i>Facebook</a>
+                <a href="#"><i class="fa-brands fa-twitter" id ="socialIcon"></i>Twitter</a>
+                <a href="#"><i class="fa-brands fa-instagram" id ="socialIcon"></i>Instagram</a>
+                <a href="#"><i class="fab fa-linkedin" id ="socialIcon"></i>LinkedIn</a>
             </div>
         </div>
         <hr>
