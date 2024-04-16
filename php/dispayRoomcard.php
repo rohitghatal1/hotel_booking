@@ -57,7 +57,7 @@ if ($fetchedRoomData->num_rows > 0) {
         echo <<<roomData
             <div class="room-card-withmoreDetail">
                 <div class="room-card">
-                    <img src="{$row['imagePath']}">
+                   <div class="room_card_img"> <img src="{$row['imagePath']}"></div>
                     <div class="room-details">
                         <h3 class="heading-font">{$row['roomType']}</h3>
                         <p class="text-font">{$row['roomDesc']}</p>

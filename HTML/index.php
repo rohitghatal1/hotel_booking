@@ -134,7 +134,7 @@ getContactDetails(); //function call to retrieve data from the databases
         <?php require '../php/displayRoomInHomepage.php'?>
 
         </div>
-        <span class="show-more-link"><a href="rooms.php">More rooms...</a></span>
+        <span class="show-more-link"><a href="rooms.php">More Rooms</a></span>
     </div>
 
     <!-- confirm bookng section  -->
@@ -168,7 +168,7 @@ getContactDetails(); //function call to retrieve data from the databases
         <!-- to include code to display facility card form availabe facilites  -->
         <?php require '../php/displayFacilityInHome.php'?>
         </div>
-        <span class="show-more-link"><a href="facilities.php">More Facilities...</a></span>
+        <span class="show-more-link"><a href="facilities.php">More Facilities</a></span>
     </div>
 
     <!-- code for displaying map and contact info  -->

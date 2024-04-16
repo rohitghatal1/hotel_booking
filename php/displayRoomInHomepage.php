@@ -9,10 +9,12 @@ if ($fetchedRoomData->num_rows > 0) {
         $roomId = $row['roomId'];
         echo <<<roomData
                             <div class="room-card">
-                                <img src="{$row['imagePath']}">
-                                <h3 class="heading-font">{$row['roomType']}</h3>
+                            <div class="room_card_img"> <img src="{$row['imagePath']}"></div>
+                              
+                            <h3 class="heading-font">{$row['roomType']}</h3>
                                 <p class="text-font">{$row['roomDesc']}</p>
                                 <p class="text-font"><strong>Price:</strong> {$row['roomPrice']}</p>
+                             
                                 <div class="room-features">
                                     <h4 class="heading-font">Features:</h4>
                                     <div class="feature">

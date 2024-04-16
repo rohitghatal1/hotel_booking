@@ -299,11 +299,13 @@ legend {
 }
 
 .founder-info img{
+    filter: grayscale(100%);
     width: 300px;
     height: 400px;
     border-radius: 10%;
 }
 .founder-info:hover img{
+    filter: grayscale(0%);
     transform: scale(1.15);
     transition: all ease 0.8s;
     -webkit-transform: scale(1.15);
