@@ -35,7 +35,7 @@
                     <select name="roomType" id="roomType">
                         <option value="" selected disabled hidden>Select Room Type</option>
                         <option value="Basic">Basic</option>
-                        <option value="Delux">Deluxe</option>
+                        <option value="Deluxe">Deluxe</option>
                         <option value="Standard">Standard</option>
                         <option value="Luxury">Luxury</option>
                     </select>

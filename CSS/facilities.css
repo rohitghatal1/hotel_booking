@@ -28,8 +28,6 @@ body{
     /* width: 80%; */
 }
 
-
-
 /* style for contents of nabigation bar  */
 .navbar-container{
     display: flex; /*to display itemms in a row*/
@@ -111,8 +109,8 @@ body{
 .form-content{
     position: relative;
     width: 350px;
-    background-color: aliceblue;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    background-color: #f0f8ff;
+    color: #101720;
     padding: 10px;
     text-align: left;
     border-left: 1px solid #ddd;

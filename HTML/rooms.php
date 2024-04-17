@@ -103,7 +103,7 @@ getContactDetails(); //function call to retrieve data from the databases
             <label for="room-type">Room Type:</label>
             <select name="room_type" id="room-type">
                 <option value="Luxury">Luxury Room</option>
-                <option value="delux">Delux Room</option>
+                <option value="Deluxe">Deluxe Room</option>
                 <option value="standard">Standard Room</option>
                 <option value="basic">Basic Room</option>
             </select>

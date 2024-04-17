@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #f1f1f1;
-    margin: 0;
+body{
+    background-color: #101720;
 }
+
 
 .heading-font {
     font-family: 'Merienda', cursive;
@@ -17,20 +17,25 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar {
+/* styles for navigation bar  */
+.navbar{
     position: fixed;
     width: 100%;
-    background-color: rgba(41, 41, 41, 0.9);
+    background-color: #1f232e;
     padding: 15px 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    padding-bottom: 20px;
-    z-index: 2;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding-bottom: 30px;
+    z-index: 10;
+    /* width: 80%; */
 }
 
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
+/* style for contents of nabigation bar  */
+.navbar-container{
+    display: flex; /*to display itemms in a row*/
+    justify-content: space-between; /*deifnes positon for every elements with same spaces where first element is at left and last is at right side*/
     align-items: center;
+    width: 90%;
+    margin: auto;
 }
 
 /* style for three line icon  */
@@ -42,16 +47,18 @@ body {
 .line {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #f0f8ff;
     margin: 5px 0;
 }
 
 
-.HotelName {
-    color: white;
+/* styles for hotel name */
+.HotelName{
+    color: #f0f8ff;
     font-size: larger;
     font-weight: bold;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .navbar-contents {
@@ -66,7 +73,7 @@ body {
 .item-links {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: white;
+    color: #f0f8ff;
 }
 
 .item-links.active {
@@ -94,7 +101,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    z-index: 3;
+    z-index: 12;
     transition: width 1s;
     -webkit-transition: width 1s;
     -moz-transition: width 1s;
@@ -105,8 +112,8 @@ body {
 .form-content{
     position: relative;
     width: 350px;
-    background-color: aliceblue;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    background-color: #f0f8ff;
+    color: #101720;
     padding: 10px;
     text-align: left;
     border-left: 1px solid #ddd;
@@ -174,9 +181,9 @@ textarea{
 
 .button-inside-form,
 .login-signup-button{
-    background-color: #404040;
-    color: #fff;
-    border: none;
+    background-color: #101720;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
@@ -211,7 +218,7 @@ textarea{
 .avatar{
     padding: 5px;
     background-color: red;
-    color: white;
+    color: #f0f8ff;
     font-size: 18px;
     font-weight: bold;
     margin-right: 60px;
@@ -220,37 +227,69 @@ textarea{
     border-radius: 50%;
     cursor: pointer;
 }
+
+/* user drop toggler  */
+.userDropdown{
+    position: relative;
+}
+
+/* style for the dropdown content after clicking avatar  */
 .dropdown-content{
-    background-color: rgba(41,41,41,0.9);
-    color: white;
+    background-color: #101720;
+    color: #f0f8ff;
     display: none;
     position: absolute;
     top: 55px;
     right: 10px;
     padding: 10px;
-    min-width: 150px;
+    min-width: 19vw;
     text-align: center;
     border-radius: 10px;
-    z-index: 3;
+    z-index: 11;
+    height: auto;
 }
 
 .dropdown-content h3{
     background-color: red;
-    color: white;
+    color: #f0f8ff;
     border-radius: 50%;
-    width: 30px;
+    width: 4.5rem;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 3rem;
 }
-.dropdown-content p{
-    margin-top: 10px;
-    color: white;
+.dropdown-content p:nth-child(2){
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.dropdown-content p:nth-child(3){
+    margin-top: 0rem;
+    margin: 1.4rem;
+    background-color: #101720;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.dropdown-content #logout{
+    margin-top: 0rem;
+    display: block;
+    margin: 1.4rem;
+    background-color: #101720;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
 }
 .dropdown-content a{
     margin-top: auto;
     text-decoration: none;
-    color: white;
+    color: #f0f8ff;
     font-size: 15px;
     font-weight: bold;
     align-self: flex-end;
@@ -262,16 +301,21 @@ textarea{
     display: block;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    background-color: #ddd;
+    background-color: #101720;
+    color: #f0f8ff;
+}
 
+.about-us-container{
+    width: 90%;
+    margin: auto;
 }
 .about-us-container h2{
-    padding-top: 10px;
+    padding-top: 2rem;
     text-align: center;
 }
 
 fieldset{
-    border: 2px solid #333;
+    border: 2px solid #f0f8ff;
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
@@ -292,10 +336,16 @@ legend {
 .founder-info{
     display: flex;
     margin-left: 30px;
-    background-color: aliceblue;
-    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f0f8ff;
+    color: #101720;
     border-radius: 10%;
     padding-left: 5px;
+    transition: all ease 1s;
+}
+
+.founder-info:hover{
+    background-color: #101720;
+    color: #f0f8ff;
 }
 
 .founder-info img{
@@ -327,14 +377,15 @@ legend {
 }
 .team-member-info{
     margin-bottom: 15px;
-    background-color: aqua;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: #f0f8ff;
+    color: #101720;
     border-radius: 10px;
 }
 .team-member-info:hover{
     transform: scale(1.2);
     transition: all ease 0.8s;
-    background-color: blue;
+    background-color: #101720;
+    color: #f0f8ff;
 }
 .team-member-info img{
     width: 300px;
@@ -348,33 +399,39 @@ p{
 }
 
 
-footer {
+footer{
     position: relative;
-    background-color: #262626;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Adjusted for the margin-top */
+    margin-top: 3rem;
+    clear: both;
+    background-color: #1f232e;
 }
 
-.footer-container {
-    padding: 10px;
+.footer-container{
+    padding-top: 25px;
+    width: 80%;
+    margin: 30px auto;
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .about-hotel {
-    color: #fff;
+    color: #f0f8ff;
     width: 30%;
     margin-left: 30px;
     padding: 5px;
 }
 
-.about-hotel p{
-    text-align: left;
+#socialIcon{
+    margin-right: 5px;
 }
 
 .links {
-    color: #fff;
+    color: #f0f8ff;
     display: flex;
     flex-direction: column;
 }
@@ -382,12 +439,12 @@ footer {
 .links a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: #fff;
+    color: #f0f8ff;
     margin-bottom: 5px;
 }
 
 .follow-us-links {
-    color: #fff;
+    color: #f0f8ff;
     margin-right: 30px;
     display: flex;
     flex-direction: column;
@@ -397,12 +454,12 @@ footer {
     margin-right: 3px;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: #fff;
+    color: #f0f8ff;
     margin-bottom: 5px;
 }
 
 hr {
-    border: 2px solid white;
+    border: 2px solid #f0f8ff;
     width: 99%;
     position: relative;
     left: 10px;
@@ -413,7 +470,7 @@ hr {
     justify-content: center;
     margin-left: 20px;
     padding: 10px;
-    color: #fff;
+    color: #f0f8ff;
 }
 
 .privacy-policy {
@@ -426,7 +483,7 @@ hr {
 
 .privacy-container a {
     text-decoration: none;
-    color: #fff;
+    color: #f0f8ff;
 }
 
 .privacy-container a:hover {

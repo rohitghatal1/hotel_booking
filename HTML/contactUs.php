@@ -82,8 +82,9 @@ getContactDetails(); //function call to retrieve data from the databases
 
     <!-- contact us container  -->
     <section class="contactUs-section">
+
         <h1 class="heading-font">Contact Us</h1>
-        <hr>
+        
         <div class="contactUs-container">
             <section class="address-section">
                 <div class="map">
