@@ -47,13 +47,13 @@ body{
 .line {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #f0f8ff;
     margin: 5px 0;
 }
 
 /* styles for hotel name */
 .HotelName{
-    color: white;
+    color: #f0f8ff;
     font-size: larger;
     font-weight: bold;
     margin-left: 15px;
@@ -75,7 +75,7 @@ body{
 .item-links{
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: white;
+    color: #f0f8ff;
 }
 
 /* special style for home menu  */
@@ -179,9 +179,9 @@ textarea{
 
 .button-inside-form,
 .login-signup-button{
-    background-color: #404040;
-    color: #fff;
-    border: none;
+    background-color: #101720;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
@@ -217,7 +217,7 @@ textarea{
     padding: 5px;
     background-color: red;
     width: 30px;
-    color: white;
+    color: #f0f8ff;
     font-size: 18px;
     font-weight: bold;
     margin-right: 60px;
@@ -225,13 +225,16 @@ textarea{
     border-radius: 50%;
     cursor: pointer;
 }
+
+/* user dropdown toggler  */
 .userDropdown{
     position: relative;
 }
+
 /* style for the dropdown content after clicking avatar  */
 .dropdown-content{
     background-color: #101720;
-    color: white;
+    color: #f0f8ff;
     display: none;
     position: absolute;
     top: 55px;
@@ -243,9 +246,10 @@ textarea{
     z-index: 4;
     height: auto;
 }
+
 .dropdown-content h3{
     background-color: red;
-    color: white;
+    color: #f0f8ff;
     border-radius: 50%;
     width: 4.5rem;
     margin-top: 10px;
@@ -283,7 +287,7 @@ textarea{
 .dropdown-content a{
     margin-top: auto;
     text-decoration: none;
-    color: white;
+    color: #f0f8ff;
     font-size: 15px;
     font-weight: bold;
     align-self: flex-end;
@@ -324,8 +328,8 @@ textarea{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #404040;
-    color: #fff;
+    background-color: #101710;
+    color: #f0f8ff;
     opacity: 0.5;
     border: none;
     padding: 10px 20px;
@@ -387,7 +391,7 @@ textarea{
     width: 100px;
     height: 50px;
     background-color: #101720;
-    color: #fff;
+    color: #f0f8ff;
     border: none;
     padding: 5px;
     cursor: pointer;
@@ -405,7 +409,7 @@ textarea{
 }
 
 .our-rooms-heading{
-    color: white;
+    color: #f0f8ff;
     padding: 10px;
     font-family: 'Merienda', cursive;
     font-size: 45px;
@@ -414,7 +418,7 @@ textarea{
 }
 .room-card-container{
     background-color: #101720;
-    color: #ffffff;
+    color: #f0f8ff;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -480,6 +484,7 @@ textarea{
     /* box-shadow: 3px 3px 8px #E9D9C9; */
     /* margin-right: 5px; */
 }
+
 .room-features h4,
 .room-facilities h4{
     font-family: 'Poppins', sans-serif;
@@ -498,7 +503,7 @@ textarea{
     margin-top: 5px;
     margin-bottom: 10px;
     background-color: #101720;
-    color: #fff;
+    color: #f0f8ff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -527,7 +532,7 @@ textarea{
 .show-more-link a:hover{
     background-color: black;
     border: 1px solid black;
-    color: white;
+    color: #f0f8ff;
 }
 
 /* for booking confirmation modal  */
@@ -580,7 +585,7 @@ input[type="email"]{
 .facilities-section{
     margin-top: 6rem;
     /* background-color: #191641; */
-    color: #ffffff;
+    color: #f0f8ff;
     padding: 20px;
     text-align: center;
 }
@@ -607,8 +612,6 @@ input[type="email"]{
     max-width: 300px;
     margin: 10px;
     text-align: center;
-    box-shadow: 3px 3px 8px #E9D9C9;
-
 }
 
 .hotel-facility img{
@@ -623,7 +626,7 @@ input[type="email"]{
     margin: 6rem auto;
     display: flex;
     /* background-color: #191641; */
-    color: #ffffff;
+    color: #f0f8ff;
     padding: 10px;
     justify-content: space-between;
     width: 90%;
@@ -703,7 +706,6 @@ input[type="email"]{
 
 footer{
     background-color: #1f232e;
-    /* box-shadow: 0px 4px 19px #f0f8ff; */
 }
 .footer-container{
     padding-top: 25px;
@@ -718,7 +720,7 @@ footer{
     -o-border-radius: 5px;
 }
 .about-hotel{
-    color: #fff;
+    color: #f0f8ff;
     width: 30%;
     padding: 5px;
 }
@@ -727,18 +729,18 @@ footer{
     margin-right: 5px;
 }
 .links{
-    color: #fff;
+    color: #f0f8ff;
     display: flex;
     flex-direction: column;
 }
 .links a{
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: #fff;
+    color: #f0f8ff;
     margin-bottom: 5px;
 }
 .follow-us-links{
-    color: #fff;
+    color: #f0f8ff;
     margin-right: 30px;
     display: flex;
     flex-direction: column;
@@ -749,11 +751,11 @@ footer{
     margin-right: 3px;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: #fff;
+    color: #f0f8ff;
     margin-bottom: 5px;
 }
 hr{
-    border: 2px solid white;
+    border: 2px solid #f0f8ff;
     width:99%;
     position: relative;
     left: 10px;
@@ -763,7 +765,7 @@ hr{
     justify-content: center;
     margin-left: 20px;
     padding: 10px;
-    color: #fff;
+    color: #f0f8ff;
 }
 .privacy-policy{
     margin-left: 30px;
@@ -773,10 +775,7 @@ hr{
 }
 .privacy-container a{
     text-decoration: none;
-    color: #fff;
-}
-.privacy-container a:hover{
-    color: rgb(37, 37, 248);
+    color: #f0f8ff;
 }
 
 
