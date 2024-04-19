@@ -1,10 +1,14 @@
 
 /* CSS for mobile */
 @media (max-width: 767px) {
+    /* hotel name and three line icon container  */
     .navbar-container{
         padding: 5px;
-        padding-right: 10px;
+        width: 90%;
+        margin: auto;
     }
+
+    /* three line icon  */
     .hamburgerMenu{
         display: flex;
         flex-direction: column;
@@ -14,39 +18,48 @@
 
     .line{
         padding: 1px;
-        background-color: #fff;
+        background-color: #f0f8ff;
     }
+
+    /* nav link items (home, rooms, about etc)  */
     .navbar-contents{
         display: none;
     }
+
     /* Add styles for open sidebar */
     .sidebar-open .navbarforMobile {
     display: block;
     }
 
+    /* .login-signup-button of big screen  */
     .loginSignupBtn-desktop{
         display: none;
     }
+
+    /* mobile nav bar  */
     .navbarforMobile{
-        background-color: #292929;
+        background-color: #101720;
         display: none;
         position: fixed;
         top: 0;
         right: 0;
         padding: 5px;
-        width: 30%;
+        width: 40%;
         height: 100vh;
-        z-index: 3;
+        z-index: 11;
     }
 
+    /* navbar items  */
     .navItems{
-        margin-top: 20px;
+        width: 95%;
+        margin-top: 4rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
         gap: 30px;
     }
     
+    /* close (x) button  */
     .closeNavBar{
         color: #888;
         font-size: 24px;
@@ -55,21 +68,26 @@
         right: 10px;
         cursor: pointer;
     }
-    
+
     .closeNavBar:hover{
         color: #ff0000;
     }
+
+    /* .login-signup-button for small devices  */
     .loginSignupBtn-mobile{
         left: 20px;
     }
+
     .login-signup-button{
         margin-top: 15px;
         padding: 5;
         font-size: smaller;
     }
+
+    /* dropdown when cliked avatar after logged in  */
     .dropdown-content{
-        background-color: rgba(78, 37, 17, 0.9);
-        color: white;
+        background-color: #101720;
+        color: #f0f8ff;
         display: block;
         position: absolute;
         top: 320px;
@@ -102,8 +120,8 @@
         position: absolute;
         top: 35%;
         transform: translateY(-35%);
-        background-color: #292929;
-        color: #fff;
+        background-color: #101720;
+        color: #f0f8ff;
         opacity: 0.5;
         border: none;
         padding: 5px 7px;
@@ -114,7 +132,7 @@
     /* responsive style for check availability form  */
     .availability-check{
         position: relative;
-        background-color: aliceblue;
+        background-color: #f0f8ff;
         padding: 10px;
         border: 1px solid #ddd;
         border-radius: 5px;
@@ -126,11 +144,12 @@
         opacity: 0.7;
     }
 
+    /* room booking confrmation modal  */
     .confirmBookingModal{
         left: 5%;
         width: 350px;
         padding: 8px;
-        background-color: #eee;
+        background-color: #f0f8ff;
         z-index: 3;
     }
     
@@ -144,20 +163,22 @@
         border: none;
     }
 
+
     .reach-us-section{
         display: flex;
         flex-direction: column;
-        background-color: #fff;
+        background-color: #f0f8ff;
         padding: 10px;
+        height: auto;
+        font-size: small;
     }
+
     .map{
         width: 100%;
-        padding: 10px;
-        box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
     }
     .map iframe{
         width:100%;
-        height: 400px;
+        height: 100%;
         margin-bottom: 10px;
         float: right;
         border-radius: 5px;
@@ -170,102 +191,51 @@
         margin-left: 0;
         width:100%;
         padding: 10px;
-        box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+        height: 40vh; 
     }
     .call-option{
-        padding: 10px;
-        background-color: #f1f1f1;
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+        padding: 5px;
+        background-color: #f0f8ff;
         border-radius: 5px;
     }
 
+    .call-option h2{
+        margin-bottom: 11px;
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    .call-option i{
+        margin-right: 5px;
+    }
+    .call-option a{
+        text-decoration: none;
+        color: #101720;
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
     .follow-us-section{
-        background-color: #f1f1f1;
-        margin-top: 30px;
-        padding: 10px;
+        background-color: #f0f8ff;
+        margin-top: 15px;
+        padding: 5px;
         border-radius: 5px;
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
     }
-
-    footer{
-        position: absolute;
-        bottom: 0;
+    .follow-us-section h2{
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+    }
+    .social-icons{
+        margin-left: 5px;
+    }
+    .icon-link{
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        color: #101720;
     }
     .footer-container{
-        padding: 5px;
-        margin-top: 15px;
+        padding-top: 1rem;
+        width: 80%;
+        margin: auto;
         display: flex;
         justify-content: space-between;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-    }
-
-    .about-hotel{
-        font-size: smaller;
-        color: #fff;
-        width: 30%;
-        margin-left: 15px;
-        padding: 5px;
-    }
-    .links{
-        font-size: smaller;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-    }
-    .links a{
-        font-family: 'Poppins', sans-serif;
-        text-decoration: none;
-        color: #fff;
-        margin-bottom: 5px;
-    }
-    .follow-us-links{
-        font-size: smaller;
-        color: #fff;
-        margin-right: 15px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .follow-us-links a{
-        margin-right: 3px;
-        font-family: 'Poppins', sans-serif;
-        text-decoration: none;
-        color: #fff;
-        margin-bottom: 5px;
-    }
-
-    .privacy-container{
-        font-size: smaller;
-        display: flex;
-        justify-content: space-evenly;
-        margin-left: 5px;
-        padding: 5px;
-        color: #fff;
-    }
-    .copyright-info{
-        max-width: 35%;
-        text-align: center;
-
-    }
-    .privacy-policy{
-        max-width: 30%;
-        text-align: center;
-        margin-left: 15px;
-    }
-    .terms-and-conditions{
-        max-width: 30%;
-        text-align: center;
-        margin-left: 15px;
-    }
-    .privacy-container a{
-        text-decoration: none;
-        color: #fff;
-    }
-    .privacy-container a:hover{
-        color: rgb(37, 37, 248);
     }
 }

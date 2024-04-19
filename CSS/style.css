@@ -645,21 +645,14 @@ input[type="email"]{
     margin-bottom: 10px;
     float: right;
     border-radius: 10px;
-    /* border-radius: 10px; */
-    /* -webkit-border-radius: 5px; */
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 .contact-container{
     background-color: #f0f8ff;
     color: #000000;
-    /* height: 40vh; */
     width: 35%;
     padding: 2.5rem;
     border-radius: 10px;
-    /* text-align: center; */
-    /* box-shadow: 3px 3px 8px #E9D9C9; */
+
 }
 .call-option{
     margin-left: 5px;

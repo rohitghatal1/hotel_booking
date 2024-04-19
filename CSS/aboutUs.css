@@ -81,10 +81,6 @@ body{
     color: #007bff;
 }
 
-.item-links:hover {
-    color: rgb(89, 245, 107);
-}
-
 /* initially hide mobile nabvar  */
 .navbarforMobile{
     display: none;
