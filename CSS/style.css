@@ -257,10 +257,14 @@ textarea{
     margin-right: auto;
     font-size: 3rem;
 }
+
+/* username of user  */
 .dropdown-content p:nth-child(2){
     margin-top: 1rem;
     font-size: 1.2rem;
 }
+
+/* my booking  */
 .dropdown-content p:nth-child(3){
     margin-top: 0rem;
     margin: 1.4rem;
@@ -272,6 +276,7 @@ textarea{
     text-decoration: none;
     font-size: 18px;
 }
+
 .dropdown-content #logout{
     margin-top: 0rem;
     display: block;
@@ -699,6 +704,7 @@ input[type="email"]{
 
 footer{
     background-color: #1f232e;
+    width: 100%;
 }
 .footer-container{
     padding-top: 25px;
@@ -739,7 +745,6 @@ footer{
     flex-direction: column;
 }
 
-
 .follow-us-links a{
     margin-right: 3px;
     font-family: 'Poppins', sans-serif;
@@ -770,7 +775,6 @@ hr{
     text-decoration: none;
     color: #f0f8ff;
 }
-
 
 button:active{
     scale: 0.9;

@@ -1,6 +1,10 @@
 
 /* CSS for mobile */
 @media (max-width: 767px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
     /* hotel name and three line icon container  */
     .navbar-container{
         padding: 5px;
@@ -18,7 +22,6 @@
 
     .line{
         padding: 1px;
-        background-color: #f0f8ff;
     }
 
     /* nav link items (home, rooms, about etc)  */
@@ -38,7 +41,6 @@
 
     /* mobile nav bar  */
     .navbarforMobile{
-        background-color: #101720;
         display: none;
         position: fixed;
         top: 0;
@@ -47,6 +49,8 @@
         width: 40%;
         height: 100vh;
         z-index: 11;
+        background-color: #101720;
+        color: #f0f8ff
     }
 
     /* navbar items  */
@@ -61,16 +65,12 @@
     
     /* close (x) button  */
     .closeNavBar{
-        color: #888;
         font-size: 24px;
         position: absolute;
         top: 10px;
         right: 10px;
         cursor: pointer;
-    }
-
-    .closeNavBar:hover{
-        color: #ff0000;
+        color: #888; ;
     }
 
     /* .login-signup-button for small devices  */
@@ -86,12 +86,10 @@
 
     /* dropdown when cliked avatar after logged in  */
     .dropdown-content{
-        background-color: #101720;
-        color: #f0f8ff;
         display: block;
         position: absolute;
-        top: 320px;
-        left: 10px;
+        top: 4rem;
+        left: 0.8rem;
         padding: 2px;
         min-width: 100px;
         max-width: 150px;
@@ -99,7 +97,55 @@
         font-size: smaller;
         border-radius: 10px;
         z-index: 5;
+        height: auto;
     }
+
+    /* first name icon */
+    .dropdown-content h3{
+        border-radius: 50%;
+        width: 3rem;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.5rem;
+    }
+
+    /* user name of user  */
+    .dropdown-content p:nth-child(2){
+        margin-top: 0.5rem;
+        font-size: 1rem;
+    }
+
+    /* my bookings */
+    .dropdown-content p:nth-child(3){
+        margin-top: 0rem;
+        margin: 1rem;
+        border-radius: 5px;
+        padding: 5px 7px;
+        text-decoration: none;
+        font-size: 0.5rem;
+    }
+    .dropdown-content #logout{
+        margin-top: 0rem;
+        display: block;
+        margin: 1rem;
+        border-radius: 5px;
+        padding: 5px 7px;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    .dropdown-content a{
+        margin-top: auto;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        align-self: flex-end;
+    }
+    .myBooking{
+        text-decoration: none;
+        cursor: pointer;
+    }
+
 
     /* responsive style for slider container */
     .slider-container{
@@ -120,8 +166,6 @@
         position: absolute;
         top: 35%;
         transform: translateY(-35%);
-        background-color: #101720;
-        color: #f0f8ff;
         opacity: 0.5;
         border: none;
         padding: 5px 7px;
@@ -132,9 +176,7 @@
     /* responsive style for check availability form  */
     .availability-check{
         position: relative;
-        background-color: #f0f8ff;
         padding: 10px;
-        border: 1px solid #ddd;
         border-radius: 5px;
         text-align: center;
         max-width: 500px;
@@ -149,8 +191,7 @@
         left: 5%;
         width: 350px;
         padding: 8px;
-        background-color: #f0f8ff;
-        z-index: 3;
+        z-index: 11;
     }
     
     .confirmBookingModal input[type="text"],
@@ -163,19 +204,21 @@
         border: none;
     }
 
-
+    /* map and contact container  */
     .reach-us-section{
         display: flex;
         flex-direction: column;
-        background-color: #f0f8ff;
         padding: 10px;
         height: auto;
         font-size: small;
     }
 
+    /* div for map  */
     .map{
         width: 100%;
     }
+
+    /* map's link  */
     .map iframe{
         width:100%;
         height: 100%;
@@ -187,15 +230,18 @@
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
     }
+
+    /* contact number & social link container  */
     .contact-container{
         margin-left: 0;
         width:100%;
         padding: 10px;
         height: 40vh; 
     }
+
+    /* contact number container  */
     .call-option{
         padding: 5px;
-        background-color: #f0f8ff;
         border-radius: 5px;
     }
 
@@ -209,12 +255,12 @@
     }
     .call-option a{
         text-decoration: none;
-        color: #101720;
         font-size: 1rem;
         margin-bottom: 5px;
     }
+
+    /* social media links */
     .follow-us-section{
-        background-color: #f0f8ff;
         margin-top: 15px;
         padding: 5px;
         border-radius: 5px;
@@ -229,13 +275,72 @@
     .icon-link{
         font-family: 'Poppins', sans-serif;
         text-decoration: none;
-        color: #101720;
+    }
+
+    footer{
+        width: 100%;
     }
     .footer-container{
+        font-size: smaller;
         padding-top: 1rem;
-        width: 80%;
+        width: 90%;
         margin: auto;
         display: flex;
         justify-content: space-between;
+    }
+
+    .about-hotel{
+
+        width: 30%;
+        padding: 5px;
+    }
+    
+    #socialIcon{
+        margin-right: 5px;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+    .links a{
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        margin-bottom: 5px;
+    }
+    .follow-us-links{
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .follow-us-links a{
+        margin-right: 3px;
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        margin-bottom: 5px;
+    }
+
+    hr{
+        width:99%;
+        position: relative;
+        left: 10px;
+    }
+    
+    .privacy-container{
+        font-size: smaller;
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        padding: 5px;
+    }
+    .privacy-policy{
+        margin-left: 30px;
+    }
+    .terms-and-conditions{
+        margin-left: 20px;
+    }
+    .privacy-container a{
+        text-decoration: none;
     }
 }
