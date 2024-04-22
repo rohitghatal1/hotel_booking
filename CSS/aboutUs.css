@@ -337,11 +337,16 @@ legend {
     border-radius: 10%;
     padding-left: 5px;
     transition: all ease 1s;
+    overflow: hidden;
 }
 
 .founder-info:hover{
     background-color: #101720;
     color: #f0f8ff;
+}
+
+.founder-name{
+    margin-left: 2rem;
 }
 
 .founder-info img{
@@ -352,18 +357,15 @@ legend {
 }
 .founder-info:hover img{
     filter: grayscale(0%);
-    transform: scale(1.15);
+    transform: scale(1.05);
     transition: all ease 0.8s;
-    -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
 }
 
 .founder-description{
     margin:auto;
-    width: 250px;
+    width: 100%;
     align-items: center;
+    overflow: hidden;
 }
 
 .team-member-details{
@@ -378,7 +380,7 @@ legend {
     border-radius: 10px;
 }
 .team-member-info:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: all ease 0.8s;
     background-color: #101720;
     color: #f0f8ff;
@@ -392,6 +394,36 @@ legend {
 .team-member-info h4,
 p{
     text-align: center;
+}
+
+/* style for social media icons  */
+.socialLinks{
+    position: relative;
+    bottom: -20rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f0f8ff;
+    padding: 1rem;
+    transition: all ease 0.8s;
+    height: 2rem;
+}
+
+
+.socialLinks a{
+    text-decoration: none;
+    color: #101720;
+    font-size: larger;
+}
+
+.founder-info:hover .founder-name{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.founder-info:hover .socialLinks{
+    position: relative;
+    margin-bottom: 20rem;
 }
 
 

@@ -77,13 +77,23 @@ getContactDetails(); //function call to retrieve data from the databases
                 <div class="founders-detail">
                     <div class="founder-info">
                         <div class="founder-description">
-                            <h3 class="fonder-name heading-font">Rohit Ghatal</h3>
+                            <h3 class="founder-name heading-font">Rohit Ghatal</h3>
+                            <div class="socialLinks">
+                                <span><a href="#"><i class="fab fa-facebook"></i></a></span>
+                                <span><a href="#"><i class="fa-brands fa-instagram"></i></a></span>
+                                <span><a href="#"><i class="fa-brands fa-twitter"></i></a></span>
+                            </div>
                         </div>
                         <img src="../team/rohit.jpg">
                     </div>
                     <div class="founder-info">
                         <div class="founder-description">
-                            <h3 class="fonder-name heading-font">Ilu Dangol</h3>
+                            <h3 class="founder-name heading-font">Ilu Dangol</h3>
+                            <div class="socialLinks">
+                                <span><a href="#"><i class="fab fa-facebook"></i></a></span>
+                                <span><a href="#"><i class="fa-brands fa-instagram"></i></a></span>
+                                <span><a href="#"><i class="fa-brands fa-twitter"></i></a></span>
+                            </div>
                         </div>
                         <img src="../team/ilu4.jpg">
                     </div>

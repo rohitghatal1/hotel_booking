@@ -8,5 +8,6 @@ if ($memberDetails->num_rows > 0) {
         echo "<h4 class='team-member-name heading-font'>{$row['member_name']}</h4>";
         echo "<p class ='text-font'>{$row['member_position']}</p>";
         echo "</div>";
+ 
     }
 }

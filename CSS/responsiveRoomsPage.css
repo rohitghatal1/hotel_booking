@@ -206,8 +206,8 @@
     .more-details-button {
         font-size: smaller;
         margin-top: 10px;
-        background-color: #007bff;
-        color: #fff;
+        background-color: #101720;
+        color: #f0f8ff;
         border: none;
         border-radius: 5px;
         padding: 5px 10px;
@@ -230,6 +230,7 @@
 
     .about-hotel{
         width: 30%;
+        text-align: left;
     }
     
     #socialIcon{
