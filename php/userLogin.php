@@ -1,27 +1,35 @@
 <?php require '../database/databaseConnection.php'?>
-<?php
 
-// geting form data
+<?php
+session_start();
+
 $userName = $_POST['username'];
 $pass = $_POST['password'];
 
-$getUserData = "SELECT UID, username, password FROM users";
-$fetchedData = $conn->query($getUserData);
-if ($fetchedData->num_rows > 0) {
-    while ($row = $fetchedData->fetch_assoc()) {
-        if ($row['username'] == $userName && $row['password'] == $pass) {
-            session_start();
-            $_SESSION['user'] = $row['username'];
-            $_SESSION['userId'] = $row['UID'];
-            $loggedIn = true;
-            break;
-        }
+// Hash the password to match the stored hashed password
+$hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
+
+$getUserData = "SELECT UID, username, password FROM users WHERE username = ?";
+$getStmt = $conn->prepare($getUserData);
+$getStmt->bind_param("s", $userName);
+$getStmt->execute();
+$result = $getStmt->get_result();
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    // Verify the hashed password
+    if (password_verify($pass, $row['password'])) {
+        $_SESSION['user'] = $row['username'];
+        $_SESSION['userId'] = $row['UID'];
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        exit();
+    } else {
+        echo "Invalid username or password";
     }
-}
-if ($loggedIn) {
-    echo "<script>alert('LoginSuccessful')</script>";
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
 } else {
-    echo "<script>alert('User Not found')</script>";
-    echo "<script>window.history.back()</script>";
+    echo "User not found";
 }
+
+$getStmt->close();
+$conn->close();
+?>
