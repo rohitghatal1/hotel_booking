@@ -31,7 +31,6 @@
                     <th>Contact No</th>
                     <th>Email</th>
                     <th>Username</th>
-                    <th>Password</th>
                     <th colspan="2">Action</th>
                     <?php require '../database/databaseConnection.php'?>
                     <?php
@@ -52,7 +51,6 @@ if ($fetchedUserData->num_rows > 0) {
                                         <td>{$row['contact']}</td>
                                         <td>{$row['email']}</td>
                                         <td>{$row['username']}</td>
-                                        <td>{$row['password']}</td>
                                         <td><button id="editUserInfo" class="editUserButton" onclick='openEditUserModal("$userId")'><i class="fa-solid fa-plus"></i>Edit</button></td>
                                         <td><a href="deleteUser.php?userId=$userId" id="deleteUserBtn" class="deleteUserBtn"><i class="fa-solid fa-trash"></i></a></td>
                                     </tr>
