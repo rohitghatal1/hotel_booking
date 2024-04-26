@@ -140,6 +140,9 @@
     padding: 10px;
 }
 
+.dashboard-content h1{
+    text-align: center;
+}
 .cards{
     display: flex;
     justify-content: space-evenly;

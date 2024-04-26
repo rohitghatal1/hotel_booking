@@ -51,8 +51,8 @@ if ($fetchedUserData->num_rows > 0) {
                                         <td>{$row['contact']}</td>
                                         <td>{$row['email']}</td>
                                         <td>{$row['username']}</td>
-                                        <td><button id="editUserInfo" class="editUserButton" onclick='openEditUserModal("$userId")'><i class="fa-solid fa-plus"></i>Edit</button></td>
-                                        <td><a href="deleteUser.php?userId=$userId" id="deleteUserBtn" class="deleteUserBtn"><i class="fa-solid fa-trash"></i></a></td>
+                                        <td><button id="editUserInfo" class="editUserButton" onclick='openEditUserModal("$userId")'><i class="fa-regular fa-pen-to-square"></i></i></button></td>
+                                        <td><button class="deleteUserBtn" onclick="deleteUser($userId)"><i class="fa-solid fa-trash"></i></button></td>
                                     </tr>
                                 userdata;
         $count++;
@@ -112,6 +112,30 @@ if ($fetchedUserData->num_rows > 0) {
 
     function closeEditUserModal(){
         document.getElementById("editUser-Modal").style.display = "none";
+    }
+
+    function deleteUser(userId) {
+        if (confirm("Are you sure you want to delete this user?")) {
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+
+            // Configure the request
+            xhr.open("GET", "deleteUser.php?userId=" + userId, true);
+
+            // Define what happens on successful data submission
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    // Redirect or update the page as needed
+                    window.location.href = "a_userPage.php";
+                } else {
+                    // Handle errors or display a message
+                    console.error("Error deleting user: " + xhr.statusText);
+                }
+            };
+
+            // Send the request
+            xhr.send();
+        }
     }
 </script>
 </html>
