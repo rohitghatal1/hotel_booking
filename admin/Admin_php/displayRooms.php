@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
             <td>{$row['roomFeatures']}</td> <!-- This will display comma-separated feature names -->
             <td>{$row['roomFacilities']}</td> <!-- This will display comma-separated facility names -->
             <td><button id="addRoomsBtn" class="addRoomsBtn" onclick='openImageModal("$roomId")'><i class="fa-solid fa-plus"></i>Add Photos</button></td>
-            <td><a href="deleteRoom.php?roomId=$roomId" id="deleteRoomBtn" class="deleteRoomBtn"><i class="fa-solid fa-trash"></i>Delete</a></td>
+            <td><button class="deleteRoomBtn" onclick="confirmDelete($roomId)"><i class="fa-solid fa-trash"></i>Delete</button></td>
         </tr>
 roomDisplay;
         $n++;

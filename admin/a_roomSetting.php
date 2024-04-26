@@ -137,6 +137,30 @@
     function closeImageModal(){
         document.getElementById("addImage-modal").style.display="none";
     }
+
+    function confirmDelete(roomId) {
+        if (confirm("Are you sure you want to delete this room?")) {
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+
+            // Configure the request
+            xhr.open("GET", "deleteRoom.php?roomId=" + roomId, true);
+
+            // Define what happens on successful data submission
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    // Redirect or update the page as needed
+                    window.location.reload(); // Refresh the page to reflect changes
+                } else {
+                    // Handle errors or display a message
+                    console.error("Error deleting room: " + xhr.statusText);
+                }
+            };
+
+            // Send the request
+            xhr.send();
+        }
+    }
 </script>
 <script src="sendRoomData.js"></script>
 
