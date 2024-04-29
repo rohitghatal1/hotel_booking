@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Create database if it doesn't exist
-$database = "web_ppppppp";
+$database = "web_project";
 $sql = "CREATE DATABASE IF NOT EXISTS $database";
 
 if ($conn->query($sql) === TRUE) {
