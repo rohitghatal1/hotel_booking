@@ -1,4 +1,4 @@
-<!-- php script for retrieving data from generral settings  -->
+
 <?php include '../RetrieveData/fetchData.php';
 getGeneralData();
 getContactDetails(); //function call to retrieve data from the databases
@@ -182,7 +182,7 @@ getContactDetails(); //function call to retrieve data from the databases
             let minPrice = document.getElementById("min-price").value;
             let maxPrice = document.getElementById("max-price").value;
 
-            window.location.href = 'rooms.php?room_type=' + roomTypeFilter + '&min_price=' + minPrice + '&max_price=' + maxPrice;
+            window.location.href = 'rooms.php?room_type=' + minPrice + '&min_price=' + minPrice + '&max_price=' + maxPrice;
         }
 
     </script>

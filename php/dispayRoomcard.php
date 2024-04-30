@@ -8,6 +8,11 @@ $searchQuery = isset($_GET['search']) ? $_GET['search'] : '';
 $roomTypeFilter = isset($_GET['room_type']) ? $_GET['room_type'] : '';
 $minPrice = isset($_GET['min_price']) ? $_GET['min_price'] : '';
 $maxPrice = isset($_GET['max_price']) ? $_GET['max_price'] : '';
+echo "room type:_" . $roomTypeFilter . "\t";
+echo "max price:_" . $maxPrice . "\t";
+
+echo "min price:_" . $minPrice ."\t";
+
 
 // initial query for selecting rooms with no filter and search
 $roomInfo = "SELECT * FROM rooms";
