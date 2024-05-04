@@ -346,7 +346,8 @@ legend {
 }
 
 .founder-name{
-    margin-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
 }
 
 .founder-info img{
@@ -395,37 +396,6 @@ legend {
 p{
     text-align: center;
 }
-
-/* style for social media icons  */
-.socialLinks{
-    position: relative;
-    bottom: -20rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #f0f8ff;
-    padding: 1rem;
-    transition: all ease 0.8s;
-    height: 2rem;
-}
-
-
-.socialLinks a{
-    text-decoration: none;
-    color: #101720;
-    font-size: larger;
-}
-
-.founder-info:hover .founder-name{
-    margin-top: 2rem;
-    margin-left: 2rem;
-}
-.founder-info:hover .socialLinks{
-    position: relative;
-    margin-bottom: 20rem;
-}
-
 
 footer{
     position: relative;
