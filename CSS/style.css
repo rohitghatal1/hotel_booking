@@ -713,10 +713,6 @@ footer{
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 .about-hotel{
     color: #f0f8ff;

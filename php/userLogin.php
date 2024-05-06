@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         exit();
     } else {
-        echo "Invalid username or password";
+        echo "Invalid Password";
     }
 } else {
     echo "User not found";
