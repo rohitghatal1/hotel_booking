@@ -3,45 +3,9 @@
 <?php
 $bookButton = '';
 
-// code to include search and filter option
-$searchQuery = isset($_GET['search']) ? $_GET['search'] : '';
-$roomTypeFilter = isset($_GET['room_type']) ? $_GET['room_type'] : '';
-$minPrice = isset($_GET['min_price']) ? $_GET['min_price'] : '';
-$maxPrice = isset($_GET['max_price']) ? $_GET['max_price'] : '';
-echo "room type:_" . $roomTypeFilter . "\t";
-echo "max price:_" . $maxPrice . "\t";
-
-echo "min price:_" . $minPrice ."\t";
-
-
 // initial query for selecting rooms with no filter and search
 $roomInfo = "SELECT * FROM rooms";
 
-// check if search query is set
-if (!empty($searchQuery)) {
-    // adding search condition to the query
-    $roomInfo .= " WHERE roomType LIKE '%$searchQuery%'";
-}
-
-// check if roomType filter is set
-if (!empty($roomTypeFilter)) {
-    // checking if query already has a WHERE clause
-    if (strpos($roomInfo, 'WHERE') !== false) {
-        $roomInfo .= " AND roomType='$roomTypeFilter'";
-    } else {
-        $roomInfo .= " WHERE roomType='$roomTypeFilter'";
-    }
-}
-
-// adding price range filter to the query
-if (!empty($minPrice) && !empty($maxPrice)) {
-    // checking if query already has a WHERE clause
-    if (strpos($roomInfo, 'WHERE') !== false) {
-        $roomInfo .= " AND roomPrice BETWEEN $minPrice AND $maxPrice";
-    } else {
-        $roomInfo .= " WHERE roomPrice BETWEEN $minPrice AND $maxPrice";
-    }
-}
 $fetchedRoomData = $conn->query($roomInfo);
 
 if ($fetchedRoomData->num_rows > 0) {

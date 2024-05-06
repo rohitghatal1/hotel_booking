@@ -17,19 +17,24 @@ body{
 }
 
 /* styles for navigation bar  */
-.navbar{
+.navigationbar{
     position: fixed;
     width: 100%;
     background-color: #1f232e;
     padding: 15px 0;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     padding-bottom: 30px;
     z-index: 10;
     /* width: 80%; */
 }
 
+/* initially hide mobile nabvar  */
+.navbarforMobile{
+    display: none;
+}
+
+
 /* style for contents of nabigation bar  */
-.navbar-container{
+.navigationbar-container{
     display: flex; /*to display itemms in a row*/
     justify-content: space-between; /*deifnes positon for every elements with same spaces where first element is at left and last is at right side*/
     align-items: center;
@@ -37,10 +42,6 @@ body{
     margin: auto;
 }
 
-/* initially hide mobile nabvar  */
-.navbarforMobile{
-    display: none;
-}
 .hamburgerMenu {
     display: none; /* Initially hidden */
     cursor: pointer;
@@ -62,7 +63,7 @@ body{
     cursor: pointer;
 }
 
-.navbar-contents {
+.navigationbar-contents {
     list-style-type: none;
     display: flex;
 }
@@ -71,8 +72,7 @@ body{
     margin-right: 20px;
 }
 
-/* styles for font for navigation contents with decoration of hyperlin none */
-.item-links{
+.item-links {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     color: #f0f8ff;
@@ -86,7 +86,6 @@ body{
 .login-signup-button{
     margin-right: 15px;
 }
-
 .login-register-form{
     display: none;
     position: fixed;
@@ -95,7 +94,7 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    z-index: 12;
+    z-index: 11;
     transition: width 1s;
     -webkit-transition: width 1s;
     -moz-transition: width 1s;
@@ -103,14 +102,11 @@ body{
     -o-transition: width 1s;
 }
 
-.login-register-form label{
-    display: block;
-}
 .form-content{
     position: relative;
     width: 350px;
-    background-color: #f0f8ff;
-    color: #101720;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
     padding: 10px;
     text-align: left;
     border-left: 1px solid #ddd;
@@ -178,7 +174,7 @@ textarea{
 
 .button-inside-form,
 .login-signup-button{
-    background-color: #101720;
+    background-color: #1f232e;
     color: #f0f8ff;
     border: 1px solid #f0f8ff;
     border-radius: 5px;
@@ -199,7 +195,6 @@ textarea{
 .toggle-password-visibility{
     cursor: pointer;
 }
-
 .toggle-password-visibility:hover{
     color: #0000ff;
 }
@@ -220,13 +215,11 @@ textarea{
     font-size: 18px;
     font-weight: bold;
     margin-right: 60px;
-    width: 45px;
+    width: 39px;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
 }
-
-/* user drop toggler  */
 .userDropdown{
     position: relative;
 }
@@ -243,7 +236,7 @@ textarea{
     min-width: 19vw;
     text-align: center;
     border-radius: 10px;
-    z-index: 11;
+    z-index: 4;
     height: auto;
 }
 
@@ -284,6 +277,7 @@ textarea{
     text-decoration: none;
     font-size: 18px;
 }
+
 .dropdown-content a{
     margin-top: auto;
     text-decoration: none;
@@ -293,152 +287,334 @@ textarea{
     align-self: flex-end;
 }
 
-.facilities-display{
-    position: relative;
-    top: 6.5rem;
-    margin-bottom: 5rem;
-}
-.facility-container {
-    width: 90%;
-    margin: auto;
+/* filter button div  */
+.filter{
+    display: flex;
+    justify-content: right;
+    padding: 10px;
     background-color: #101720;
     color: #f0f8ff;
-    margin-bottom: 4rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 0;
 }
 
-.facility-discription {
+.filter-button{
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* filter modal  */
+.filter-container{
+    display: none;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition: width 0.8s;
+    -webkit-transition: width 0.8s;
+    -moz-transition: width 0.8s;
+    -ms-transition: width 0.8s;
+    -o-transition: width 0.8s;
+}
+
+/* filter condition div  */
+.filter-options{
+    position: relative;
+    width: 350px;
+    height: 100%;
+    text-align: left;
+    background-color: #101720;
+    color: #f0f8ff;
+    padding: 20px;
+}
+
+.filter-options label{
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.filter-options input[type = "text"],
+input[type = "date"],
+select{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.filter-options h2{
     text-align: center;
-    width: 50%;
-    margin: auto;
+    padding-bottom: 10px;
 }
 
-.facililty-heading {
+.close-filter{
+    color: #888;
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.priceRange{
+    margin-top: 10px;
+    padding: 10px;
+}
+.close-filter:hover{
+    color: #ff0000;
+}
+
+.btn-inside-filter-option{
+    margin-top: 5px;
+    background-color: #f0f8ff;
+    color: #101720;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rooms-section{
+    background-color: #101720;
+    color: #f0f8ff;
+    position: relative;
+    top: 71px;
+}
+.rooms-section h1{
     padding-top: 2rem;
     text-align: center;
 }
 
-.facility-section {
-    width: 80%;
+.rooms-container{
+    margin-bottom: 70px;
+    padding: 10px;
+    background-color: #101720;
+    color: #f0f8ff;
+    width: 90%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 4rem; 
 }
-
-.facility-items {
-    position: relative;
-    margin-top: 0.6rem;
-    padding: 2rem;
+.room-card-withmoreDetail {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #f0f8ff;
     color: #101720;
-    min-width: 350px;
-    max-width: 400px;
-    min-height: 150px;
-    text-align: left;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 2rem;
-    margin-left: 20px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure children don't overflow */
 }
 
-.facilityImage{
-    padding: 0;
-    width: 5rem;
-    height: 3rem;
+.room-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
-.facilityImage img {
+
+.room-card img {
+    width: 400px;
+    height: 250;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+
+.room-details {
+    flex: 1; /* Take remaining space */
+}
+
+.room-details h3,
+.room-details p {
+    text-align: left;
+    margin: 0;
+    padding: 5px 0;
+    color: #333;
+}
+
+.room-features,
+.room-facilities {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.booking h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.book-button,
+.more-details-button {
+    margin-top: 10px;
+    background-color: #101720;
+    color: #f0f8ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.moreDetails {
+    display: none; /* Initially hide the More Details section */
+    padding: 20px;
+}
+.moreDetails img{
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    mix-blend-mode: color-burn;
+    height: 500px;
 }
-.facility-items h4, p{
-    margin-left: 1rem;
+.moreDetails h3,
+p{
+    text-align: center;
+}
+.showLessDetailsBtn{
+    margin-top: 10px;
+    background-color: #101720;
+    color: #f0f8ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* for booking confirmation modal  */
+.confirmBookingModal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 40%;
+    width: 400px;
+    padding: 10px;
+    background-color: #f0f8ff;
+    color: #000;
+    border-radius: 5px;
+    z-index: 12;
+    border: 1px solid #101720;
+}
+
+.confirmBookingModal input[type="text"],
+input[type="number"]{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.closeBookingModal{
+    color: #888;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.closeBookingModal:hover{
+    color: #ff0000;
+}
+
+.confirmBtn{
+    margin-top: 10px;
+    background-color: #101720;
+    color: #f0f8ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 footer{
-    position: relative;
-    margin-top: 3rem;
-    clear: both;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #1f232e;
+    margin-top: 2rem;
+    clear: both;
 }
-
 .footer-container{
-    padding-top: 25px;
+    padding-top: 3rem;
     width: 80%;
     margin: 30px auto;
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
 }
-
-.about-hotel {
+.about-hotel{
     color: #f0f8ff;
-    width: 25%;
+    width: 30%;
 }
+
 #socialIcon{
     margin-right: 5px;
 }
-
-.links {
+.links{
     color: #f0f8ff;
     display: flex;
     flex-direction: column;
 }
-
-.links a {
+.links a{
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     color: #f0f8ff;
     margin-bottom: 5px;
 }
 
-.follow-us-links {
+.follow-us-links{
     color: #f0f8ff;
     margin-right: 30px;
     display: flex;
     flex-direction: column;
 }
 
-.follow-us-links a {
+.follow-us-links a{
     margin-right: 3px;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     color: #f0f8ff;
     margin-bottom: 5px;
 }
-
-hr {
+hr{
     border: 2px solid #f0f8ff;
-    width: 99%;
+    width:99%;
     position: relative;
     left: 10px;
 }
-
-.privacy-container {
+.privacy-container{
     display: flex;
     justify-content: center;
     margin-left: 20px;
     padding: 10px;
     color: #f0f8ff;
 }
-
-.privacy-policy {
+.privacy-policy{
     margin-left: 30px;
 }
-
-.terms-and-conditions {
+.terms-and-conditions{
     margin-left: 20px;
 }
-
-.privacy-container a {
+.privacy-container a{
     text-decoration: none;
     color: #f0f8ff;
 }
 
-
-button:active {
+button:active{
     scale: 0.9;
 }
+
