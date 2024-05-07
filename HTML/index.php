@@ -77,16 +77,18 @@ getContactDetails(); //function call to retrieve data from the databases
     <!-- booking availability check form  -->
     <div class="availability-check">
         <h2 class="availability-title">Check Booking Availability</h2>
-        <form action ="availabilityCheck.php" method="post" id="availability-form" class="booking-form">
+        <form action ="availabilityCheck.php" method="post" id="availability-form" class="booking-form" onsubmit="return validateForm('check-in-date','check-out-date', 'checkInError1','formerror1')">
 
             <div class="form-row">
                 <label for="check-in-date">Check-In Date:</label>
-                <input type="date" id="check-in-date" name="check-in-date" required>
+                <input type="date" id="check-in-date" name="check-in-date" required onchange="validateCheckIn('check-in-date', 'checkInError1')">
+                <p id="checkInError1" class="text-font" style="color:red;"></p>
             </div>
 
             <div class="form-row">
                 <label for="check-out-date">Check-Out Date:</label>
-                <input type="date" id="check-out-date" name="check-out-date" required>
+                <input type="date" id="check-out-date" name="check-out-date" required onchange="validateCheckOut('check-out-date', 'check-in-date', 'checkOutError1')">
+                <p id="checkOutError1" class="text-font" style="color:red;"></p>
             </div>
 
             <div class="form-row">
@@ -114,6 +116,8 @@ getContactDetails(); //function call to retrieve data from the databases
             } 
             ?>
                 <button type="submit" class="check-availability-btn">Check Availability</button>
+                <p id="formerror1" class="text-font" style="color:red;"></p>
+
             </div>
         </form>
     </div>
@@ -135,22 +139,23 @@ getContactDetails(); //function call to retrieve data from the databases
         <span class="closeBookingModal" onclick="closeBookingModal()">&times;</span>
         <div class="modalContent">
             <h3 class="heading-font">Confirm Booking</h3>
-            <form action="../php/confirmBooking.php" method="post" onsubmit="return validateForm()">
+            <form action="../php/confirmBooking.php" method="post" onsubmit="return validateForm('checkInDate','checkOutDate',  'checkOutError2','formerror2')">
 
                 <input type="hidden" name="roomId" id="room-Id" value="">
                 <input type="hidden" name="userId" id="user-Id" value="">
                 <input type="hidden" name="bookingDate" id="booking-Date" value="">
 
                 <label for="checkin">Check-in Date:</label>
-                <input type="date" id="checkInDate" name="checkInDate" required onchange="validateCheckIn()">
-                <p id="checkInError" class="text-font" style="color:red;"></p>
+                <input type="date" id="checkInDate" name="checkInDate" required onchange="validateCheckIn('checkInDate', 'checkInError2')">
+                <p id="checkInError2" class="text-font" style="color:red;"></p>
 
 
                 <label for="checkout">Check-out Date:</label>
-                <input type="date" id="checkOutDate" name ="checkOutDate" required onchange="validateCheckOut()">
-                <p id="checkOutError" class="text-font" style="color:red;"></p>
+                <input type="date" id="checkOutDate" name ="checkOutDate" required onchange="validateCheckOut('checkOutDate', 'checkInDate', 'checkOutError2')">
+                <p id="checkOutError2" class="text-font" style="color:red;"></p>
 
                 <button type="submit" class="confirmBtn">Confirm </button>
+                <p id="formerror2" class="text-font" style="color:red;"></p>
             </form>
         </div>
     </div>

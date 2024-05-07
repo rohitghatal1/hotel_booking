@@ -77,43 +77,46 @@ function autoSlide() {
 
 // -------------------------------------------------Booking Form validation---------------------------------------------------------
   // Function to validate the entire form
-  function validateForm() {
-    // Validate check-in and check-out dates
-    var checkInValid = validateCheckIn();
-    var checkOutValid = validateCheckOut();
+  // Function to validate the entire form
+function validateForm(checkInId,checkOutId,  errorId,formerror) {
+  // Validate check-in and check-out dates
+  var checkInValid = validateCheckIn(checkInId, errorId);
+  var checkOutValid = validateCheckOut(checkOutId, checkInId, errorId);
+  document.getElementById(formerror).textContent = "Enter Valid Dates to Proceed";
 
-    // Return false if any validation fails
-    return checkInValid && checkOutValid;
+  // Return false if any validation fails
+  return checkInValid && checkOutValid;
 }
 
+
 // Function to validate check-in date
-function validateCheckIn() {
-    var checkInDate = document.getElementById("checkInDate").value;
+function validateCheckIn( checkInId, errorId) {
+    var checkInDate = document.getElementById(checkInId).value;
     var checkIn = new Date(checkInDate);
     var today = new Date();
 
     if (checkIn < today) {
-        document.getElementById("checkInError").textContent = "Check-In date cannot be before today.";
+        document.getElementById(errorId).textContent = "Check-In date cannot be before today.";
         return false;
     } else {
-        document.getElementById("checkInError").textContent = "";
+        document.getElementById(errorId).textContent = "";
         return true;
     }
 }
 
 // Function to validate check-out date
-function validateCheckOut() {
-    var checkOutDate = document.getElementById("checkOutDate").value;
-    var checkOut = new Date(checkOutDate);
-    var checkInDate = document.getElementById("checkInDate").value;
-    var checkIn = new Date(checkInDate);
 
-    if (checkOut < checkIn) {
-        document.getElementById("checkOutError").textContent = "Check-out date can't be less than check-in date";
-        return false;
-    } else {
-        document.getElementById("checkOutError").textContent = "";
-        return true;
-    }
+function validateCheckOut(checkOutId, checkInId, errorId) {
+  var checkOutDate = document.getElementById(checkOutId).value;
+  var checkOut = new Date(checkOutDate);
+  var checkInDate = document.getElementById(checkInId).value;
+  var checkIn = new Date(checkInDate);
+
+  if (checkOut < checkIn) {
+      document.getElementById(errorId).textContent = "Check-out date can't be less than check-in date";
+      return false;
+  } else {
+      document.getElementById(errorId).textContent = "";
+      return true;
+  }
 }
-
