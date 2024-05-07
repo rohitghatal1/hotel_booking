@@ -135,19 +135,21 @@ getContactDetails(); //function call to retrieve data from the databases
         <span class="closeBookingModal" onclick="closeBookingModal()">&times;</span>
         <div class="modalContent">
             <h3 class="heading-font">Confirm Booking</h3>
-            <form action="../php/confirmBooking.php" method="post">
+            <form action="../php/confirmBooking.php" method="post" onsubmit="return validateForm()">
 
                 <input type="hidden" name="roomId" id="room-Id" value="">
                 <input type="hidden" name="userId" id="user-Id" value="">
                 <input type="hidden" name="bookingDate" id="booking-Date" value="">
 
                 <label for="checkin">Check-in Date:</label>
-                <input type="date" name="checkInDate" required>
+                <input type="date" id="checkInDate" name="checkInDate" required onchange="validateCheckIn()">
+                <p id="checkInError" class="text-font" style="color:red;"></p>
+
 
                 <label for="checkout">Check-out Date:</label>
-                <input type="date" name ="checkOutDate" required>
+                <input type="date" id="checkOutDate" name ="checkOutDate" required onchange="validateCheckOut()">
+                <p id="checkOutError" class="text-font" style="color:red;"></p>
 
-                <p class="text-font" style="color:red;">Provide check-in and check-out date</p>
                 <button type="submit" class="confirmBtn">Confirm </button>
             </form>
         </div>
@@ -250,6 +252,7 @@ getContactDetails(); //function call to retrieve data from the databases
         function closeBookingModal(){
             document.getElementById("confirmBooking-Modal").style.display="none";
         }
+
     </script>
 </body>
 

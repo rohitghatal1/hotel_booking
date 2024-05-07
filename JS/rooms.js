@@ -36,3 +36,46 @@ filtertoggler.addEventListener("click", function () {
         let dropdown = document.querySelector('.dropdown-content');
         dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
     }
+
+// -------------------------------------------------Booking Form validation---------------------------------------------------------
+  // Function to validate the entire form
+  function validateForm() {
+    // Validate check-in and check-out dates
+    var checkInValid = validateCheckIn();
+    var checkOutValid = validateCheckOut();
+
+    // Return false if any validation fails
+    return checkInValid && checkOutValid;
+}
+
+// Function to validate check-in date
+function validateCheckIn() {
+    var checkInDate = document.getElementById("checkInDate").value;
+    var checkIn = new Date(checkInDate);
+    var today = new Date();
+
+    if (checkIn < today) {
+        document.getElementById("checkInError").textContent = "Check-In date cannot be before today.";
+        return false;
+    } else {
+        document.getElementById("checkInError").textContent = "";
+        return true;
+    }
+}
+
+// Function to validate check-out date
+function validateCheckOut() {
+    var checkOutDate = document.getElementById("checkOutDate").value;
+    var checkOut = new Date(checkOutDate);
+    var checkInDate = document.getElementById("checkInDate").value;
+    var checkIn = new Date(checkInDate);
+
+    if (checkOut < checkIn) {
+        document.getElementById("checkOutError").textContent = "Check-out date can't be less than check-in date";
+        return false;
+    } else {
+        document.getElementById("checkOutError").textContent = "";
+        return true;
+    }
+}
+
