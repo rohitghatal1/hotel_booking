@@ -26,8 +26,8 @@
         <div class="bookingsTable">
             <table border=1>
                 <th>SN</th>
-                <th>User Id</th>
-                <th>Room Id</th>
+                <th>User Name</th>
+                <th>Room No</th>
                 <th>Check-in Date</th>
                 <th>Check-out Date</th>
                 <th>Booked Date</th>
@@ -44,12 +44,12 @@ if ($fetchedBookingData->num_rows > 0) {
         echo <<<bookingData
                                 <tr>
                                     <td>$count</td>
-                                    <td>{$row['userId']}</td>
-                                    <td>{$row['roomId']}</td>
+                                    <td>{$row['Name']}</td>
+                                    <td>{$row['roomNo']}</td>
                                     <td>{$row['checkInDate']}</td>
                                     <td>{$row['checkOutDate']}</td>
                                     <td>{$row['bookedDate']}</td>
-                                    <td><a class="cancelBookingBtn" href="cancelBooking.php?roomId={$roomId}">Cancel Booking</a></td>
+                                    <td><button class="cancelBookingBtn" onclick='confirmCancelBooking($roomId)'><i class='fa-solid fa-xmark'></i>Cancel Booking</button></td>
                                 </tr>
                             bookingData;
         $count++;
@@ -62,5 +62,30 @@ if ($fetchedBookingData->num_rows > 0) {
     </main>
 
     <script src="common/commonAdminJS.js"></script>
+    <script>
+    function confirmCancelBooking(roomId){
+        if(confirm("Are you sure you want to cancel this booking?")){
+            cancelBooking(roomId);
+        }
+    }
+
+    function cancelBooking(roomId) {
+        // Sending AJAX request
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "cancelBooking.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                   location.reload();
+                } else {
+                    // Handle error response if needed
+                    console.error('Error: ' + xhr.status);
+                }
+            }
+        };
+        xhr.send("roomId=" + roomId);
+    }
+    </script>
 </body>
 </html>

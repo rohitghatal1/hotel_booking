@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("submitBtn").addEventListener("click", function () {
     //retrieve form data
+    let roomNo = document.getElementById("roomNo").value();
     let roomType = document.getElementById("roomType").value();
     let roomDesc = document.getElementById("roomDesc").value();
     let roomQuantity = document.getElementById("roomQuantity").value();
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //create form Data object
     let formData = new FormData();
+    formData.append("roomNo", roomNo);
     formData.append("roomType", roomType);
     formData.append("roomDesc", roomDesc);
     formData.append("roomQuantity", roomQuantity);

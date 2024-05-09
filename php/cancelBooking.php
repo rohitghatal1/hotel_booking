@@ -1,5 +1,5 @@
 <?php
-require '../database/databaseConnection.php'; // Include your database connection file
+require '../database/databaseConnection.php';
 
 if (isset($_POST['roomId'])) {
     $roomId = $_POST['roomId'];

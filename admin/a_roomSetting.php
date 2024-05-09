@@ -31,6 +31,10 @@
 
             <!-- form to get information about room  -->
                 <form action="addRooms.php" method="post">
+
+                    <label for="roomNo">Room Number:</label>
+                    <input type="text" name="roomNo" id="roomNo">
+
                     <label for="roomName">Room Type:</label>
                     <select name="roomType" id="roomType">
                         <option value="" selected disabled hidden>Select Room Type</option>
@@ -57,7 +61,7 @@
         </div>
         <div class="roomsTable">
             <table border=1>
-                <th>SN</th>
+                <th>Room No</th>
                 <th>Room Type</th>
                 <th>Description</th>
                 <th>Status</th>

@@ -67,14 +67,14 @@
                         echo "<h4 class='heading-font'>Features:</h4>";
                         echo "<div class='feature'>";
                         foreach ($features as $feature) {
-                            echo "<span>$feature</span>";
+                            echo "<span>$feature&nbsp</span>";
                         }
                         echo "</div></div>";
                         echo "<div class='room-facilities'>";
                         echo "<h4 class='heading-font'>Facilities:</h4>";
                         echo "<div class='facility'>";
                         foreach ($facilities as $facility) {
-                            echo "<span>$facility</span>";
+                            echo "<span>$facility&nbsp</span>";
                         }
                         echo "</div></div></div>";
                         echo "<div class='booking'>";

@@ -4,14 +4,13 @@ require '../database/databaseConnection.php';
 // Fetch data from the rooms table
 $getRoomsQuery = "SELECT * FROM rooms";
 $result = $conn->query($getRoomsQuery);
-$n = 1;
 if ($result->num_rows > 0) {
     // Output data of each row using heredoc
     while ($row = $result->fetch_assoc()) {
         $roomId = $row['roomId'];
         echo <<<roomDisplay
         <tr>
-            <td>$n</td>
+            <td>{$row['roomNo']}</td>
             <td>{$row['roomType']}</td>
             <td>{$row['roomDesc']}</td>
             <td>{$row['status']}</td>
@@ -22,7 +21,6 @@ if ($result->num_rows > 0) {
             <td><button class="deleteRoomBtn" onclick="confirmDelete($roomId)"><i class="fa-solid fa-trash"></i>Delete</button></td>
         </tr>
 roomDisplay;
-        $n++;
     }
 } else {
     echo "<tr><td colspan='7'>No results found</td></tr>";

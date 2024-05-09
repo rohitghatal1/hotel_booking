@@ -7,6 +7,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $checkIn = $_POST['checkInDate'];
     $checkOut = $_POST['checkOutDate'];
 
+    // for feteching user Name
+    $getUserName = "SELECT firstName, lastName FROM users WHERE UID =$userId";
+    $userName = $conn->query($getUserName);
+    $row = $userName->fetch_assoc();
+
+    $fName = $row['firstName'];
+    $lName = $row['lastName'];
+    $fullName = $fName . " " . $lName;
+
+    // for getting roomNumber
+    $getRoomNumber = "SELECT roomNo FROM rooms WHERE roomId = $roomId";
+    $roomNo = $conn->query($getRoomNumber);
+    $roomNum = $roomNo->fetch_assoc();
+    $fetchedRoomNo = $roomNum['roomNo'];
+
     // Validate check-in and check-out dates
     $today = date('Y-m-d');
     if ($checkIn < $today || $checkOut < $today || $checkOut < $checkIn) {
@@ -15,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit; // stop further execution
     }
 
-    $bookingDetails = $conn->prepare("INSERT INTO bookings (userId, roomId, checkInDate, checkOutDate, bookedDate) VALUES (?,?,?,?,?);");
-    $bookingDetails->bind_param("iisss", $userId, $roomId, $checkIn, $checkOut, $bookingDate);
+    $bookingDetails = $conn->prepare("INSERT INTO bookings (userId, Name, roomId, roomNo, checkInDate, checkOutDate, bookedDate) VALUES (?,?,?,?,?,?,?);");
+    $bookingDetails->bind_param("isiisss", $userId, $fullName, $roomId, $fetchedRoomNo, $checkIn, $checkOut, $bookingDate);
     if ($bookingDetails->execute()) {
         $bookingDone = true;
         echo "<script>alert('Booking Successful')</script>";
