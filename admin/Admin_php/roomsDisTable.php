@@ -9,6 +9,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo <<<roomDisplay
         <tr>
+            <td>{$row['roomNo']}</td>
             <td><img src={$row['imagePath']} height="80px"/></td>
             <td><img src={$row['photo1']} height="50px"/></td>
             <td><img src={$row['photo2']} height="50px"/></td>

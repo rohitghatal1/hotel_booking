@@ -74,6 +74,7 @@
                 <?php require 'Admin_php/displayRooms.php';?>
             </table>
             <table border=1>
+                <th rowspan="2">Room No</th>
                 <th rowspan="2">Display Image</th>
                 <th colspan="4">Sliding Images</th>
                 <th rowspan="2">Detailed Infromation</th>

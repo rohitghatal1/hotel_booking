@@ -109,5 +109,27 @@
     document.getElementById("closeFeatureModal").addEventListener("click", function(){
         document.getElementById("featureModal").style.display = "none";
     })
+
+
+    function deleteFacility(name) {
+    if (confirm("Are you sure you want to delete this facility?")) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "deleteFacility.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                if (xhr.status == 200) {
+                    // Facility deleted successfully, you can perform any action here if needed
+                    location.reload(); // Reload the page to reflect changes
+                } else {
+                    console.error('Error: ' + xhr.status);
+                    // Handle error here if needed
+                }
+            }
+        };
+        xhr.send("name=" + encodeURIComponent(name)); // Send facility name
+    }
+}
+
 </script>
 </html>

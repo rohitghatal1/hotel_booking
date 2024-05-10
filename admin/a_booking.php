@@ -55,6 +55,9 @@ if ($fetchedBookingData->num_rows > 0) {
         $count++;
     }
 }
+else{
+    echo"<tr><td colspan='7'>No Bookings yet!!!</td></tr>";
+}
 ?>
             </table>
         </div>
