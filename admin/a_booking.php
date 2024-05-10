@@ -79,7 +79,7 @@ if ($fetchedBookingData->num_rows > 0) {
                 if (xhr.status === 200) {
                    location.reload();
                 } else {
-                    // Handle error response if needed
+                    // Handle error response
                     console.error('Error: ' + xhr.status);
                 }
             }
