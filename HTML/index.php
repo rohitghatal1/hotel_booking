@@ -82,22 +82,29 @@ getContactDetails(); //function call to retrieve data from the databases
             <div class="form-row">
                 <label for="check-in-date">Check-In Date:</label>
                 <input type="date" id="check-in-date" name="check-in-date" required onchange="validateCheckIn('check-in-date', 'checkInError1')">
-                <p id="checkInError1" class="text-font" style="color:red;"></p>
+                <p id="checkInError1" class="text-font" style="color:red; font-size:small"></p>
             </div>
 
             <div class="form-row">
                 <label for="check-out-date">Check-Out Date:</label>
                 <input type="date" id="check-out-date" name="check-out-date" required onchange="validateCheckOut('check-out-date', 'check-in-date', 'checkOutError1')">
-                <p id="checkOutError1" class="text-font" style="color:red;"></p>
+                <p id="checkOutError1" class="text-font" style="color:red; font-size:small"></p>
             </div>
 
             <div class="form-row">
                 <label for="roomType">Room Type</label>
                 <select id="roomType" name="roomType" required>
-                    <option value="Basic">Baisc</option>
-                    <option value="Standard">Standard</option>
-                    <option value="Deluxe">Deluxe</option>
-                    <option value="Luxury">Luxury</option>
+                    
+                    <!-- to display rooms type available  -->
+                    <?php 
+                    $getRoomType = "SELECT roomType FROM rooms";
+                    $roomType = $conn->query($getRoomType);
+                    if($roomType->num_rows>0){
+                        while($fetchedRoomType = $roomType->fetch_assoc()){
+                            echo "<option value = '" . $fetchedRoomType['roomType'] . "'>" . $fetchedRoomType['roomType'] . "</option>";
+                        }
+                    } 
+                    ?>
                 </select>
             </div>
 
@@ -110,13 +117,8 @@ getContactDetails(); //function call to retrieve data from the databases
                 </select>
             </div>
             <div class="form-row">
-            <?php
-            if (isset($_GET['error'])) {
-                echo '<div style="color:red"; >' . $_GET['error'] . '</div>';
-            } 
-            ?>
                 <button type="submit" class="check-availability-btn">Check Availability</button>
-                <p id="formerror1" class="text-font" style="color:red;"></p>
+                <p id="formerror1" class="text-font" style="color:red; font-size:small"></p>
 
             </div>
         </form>
@@ -222,15 +224,7 @@ getContactDetails(); //function call to retrieve data from the databases
     <!-- to include code for getting form data and send it to php to store in database  -->
     <script src = "../JS/sendRegisterDataToDb.js"></script>
 
-    <!-- to toggle dropdown for user logout  -->
-    <script>
-        function toggleDropdown(){
-            let dropdown = document.querySelector('.dropdown-content');
-            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-        }
-    </script>
-
-    <!-- script for opening and closeBookingModal on window -->
+    <!-- script for opening and closeBookingModal on window after checking user login -->
     <script>
         function handleBooking(roomID) {
             <?php if (isset($_SESSION['user'])) {?>

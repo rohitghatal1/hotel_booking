@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #101720;
+}
+
 /* for styling all heading with same font  */
 .heading-font{
     font-family: 'Merienda', cursive;
@@ -15,17 +19,30 @@
 }
 
 h2{
-    background-color: black;
-    color: #fff;
-    padding: 10px;
     text-align: center;
+    color: #f0f8ff;
+    background-color: #1f232e;
+    padding: 1rem;
+}
+
+.goBackBtn{
+    color: #f0f8ff;
+    position: absolute;
+    right: 2rem;
+    top: 1.25rem;
+    background-color: #1f232e;
+    padding: 3px;
+    font-weight: bold;
+    border: 1px solid #f0f8ff;
+    border-radius: 5px;
 }
 
 .room-card{
     position: relative;
     border: #ccc;
+    background-color: #f0f8ff;
+    color: #101720;
     border-radius: 5px;
-    box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
     padding: 10px;
     max-width: 400px;
     margin: 10px;
@@ -86,15 +103,29 @@ h2{
 
 /* button inside room card  */
 .book-button{
-    margin-top: 5px;
-    background-color: #007bff;
-    color: #fff;
+    margin-top: 10px;
+    background-color: #101720;
+    color: #f0f8ff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
 }
-.book-button:hover{
-    background-color: #0056b3;
+
+/* for showing no rooms error  */
+.noRoomsError{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 5rem;
+    min-height: 5rem;
+    background-color: #101010;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }

@@ -15,6 +15,10 @@
 </head>
 
 <body>
+    <div class="noRoomsHeading">
+        <h2 class="heading-font">Available Rooms</h2>
+        <button class="goBackBtn" onclick="window.location.href = 'index.php'">Go Back</button>
+    </div>
 
 <?php
 require '../database/databaseConnection.php';
@@ -55,25 +59,20 @@ if ($getRoomsResult->num_rows > 0) {
 
         // Display room card
         ?>
-        <h2 class="heading-font">Available Rooms</h2>
         <div class="room-card">
             <img src="<?php echo $room['imagePath']; ?>">
             <h3 class="heading-font"><?php echo $room['roomType']; ?></h3>
             <p class="text-font"><?php echo $room['roomDesc']; ?></p>
             <p class="text-font"><strong>Price:</strong> <?php echo $room['roomPrice']; ?></p>
-            <!-- Add more room details here if needed -->
             <button class="book-button" onclick="handleBooking(<?php echo $roomId; ?>)">Book Now</button>
         </div>
         <?php
     }
 }
-
-// If no rooms are available for the specified type or dates, display appropriate message
-if (!$roomsAvailable) {
-    // echo "<script>alert('No rooms available for the selected room type and dates. Please select a different room type or dates.')</script>";
-    // echo "<script>window.history.back()</script>";
-    header('location:index.php?error="No rooms available for the selected room type and dates. Please select a different room type or dates"');
+else{
+    echo"<div class='noRoomsError'>No rooms available within this time period!!!</div>";
 }
+
 ?>
 </body>
 <script>

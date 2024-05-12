@@ -9,6 +9,12 @@ function closeSidebarNav(){
   document.body.classList.remove("sidebar-open");
 }
 
+//  to toggle dropdown for user logout 
+function toggleDropdown(){
+  let dropdown = document.querySelector('.dropdown-content');
+  dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+}
+
 // ----------------------------------------------------------image slider----------------------------------------------------------
 // JavaScript for Image Slider
 // Get references to HTML elements
@@ -120,3 +126,5 @@ function validateCheckOut(checkOutId, checkInId, errorId) {
       return true;
   }
 }
+
+
