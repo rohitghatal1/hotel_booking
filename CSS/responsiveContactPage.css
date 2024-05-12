@@ -193,14 +193,13 @@
     .footer-container{
         font-size: smaller;
         padding-top: 1rem;
-        width: 90%;
+        width: 98%;
         margin: auto;
         display: flex;
         justify-content: space-between;
     }
 
     .about-hotel{
-
         width: 30%;
         padding: 5px;
     }

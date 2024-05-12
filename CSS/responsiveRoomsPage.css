@@ -230,10 +230,16 @@
 
     .about-hotel{
         width: 30%;
-        text-align: left;
-        padding: 5px;
+        text-align: left !important;
     }
     
+    .about-hotel h2{
+        font-size: medium;
+    }
+    .about-hotel p{
+        font-size: small;
+    }
+
     #socialIcon{
         margin-right: 5px;
     }
@@ -241,21 +247,32 @@
         display: flex;
         flex-direction: column;
     }
+
+    .links h2{
+        font: medium;
+    } 
+
     .links a{
         font-family: 'Poppins', sans-serif;
+        font-size: small;
         text-decoration: none;
         margin-bottom: 5px;
     }
+
     .follow-us-links{
         margin-right: 30px;
         display: flex;
         flex-direction: column;
     }
     
+    .follow-us-links h2{
+        font-size: medium;
+    }
     
     .follow-us-links a{
         margin-right: 3px;
         font-family: 'Poppins', sans-serif;
+        font-size: small;
         text-decoration: none;
         margin-bottom: 5px;
     }
