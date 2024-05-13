@@ -177,7 +177,7 @@ td{
 .editUserButton{
     margin-left: 5px;
     padding: 3px;
-    background-color: greenyellow;
+    background-color: #161B40;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -244,4 +244,9 @@ input[type="password"]{
 
 label{
     font-family: 'Poppins', sans-serif;
+}
+
+button:active{
+    scale: 0.9;
+    transition: all ease 0.2s;
 }

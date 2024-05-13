@@ -92,3 +92,8 @@ button:active{
     -ms-transition: all ease 0.8s;
     -o-transition: all ease 0.8s;
 }
+
+button:active{
+    scale: 0.9;
+    transition: all ease 0.2s;
+}

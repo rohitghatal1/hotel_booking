@@ -268,3 +268,8 @@ td{
 .deleteFacilityBtn:hover{
     background-color: rgb(161, 13, 13);
 }
+
+button:active{
+    scale: 0.9;
+    transition: all ease 0.2s;
+}

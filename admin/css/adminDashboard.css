@@ -194,3 +194,8 @@ a{
     color: #fff;
 }
 
+button:active{
+    scale: 0.9;
+    transition: all ease 0.2s;
+}
+

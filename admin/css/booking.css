@@ -182,3 +182,7 @@ border-radius: 3px;
 border: none;
 }
 
+button:active{
+    scale: 0.9;
+    transition: all ease 0.2s;
+}

@@ -419,3 +419,8 @@ p{
     border-radius: 3px;
     border: 1px solid #fff;
 }
+
+button:active{
+    scale: 0.9;
+    transition: all ease 0.2s;
+}
