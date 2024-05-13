@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #161B40;
+}
+
 /* for styling all heading with same font  */
 .heading-font{
     font-family: 'Merienda', cursive;
@@ -142,7 +146,7 @@
     margin-left: 270px;
     padding: 15px;
     width: 1200px;
-    background-color: #ccc;
+    background-color: black;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
 }
@@ -174,7 +178,8 @@
     display: none;
     top: 0;
     left: 40%;
-    background-color: #eee;
+    background-color: #161B40;
+    color: #fff;
     width: 400px;
     padding: 10px;
     border-radius: 5px;
@@ -222,15 +227,12 @@ textarea{
 
 .submitBtn{
     padding: 10px;
-    background-color: #1202f2;
-    color: white;
+    background-color: #161B40;
+    color: #fff;
     font-weight: bold;
-    border: none;
+    border: 1px solid #fff;
     border-radius: 3px;
     cursor: pointer;
-}
-.submitBtn:hover{
-    background-color: #0c00d3;
 }
 
 .tableheading{

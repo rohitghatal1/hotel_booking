@@ -85,7 +85,7 @@ getContactDetails(); //function call to retrieve data from the databases
                         <div class="founder-description">
                             <h3 class="founder-name heading-font">Ilu Dangol</h3>
                         </div>
-                        <img src="../team/ilu4.jpg">
+                        <img src="../team/ilu.jpg">
                     </div>
                 </div>
             </fieldset>

@@ -417,6 +417,10 @@ hr {
     left: 10px;
 }
 
+.copyright-info{
+    cursor: pointer;
+}
+
 .privacy-container {
     display: flex;
     justify-content: center;

@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #161B40;
+}
 /* for styling all heading with same font  */
 .heading-font{
     font-family: 'Merienda', cursive;
@@ -14,11 +17,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.dashboard-container{
-    background-color: #fff;
-    color: black;
-    margin-top: 0;
-}
 
 .heading{
     position: fixed;
@@ -135,13 +133,18 @@
     color: white;
 }
 
+.dashboard-container{
+    background-color: #161B40;
+    margin-top: 0;
+}
+
 .settings-container{
     display: block;
     margin-top: 85px;
     margin-left: 280px;
     padding: 15px;
     width: 1200px;
-    background-color: #ccc;
+    background-color: black;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
 }
@@ -184,11 +187,12 @@
 
 .edit-settings-contents{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 40%;
     width: 400px;
-    background-color: #eee;
+    background-color: #161B40;
+    color: #fff;
     padding: 10px;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
     border-radius: 8px;
@@ -227,10 +231,10 @@ textarea{
 .confirmBtn{
     margin-top: 10px;
     padding: 10px;
-    background-color: #1202f2;
-    border-radius: 5px;
+    background-color: #161B40;
     color: white;
-    border: none;
+    border-radius: 5px;
+    border: 1px solid #fff;
     font-size: 15px;
     font-weight: bold;
 }
@@ -282,7 +286,8 @@ textarea{
     display: none;
     width: 400px;
     padding: 10px;
-    background-color: #eee;
+    background-color: #161B40;
+    color: #fff;
     border-radius: 10px;
     position: fixed;
     top: 0;
@@ -355,12 +360,9 @@ textarea{
     left: 40%;
     width: 400px;
     border-radius: 10px;
-    background-color: #eee;
+    background-color: #161B40;
+    color: #fff;
     padding: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
 .addTeamMember-modal input[type="text"],
 input[type="file"],
@@ -375,15 +377,12 @@ select
 }
 .submitBtn{
     padding: 10px;
-    background-color: #1202f2;
+    background-color: #161B40;
     color: white;
     font-weight: bold;
-    border: none;
+    border: 1px solid #fff;
     border-radius: 3px;
     cursor: pointer;
-}
-.submitBtn:hover{
-    background-color: #0c00d3;
 }
 
 /* code to style team memberr view  */
@@ -394,7 +393,8 @@ select
 }
 .team-member-info{
     margin-bottom: 15px;
-    background-color: antiquewhite;
+    background-color: #161B40;
+    color: #fff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     overflow: hidden;
@@ -413,9 +413,9 @@ p{
 .deleteMemberBtn{
     margin: auto;
     text-decoration: none;
-    background-color: red;
+    background-color: #161B40;
     color: white;
     padding: 4px;
     border-radius: 3px;
-    border: none;
+    border: 1px solid #fff;
 }

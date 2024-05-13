@@ -469,6 +469,11 @@ hr {
     margin-left: 20px;
     padding: 10px;
     color: #f0f8ff;
+    cursor: pointer;
+}
+
+.copyright-info{
+    cursor: pointer;
 }
 
 .privacy-policy {
@@ -484,9 +489,6 @@ hr {
     color: #f0f8ff;
 }
 
-.privacy-container a:hover {
-    color: rgb(37, 37, 248);
-}
 
 button:active {
     scale: 0.9;

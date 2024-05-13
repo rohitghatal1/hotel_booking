@@ -451,6 +451,10 @@ hr {
     left: 10px;
 }
 
+.copyright-info{
+    cursor: pointer;
+}
+
 .privacy-container {
     display: flex;
     justify-content: center;
@@ -472,9 +476,6 @@ hr {
     color: #f0f8ff;
 }
 
-.privacy-container a:hover {
-    color: rgb(37, 37, 248);
-}
 
 button:active {
     scale: 0.9;

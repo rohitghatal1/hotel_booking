@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #161B40;
+}
+
 /* for styling all heading with same font  */
 .heading-font{
     font-family: 'Merienda', cursive;
@@ -104,7 +108,7 @@
 
 .sidebar{
     position: fixed;
-    top: 75px;
+    top: 72px;
     left: 0;
     width: 250px;
     height: 100%;
@@ -112,6 +116,7 @@
     color: white;
     padding: 10px;
     padding-left: 30px;
+    border-top: 1px solid #fff;
 }
 
 .sidebar_menu{
@@ -135,13 +140,15 @@
 }
 
 .dashboard-content{
+    background-color: #161B40;
     margin-top: 75px;
-    margin-left: 270px;
+    margin-left: 15.5rem;
     padding: 10px;
 }
 
 .dashboard-content h1{
     text-align: center;
+    color: #fff;
 }
 .cards{
     display: flex;
@@ -156,46 +163,34 @@ p{
     margin-left: 10px;
     text-align: center;
     width: 300px;
-    background-color: #eee;
+    background-color: #fff;
     border-radius: 10px;
     padding: 10px;
 }
 
 .roomCard{
     padding: 10px;
-    background-color: yellowgreen;
+    background-color: black;
+    color: #fff;
     min-height: 150px;
-    transition: background-color 1s;
-}
-
-.roomCard:hover{
-    background: radial-gradient(circle at top right, blue, green, yellow);
 }
 
 .userCard{
     padding: 10px;
-    background-color: rgb(156, 17, 126);
+    background-color: black;
+    color: #fff;
     min-height: 150px;
-    transition: background-color 1s;
-}
-
-.userCard:hover{
-    background: radial-gradient(circle at top right, rgb(28, 236, 205), rgb(172, 4, 158), rgb(81, 23, 225));
 }
 
 .bookingCard{
     padding: 10px;
-    background-color: rgb(32, 114, 236);
+    background-color: black;
+    color: #fff;
     min-height: 150px;
-    transition: background-color 1s;
-}
-
-.bookingCard:hover{
-    background: radial-gradient(circle at top right, rgb(12, 250, 47), rgb(54, 10, 231), rgb(214, 22, 22));
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
