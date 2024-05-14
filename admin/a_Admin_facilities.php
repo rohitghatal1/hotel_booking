@@ -111,6 +111,7 @@
     })
 
 
+    // to delete a facility 
     function deleteFacility(name) {
     if (confirm("Are you sure you want to delete this facility?")) {
         var xhr = new XMLHttpRequest();

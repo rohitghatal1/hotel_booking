@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
+body{
+    background-color: #101720;
 }
 
 /* for styling all heading with same font  */
@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #1f232e;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -28,21 +28,19 @@ header {
 
 .goBackBtn{
     position: absolute;
-    right: 20px;
+    right: 5rem;
     top: 20px;
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 16px;
+    background-color: #1f232e;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
+    font-size: 1rem;
     cursor: pointer;
-}
-
-.goBackBtn:hover{
-    color: #666;
+    padding: 3px;
 }
 
 .userData-Container {
-    background-color: #ccc;
+    background-color: #101720;
+    color: #f0f8ff;
     margin: 20px;
 }
 .userData-Container h2{
@@ -51,12 +49,15 @@ header {
 }
 
 .bookedRoomsSection{
+    width: 90%;
+    margin: auto;
     padding: 10px;
-    background-color: #eee;
+    background-color: #101720;
 }
 
 .room-card {
-    background-color: #fff;
+    background-color: #f0f8ff;
+    color: #101720;
     margin-top: 5px;
     display: flex;
     align-items: center;
@@ -87,7 +88,6 @@ header {
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
-    background-color: #f9f9f9;
 }
 
 .booking {
@@ -115,17 +115,12 @@ header {
 .cancelBooking-button i{
     margin-right: 5px;
 }
-.book-button{
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 .bookingDates{
+    background-color: #f0f8ff;
+    color: #101720;
+    border: 1px solid #101720;
+    padding: 5px;
     margin-top: 5px;
     font-weight: bold;
 }
