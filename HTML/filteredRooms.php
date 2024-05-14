@@ -158,6 +158,31 @@ else{
         </div>
     </div>
 
+    <!-- code for confirmBookingModal  -->
+    <div class="confirmBookingModal" id="confirmBooking-Modal">
+        <span class="closeBookingModal" onclick="closeBookingModal()">&times;</span>
+        <div class="modalContent">
+            <h3 class="heading-font">Confirm Booking</h3>
+            <form action="../php/confirmBooking.php" method="post" onsubmit="return validateForm()">
+
+                <input type="hidden" name="roomId" id="room-Id" value="">
+                <input type="hidden" name="userId" id="user-Id" value="">
+                <input type="hidden" name="bookingDate" id="booking-Date" value="">
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkInDate" name="checkInDate" required onchange="validateCheckIn()">
+                <p id="checkInError" class="text-font" style="color:red;"></p>
+
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkOutDate" name ="checkOutDate" required onchange="validateCheckOut()">
+                <p id="checkOutError" class="text-font" style="color:red;"></p>
+
+                <button type="submit" class="confirmBtn">Confirm </button>
+            </form>
+        </div>
+    </div>
+
     <!-- to include code for footer from the common folder -->
     <?php require '../common/footer.php'?>
 
@@ -167,3 +192,30 @@ else{
     <script src = ../JS/rooms.js></script>
     
 </body>
+
+<script>
+        function handleBooking(roomID) {
+            <?php if (isset($_SESSION['user'])) {?>
+                try {
+                    document.getElementById("confirmBooking-Modal").style.display = "block";
+                    let userId = <?php echo $_SESSION['userId']; ?>;
+                    if (!userId) {
+                        throw new Error('User ID not found in session.');
+                    }
+                    let currentDate = new Date().toISOString().slice(0, 10);
+                    document.getElementById("room-Id").value = roomID;
+                    document.getElementById("user-Id").value = userId;
+                    document.getElementById("booking-Date").value = currentDate;
+                } catch (error) {
+                    console.error('Error handling booking:', error.message);
+                    alert('An error occurred while processing your booking. Please try again later.');
+                }
+            <?php } else {?>
+                alert('Please login first!');
+                window.location.href = 'rooms.php';
+            <?php }?>
+        }
+        function closeBookingModal(){
+            document.getElementById("confirmBooking-Modal").style.display="none";
+        }
+    </script>

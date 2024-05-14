@@ -92,10 +92,16 @@ getContactDetails(); //function call to retrieve data from the databases
             <label for="room-type">Room Type:</label>
 
             <select name="room_type" id="room-type" required>
-                <option value="Luxury">Luxury Room</option>
-                <option value="Deluxe">Deluxe Room</option>
-                <option value="standard">Standard Room</option>
-                <option value="basic">Basic Room</option>
+                <!-- to display rooms type available  -->
+                <?php 
+                    $getRoomType = "SELECT roomType FROM rooms";
+                        $roomType = $conn->query($getRoomType);
+                        if($roomType->num_rows>0){
+                            while($fetchedRoomType = $roomType->fetch_assoc()){
+                                echo "<option value = '" . $fetchedRoomType['roomType'] . "'>" . $fetchedRoomType['roomType'] . "</option>";
+                            }
+                        } 
+                ?>
             </select>
 
             <div class="priceRange">

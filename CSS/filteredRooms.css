@@ -166,6 +166,54 @@ p{
     align-items: center;
     padding: 10px;
 }
+
+/* for booking confirmation modal  */
+.confirmBookingModal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 40%;
+    width: 400px;
+    padding: 10px;
+    background-color: #f0f8ff;
+    color: #000;
+    border-radius: 5px;
+    z-index: 12;
+    border: 1px solid #101720;
+}
+
+.confirmBookingModal input[type="text"],
+input[type="date"]{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.closeBookingModal{
+    color: #888;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.closeBookingModal:hover{
+    color: #ff0000;
+}
+
+.confirmBtn{
+    margin-top: 10px;
+    background-color: #101720;
+    color: #f0f8ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
 footer{
     position: relative;
     background-color: #1f232e;
