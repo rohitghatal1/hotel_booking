@@ -20,6 +20,7 @@
         <button class="goBackBtn" onclick="window.location.href = 'index.php'">Go Back</button>
     </div>
 
+    <div class="roomCards-container">
 <?php
 require '../database/databaseConnection.php';
 
@@ -48,6 +49,7 @@ $getRoomsQuery = "
     )
 ";
 $getRoomsResult = $conn->query($getRoomsQuery);
+
 $roomsAvailable = false; // Flag to check if any room is available
 
 if ($getRoomsResult->num_rows > 0) {
@@ -59,13 +61,13 @@ if ($getRoomsResult->num_rows > 0) {
 
         // Display room card
         ?>
-        <div class="room-card">
-            <img src="<?php echo $room['imagePath']; ?>">
-            <h3 class="heading-font"><?php echo $room['roomType']; ?></h3>
-            <p class="text-font"><?php echo $room['roomDesc']; ?></p>
-            <p class="text-font"><strong>Price:</strong> <?php echo $room['roomPrice']; ?></p>
-            <button class="book-button" onclick="handleBooking(<?php echo $roomId; ?>)">Book Now</button>
-        </div>
+            <div class="room-card">
+                <img src="<?php echo $room['imagePath']; ?>">
+                <h3 class="heading-font"><?php echo $room['roomType']; ?></h3>
+                <p class="text-font"><?php echo $room['roomDesc']; ?></p>
+                <p class="text-font"><strong>Price:</strong> <?php echo $room['roomPrice']; ?></p>
+                <button class="book-button" onclick="handleBooking(<?php echo $roomId; ?>)">Book Now</button>
+            </div>
         <?php
     }
 }
@@ -74,6 +76,7 @@ else{
 }
 
 ?>
+</div>
 </body>
 <script>
         function handleBooking() {

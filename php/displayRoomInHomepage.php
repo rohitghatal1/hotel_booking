@@ -7,9 +7,11 @@ if ($fetchedRoomData->num_rows > 0) {
         $features = explode(',', $row['roomFeatures']);
         $facilities = explode(',', $row['roomFacilities']);
         $roomId = $row['roomId'];
+    
+        // heredoc method for echo rooms
         echo <<<roomData
                             <div class="room-card">
-                            <div class="room_card_img"> <img src="{$row['imagePath']}"></div>
+                            <div class="room_card_img"><img src="{$row['imagePath']}"></div>
                               
                             <h3 class="heading-font">{$row['roomType']}</h3>
                                 <p class="text-font">{$row['roomDesc']}</p>

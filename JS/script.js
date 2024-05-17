@@ -84,7 +84,7 @@ function autoSlide() {
 // -------------------------------------------------Booking Form validation---------------------------------------------------------
   // Function to validate the entire form
   // Function to validate the entire form
-function validateForm(checkInId,checkOutId,  errorId,formerror) {
+function validateForm(checkInId,checkOutId, errorId,formerror) {
   // Validate check-in and check-out dates
   var checkInValid = validateCheckIn(checkInId, errorId);
   var checkOutValid = validateCheckOut(checkOutId, checkInId, errorId);

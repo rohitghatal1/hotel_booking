@@ -16,9 +16,12 @@ getContactDetails(); //function call to retrieve data from the databases
 </head>
 <link rel="stylesheet" href="../CSS/style.css">
 <link rel = "stylesheet" href ="../CSS/responsiveHomePage.css">
+
+<!-- include google fonts  -->
 <link
     href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet">
+    
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <body>
@@ -234,6 +237,7 @@ getContactDetails(); //function call to retrieve data from the databases
                     if (!userId) {
                         throw new Error('User ID not found in session.');
                     }
+                    
                     let currentDate = new Date().toISOString().slice(0, 10);
                     document.getElementById("room-Id").value = roomID;
                     document.getElementById("user-Id").value = userId;
@@ -248,6 +252,8 @@ getContactDetails(); //function call to retrieve data from the databases
                 document.getElementById("loginRegisterForm").style.width = "350px";
             <?php }?>
         }
+
+        // to close booking modal 
         function closeBookingModal(){
             document.getElementById("confirmBooking-Modal").style.display="none";
         }

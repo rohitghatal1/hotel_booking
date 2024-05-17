@@ -37,6 +37,13 @@ h2{
     border-radius: 5px;
 }
 
+.roomCards-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
 .room-card{
     position: relative;
     border: #ccc;

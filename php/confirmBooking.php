@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $getRoomNumber = "SELECT roomNo FROM rooms WHERE roomId = $roomId";
     $roomNo = $conn->query($getRoomNumber);
     $roomNum = $roomNo->fetch_assoc();
-    $fetchedRoomNo = $roomNum['roomNo'];
+    $fetchedRoomNo = $roomNum['roomNo']; 
 
     // Validate check-in and check-out dates
     $today = date('Y-m-d');

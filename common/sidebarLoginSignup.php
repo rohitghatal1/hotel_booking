@@ -4,6 +4,7 @@
         <div class="form-content">
             <button class="close-button" id="closeLoginForm" onclick="closeLoginRegisterForm()">&times;</button>
             <form id="loginForm" action="../php/userLogin.php" method="post">
+                
                 <span class="form-heading"><i class="fas fa-user"></i>
                     <h3 class="heading-font">User Login</h3>
                 </span>

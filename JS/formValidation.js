@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let nameRegex = /^[a-zA-Z]+$/;
   let contactRegex = /^\d{10}$/;
   let passwordRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%&*?])[a-zA-Z\d!@#$%^&*?]{8,}$/;
+    /^(?=.*[a-z]) (?=.*[A-Z]) (?=.*\d) (?=.*[!@#$%&*?]) [a-zA-Z\d!@#$%^&*?]{8,16}$/;
 
   // event listeners for input fields
   fnameInput.addEventListener("blur", validateFirstName);
