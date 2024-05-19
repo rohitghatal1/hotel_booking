@@ -170,9 +170,14 @@
         margin-left: 5px;
         background-color: #f0f8ff;
         color: #101720;
-        max-width: 300px;
+        width: 300px;
         padding-left: 0;
         border-radius: 0;
+    }
+    
+    .founder-name{
+        width: 100% !important;
+        margin-left: 1px;
     }
     
     .founder-description{
@@ -188,7 +193,6 @@
     }
 
     /* footer  */
-     /* footer  */
      footer{
         width: 100%;
     }
