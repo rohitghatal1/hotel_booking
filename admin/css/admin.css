@@ -1,99 +1,89 @@
-*{
-    background-color: #fff;
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #fff;
+body {
+    background: url('../blackBG.jpg') no-repeat center center fixed;
+    background-size: cover;
     padding: 10px;
 }
 
-/* for styling all heading with same font  */
-.heading-font{
+/* For styling all headings with the same font */
+.heading-font {
     font-family: 'Merienda', cursive;
 }
 
-/* for styling all texts with same font  */
-.text-font{
+/* For styling all texts with the same font */
+.text-font {
     font-family: 'Poppins', sans-serif;
 }
 
-.adminLoginForm{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+.adminLoginContainer {
+    padding: 10px;
+    width: 100%;
+    height: 39rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminLoginForm {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     width: 400px;
     border-radius: 10px;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     overflow: hidden;
-    transform: translate(-50%, -50%);
 }
 
-.adminLoginForm h3{
-    text-align: center;
-    font: 28px;
+.adminLoginForm h3 {
+    font-size: 28px;
     background-color: black;
     color: #fff;
     padding: 10px;
     margin-bottom: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.adminLoginForm input[type ="text"],
-input[type = "password"]{
+.adminLoginForm input[type="text"],
+.adminLoginForm input[type="password"] {
     display: block;
-    width: 99%;
+    width: 90%;
     text-align: center;
     border: 1px solid black;
     padding: 10px;
-    margin-top: 15px;
+    margin: 15px auto;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
-.toggle-password-visibility{
+.toggle-password-visibility {
     margin-top: 3px;
     display: flex;
     justify-content: center;
     cursor: pointer;
 }
 
-.login-btn{
+.login-btn {
     margin-top: 10px;
-    background-color: greenyellow;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
     padding: 10px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
-    border: none;
+    border: 1px solid black;
     cursor: pointer;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
-.login-btn:hover{
+.login-btn:hover {
     background-color: rgb(108, 176, 5);
 }
 
-button:active{
-    scale: 0.8;
-    transition: all ease 0.8s;
-    -webkit-transition: all ease 0.8s;
-    -moz-transition: all ease 0.8s;
-    -ms-transition: all ease 0.8s;
-    -o-transition: all ease 0.8s;
-}
-
-button:active{
-    scale: 0.9;
+button:active {
+    transform: scale(0.9);
     transition: all ease 0.2s;
 }

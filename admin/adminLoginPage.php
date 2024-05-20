@@ -21,16 +21,18 @@ if (isset($_SESSION['admin_username'])) {
     exit();
 }
 ?>
-    <form action="adminLogin.php" method="post">
-        <div class="adminLoginForm">
-            <h3 class="heading-font">Admin Login Panel</h3>
-            <input type="text" name="admin-name" placeholder="Admin Name" required>
-            <input type="password" name="admin-pass" id="admin-pass" placeholder="Password" required>
-            <span class="toggle-password-visibility text-font" id="toggle-password"><input type="checkbox"
-                    id="chekmark">Show Password</span>
-            <button class="login-btn" type="submit">LOGIN</button>
-        </div>
-    </form>
+    <div class="adminLoginContainer">
+        <form action="adminLogin.php" method="post">
+            <div class="adminLoginForm">
+                <h3 class="heading-font">Admin Login Panel</h3>
+                <input type="text" name="admin-name" placeholder="Admin Name" required>
+                <input type="password" name="admin-pass" id="admin-pass" placeholder="Password" required>
+                <span class="toggle-password-visibility text-font" id="toggle-password"><input type="checkbox"
+                        id="chekmark">Show Password</span>
+                <button class="login-btn" type="submit">LOGIN</button>
+            </div>
+        </form>
+    </div>
 </body>
 
 
