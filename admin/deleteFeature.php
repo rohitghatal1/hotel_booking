@@ -2,9 +2,9 @@
 require '../database/databaseConnection.php';
 
 // Check if the facilityName parameter is present in the URL
-if (isset($_GET['featureName'])) {
+if (isset($_POST['featureName'])) {
     // Retrieve and sanitize the facilityName from the URL
-    $featureName = $_GET['featureName'];
+    $featureName = $_POST['featureName'];
 
     // Prepare the SQL statement to delete the facility
     $delete = $conn->prepare("DELETE FROM features WHERE featureName = ?");

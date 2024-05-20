@@ -113,24 +113,39 @@
 
     // to delete a facility 
     function deleteFacility(name) {
-    if (confirm("Are you sure you want to delete this facility?")) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "deleteFacility.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == XMLHttpRequest.DONE) {
-                if (xhr.status == 200) {
-                    // Facility deleted successfully, you can perform any action here if needed
-                    location.reload(); // Reload the page to reflect changes
-                } else {
-                    console.error('Error: ' + xhr.status);
-                    // Handle error here if needed
+        if (confirm("Are you sure you want to delete this facility?")) {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "deleteFacility.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == XMLHttpRequest.DONE) {
+                    if (xhr.status == 200) {
+                        location.reload(); // Reload the page to reflect changes
+                    } else {
+                        console.error('Error: ' + xhr.status);
+                    }
                 }
-            }
-        };
-        xhr.send("name=" + encodeURIComponent(name)); // Send facility name
+            };
+            xhr.send("name=" + encodeURIComponent(name)); // Send facility name
+        }
     }
-}
 
+    function deleteFeature(name){
+        if(confirm("Are you sure you want to delete this feature?")){
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "deleteFeature.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState = XMLHttpRequest.DONE){
+                    if(xhr.status == 200){
+                        location.reload();
+                    } else {
+                        console.error('Error: ' + xhr.status);
+                    }
+                }
+            };
+            xhr.send("featureName=" + (name));
+        }
+    }
 </script>
 </html>

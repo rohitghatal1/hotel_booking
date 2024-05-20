@@ -13,7 +13,7 @@ if ($fetchedData->num_rows > 0) {
         <td>{$row['featureName']}</td>
         <td>{$row['aboutFeature']}</td>
 
-        <td><a href="deleteFeature.php?featureName=$name" class='deleteFacilityBtn'><i class="fa-solid fa-trash"></i>Delete</a></td>
+         <td><button class='deleteFacilityBtn' onclick='deleteFeature("$name")'><i class="fa-solid fa-trash"></i>Delete</button></td>
 
         </tr>
         featureTable;
