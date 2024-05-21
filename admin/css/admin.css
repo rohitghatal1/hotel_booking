@@ -79,10 +79,6 @@ body {
     border-radius: 5px;
 }
 
-.login-btn:hover {
-    background-color: rgb(108, 176, 5);
-}
-
 button:active {
     transform: scale(0.9);
     transition: all ease 0.2s;

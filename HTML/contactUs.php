@@ -121,7 +121,7 @@ getContactDetails(); //function call to retrieve data from the databases
             <section class="send-message-section">
                 <h2 class="heading-font">Send Message</h2>
 
-                <form method="post" action="https://formspree.io/f/xoqglnyo">
+                <form method="post" action="https://formspree.io/f/mnqeynbk">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" required />
 

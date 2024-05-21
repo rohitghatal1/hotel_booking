@@ -32,7 +32,7 @@ body{
     width: 100%;
     justify-content: space-between;
     background-color: black;
-    color: white;
+    color: #fff;
     padding: 15px;
 }
 
@@ -85,7 +85,7 @@ body{
 }
 .dropdown-items h3{
     background-color: red;
-    color: white;
+    color: #fff;
     border-radius: 50%;
     width: 30px;
     margin-top: 10px;
@@ -95,12 +95,12 @@ body{
 .dropdown-items p{
     margin-top: 10px;
     background-color: black;
-    color: white;
+    color: #fff;
 }
 .dropdown-items a{
     margin-top: auto;
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-size: 15px;
     font-weight: bold;
     align-self: flex-end;
@@ -113,7 +113,7 @@ body{
     width: 250px;
     height: 100%;
     background-color: black;
-    color: white;
+    color: #fff;
     padding: 10px;
     padding-left: 30px;
 }
@@ -135,7 +135,7 @@ body{
     font-family: 'Poppins', sans-serif;
     list-style-type: none;
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 .userInfo-container{
@@ -165,9 +165,9 @@ table{
 
 th{
     background-color: black;
-    color: white;
+    color: #fff;
     padding: 5px;
-    border: 1px solid white;
+    border: 1px solid #fff;
 }
 
 td{
@@ -190,7 +190,7 @@ td{
 .deleteUserBtn{
     border: none;
     background-color: red;
-    color: white;
+    color: #fff;
     padding: 4px;
     border-radius: 3px;
 }
@@ -201,7 +201,8 @@ td{
     top: 0;
     left: 40%;
     width: 400px;
-    background-color: #eee;
+    background-color: #161B40;
+    color: #fff;
     padding: 10px;
     border-radius: 10px;
 }
@@ -230,10 +231,10 @@ input[type="password"]{
 #submitButton{
     margin-top: 5px;
     padding: 5px;
-    background-color: #1202f2;
-    color: white;
+    background-color: #161B40;
+    color: #fff;
     font-weight: bold;
-    border: none;
+    border: 1px solid #fff;
     border-radius: 3px;
     cursor: pointer;
 }

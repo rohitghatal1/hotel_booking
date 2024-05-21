@@ -19,3 +19,9 @@ if ($fetchedData->num_rows > 0) {
         $i++;
     }
 }
+else{
+    echo"<tr>";
+    echo "<td colspan='5'> No Facilities added yet </td>";
+    echo"</td>";
+}
+

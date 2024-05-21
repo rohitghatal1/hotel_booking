@@ -20,3 +20,8 @@ if ($fetchedData->num_rows > 0) {
         $i++;
     }
 }
+else {
+    echo "<tr>";
+    echo "<td colspan='5'> No features added yet!!! </td>";
+    echo "</tr>";
+}

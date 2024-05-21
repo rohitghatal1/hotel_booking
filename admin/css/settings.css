@@ -26,7 +26,7 @@ body{
     width: 100%;
     justify-content: space-between;
     background-color: black;
-    color: white;
+    color: #fff;
     padding: 15px;
 }
 
@@ -79,7 +79,7 @@ body{
 }
 .dropdown-items h3{
     background-color: red;
-    color: white;
+    color: #fff;
     border-radius: 50%;
     width: 30px;
     margin-top: 10px;
@@ -89,12 +89,12 @@ body{
 .dropdown-items p{
     margin-top: 10px;
     background-color: black;
-    color: white;
+    color: #fff;
 }
 .dropdown-items a{
     margin-top: auto;
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-size: 15px;
     font-weight: bold;
     align-self: flex-end;
@@ -107,10 +107,10 @@ body{
     width: 250px;
     height: 100%;
     background-color: black;
-    color: white;
+    color: #fff;
     padding: 10px;
     padding-left: 30px;
-    border-top: 2px solid white;
+    border-top: 2px solid #fff;
 }
 
 .sidebar_menu{
@@ -130,7 +130,7 @@ body{
     font-family: 'Poppins', sans-serif;
     list-style-type: none;
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 .dashboard-container{
@@ -179,7 +179,7 @@ body{
 
 .editBtn{
     background-color: black;
-    color: white;
+    color: #fff;
     cursor: pointer;
     padding: 5px;
     border-radius: 3px;
@@ -232,7 +232,7 @@ textarea{
     margin-top: 10px;
     padding: 10px;
     background-color: #161B40;
-    color: white;
+    color: #fff;
     border-radius: 5px;
     border: 1px solid #fff;
     font-size: 15px;
@@ -330,7 +330,7 @@ textarea{
 /* style for add member btn */
 .addMembersBtn{
     background-color: black;
-    color: white;
+    color: #fff;
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
@@ -378,7 +378,7 @@ select
 .submitBtn{
     padding: 10px;
     background-color: #161B40;
-    color: white;
+    color: #fff;
     font-weight: bold;
     border: 1px solid #fff;
     border-radius: 3px;
@@ -414,7 +414,7 @@ p{
     margin: auto;
     text-decoration: none;
     background-color: #161B40;
-    color: white;
+    color: #fff;
     padding: 4px;
     border-radius: 3px;
     border: 1px solid #fff;
