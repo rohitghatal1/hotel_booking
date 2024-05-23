@@ -26,13 +26,12 @@ body{
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     padding-bottom: 30px;
     z-index: 10;
-    /* width: 80%; */
 }
 
 /* style for contents of nabigation bar  */
 .navbar-container{
-    display: flex; /*to display itemms in a row*/
-    justify-content: space-between; /*deifnes positon for every elements with same spaces where first element is at left and last is at right side*/
+    display: flex;
+    justify-content: space-between; 
     align-items: center;
     width: 90%;
     margin: auto;
@@ -40,7 +39,7 @@ body{
 
 /* style for three line icon  */
 .hamburgerMenu {
-    display: none; /* Initially hidden */
+    display: none; 
     cursor: pointer;
 }
 
