@@ -184,9 +184,6 @@ td{
     border-radius: 3px;
 }
 
-.editUserButton:hover{
-    background-color: green;
-}
 .deleteUserBtn{
     border: none;
     background-color: red;
@@ -240,7 +237,7 @@ input[type="password"]{
 }
 
 #submitButton:hover{
-    background-color: #0c00d3;
+    border: 1px solid #161B40;
 }
 
 label{

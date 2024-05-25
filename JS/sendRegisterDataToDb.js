@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (xhr.status == 200) {
           let response = xhr.responseText;
           if (response.includes("Email Already Used")) {
-            console.log("Email already used");
             alert("Email Already Used");
           } else if (response.includes("Username Already taken")) {
             alert("Username Already taken");

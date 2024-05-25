@@ -192,7 +192,7 @@ textarea{
 }
 
 .login-signup-button:hover{
-    background-color: rgba(41,41,41,0.9);
+    border: 1px solid #101720;
 }
 
 .toggle-password-visibility{
@@ -508,9 +508,6 @@ textarea{
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
-}
-.book-button:hover{
-    background-color: #192330;
 }
 
 /* for show more rooms button  */

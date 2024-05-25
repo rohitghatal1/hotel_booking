@@ -240,7 +240,7 @@ textarea{
 }
 .confirmBtn:hover{
     cursor: pointer;
-    background-color: #0c00d3;
+    border: 1px solid #161B40;
 }
 
 .contanct-settings{

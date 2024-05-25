@@ -17,7 +17,6 @@ function toggleDropdown(){
 
 // ----------------------------------------------------------image slider----------------------------------------------------------
 // JavaScript for Image Slider
-// Get references to HTML elements
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev-button");

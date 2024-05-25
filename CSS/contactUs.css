@@ -189,7 +189,7 @@ textarea{
 }
 
 .login-signup-button:hover{
-    background-color: rgba(41,41,41,0.9);
+    border: 1px solid #101720;
 }
 
 .toggle-password-visibility{
@@ -340,10 +340,6 @@ textarea{
 .social-icons a{
     margin-left: 10px;
     font-size: larger;
-}
-
-.social-icons a:hover{
-    color: blueviolet;
 }
 
 .send-message-section{
