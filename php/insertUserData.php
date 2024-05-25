@@ -10,7 +10,7 @@ $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-// Hash the password
+// Hashing the password
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Check if the email already exists
@@ -33,26 +33,20 @@ if ($existingEmail) {
 } elseif ($existingUsername) {
     echo "Username Already taken";
 } else {
-    // Prepare the SQL statement with placeholders
     $insert = $conn->prepare("INSERT INTO users (firstName, lastName, gender, address, contact, email, username, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 
-    // Bind parameters
     $insert->bind_param("ssssssss", $fname, $lname, $gender, $address, $contact, $email, $username, $hashedPassword);
 
-    // Execute the query
     if ($insert->execute()) {
         echo "Data inserted successfully";
     } else {
         echo "Error inserting data";
-        // Log the error
         error_log("Error inserting data: " . $insert->error);
     }
 
-    // Close statement and connection
     $insert->close();
 }
 
-// Close statement and connection for email check
 $checkEmailStmt->close();
 $checkUsernameStmt->close();
 $conn->close();

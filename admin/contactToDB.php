@@ -1,5 +1,5 @@
 <?php require '../database/databaseConnection.php';?>
-<!-- script to send contact detals to database -->
+<!-- code to send contact detals to database -->
 <?php
 
 $faddress = $_POST['faddress'];

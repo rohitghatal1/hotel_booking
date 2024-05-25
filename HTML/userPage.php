@@ -20,7 +20,7 @@
         <div class="heading">
             <?php 
                 require '../database/databaseConnection.php';
-                $userHeading = "User Page"; // Default heading
+                $userHeading = "User Page";
                 if (isset($_GET['userId'])) {
                     $uid = $_GET['userId'];
 
@@ -104,7 +104,6 @@
     }
 
     function cancelBooking(roomId) {
-        // Sending AJAX request
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "../php/cancelBooking.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -113,7 +112,6 @@
                 if (xhr.status === 200) {
                    location.reload();
                 } else {
-                    // Handle error response if needed
                     console.error('Error: ' + xhr.status);
                 }
             }

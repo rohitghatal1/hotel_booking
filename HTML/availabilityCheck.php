@@ -50,16 +50,15 @@ $getRoomsQuery = "
 ";
 $getRoomsResult = $conn->query($getRoomsQuery);
 
-$roomsAvailable = false; // Flag to check if any room is available
+$roomsAvailable = false;
 
 if ($getRoomsResult->num_rows > 0) {
     while ($room = $getRoomsResult->fetch_assoc()) {
         $roomId = $room['roomId'];
 
-        // Room is available for booking
-        $roomsAvailable = true; // Set flag to true as at least one room is available
+        $roomsAvailable = true;
 
-        // Display room card
+        // Displaying room card
         ?>
             <div class="room-card">
                 <img src="<?php echo $room['imagePath']; ?>">

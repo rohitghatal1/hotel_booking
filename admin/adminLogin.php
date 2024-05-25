@@ -2,7 +2,6 @@
 session_start();
 
 //check if user is already logged in
-
 if (isset($_SESSION['admin_username'])) {
     header("loction: a_adminDashboard.php");
     exit();
@@ -23,7 +22,7 @@ $incorrectCredintials = true;
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         if (($username == $row["admin_name"]) && ($password == $row["admin_pass"])) {
-            session_start(); //start the session after successful authentication
+            session_start(); //starting the session after successful authentication
             $_SESSION['admin_username'] = $username;
             $loggedIn = true;
             break;

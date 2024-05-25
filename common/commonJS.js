@@ -9,13 +9,13 @@ function closeLoginRegisterForm() {
   document.getElementById("loginRegisterForm").style.width = "0";
 }
 
-// Function to open the Loging form
+// Function to switch the Loging form
 function openLoginForm() {
   document.getElementById("loginForm").style.display = "block";
   document.getElementById("registerForm").style.display = "none";
 }
 
-// Function to open the Register form
+// Function to switch the Register form
 function openRegistrationForm() {
   document.getElementById("loginForm").style.display = "none";
   document.getElementById("registerForm").style.display = "block";

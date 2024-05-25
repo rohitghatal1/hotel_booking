@@ -106,7 +106,7 @@ getContactDetails(); //function call to retrieve data from the databases
     </div>
 
      <!-- to include code for footer from the common folder -->
-     <?php require '../common/footer.php'?>
+    <?php require '../common/footer.php'?>
 
    <!-- to embed common javascript code  -->
    <script src = "../common/commonJS.js"></script>

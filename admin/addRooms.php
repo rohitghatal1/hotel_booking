@@ -32,6 +32,4 @@ if (isset($_POST['roomType'], $_POST['roomDesc'], $_POST['roomPrice'], $_POST['s
     echo "<script>alert('Required data is missing')</script>";
     echo "<script>history.back();</script>";
 }
-
-// Close the database connection
 $conn->close();

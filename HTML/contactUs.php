@@ -1,7 +1,7 @@
 <!-- php script for retrieving data from generral settings  -->
 <?php include '../RetrieveData/fetchData.php';
 getGeneralData();
-getContactDetails(); //function call to retrieve data from the databases
+getContactDetails();
 ?>
 
 <!-- to inlcude code for user session  -->

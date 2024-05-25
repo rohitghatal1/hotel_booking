@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     xhr.onreadystatechange = function () {
       if (xhr.readyState == XMLHttpRequest.DONE) {
         if (xhr.status == 200) {
-          // Check the response text for alert messages
           let response = xhr.responseText;
           if (response.includes("Email Already Used")) {
             console.log("Email already used");
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Username Already taken");
           } else {
             console.log("Data inserted successfully");
-            // Redirect or perform other actions upon successful insertion
           }
         } else {
           console.error("Error: " + xhr.status);

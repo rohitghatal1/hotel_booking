@@ -12,11 +12,9 @@ if (isset($_POST['roomId'])) {
         header("Location: " . $_SERVER['HTTP_REFERER']);
         exit();
     } else {
-        // Handle error if needed
         echo "Error: " . $conn->error;
     }
 } else {
-    // Handle case where $_POST['roomId'] is not set
     echo "Room ID is not set.";
 }
 ?>

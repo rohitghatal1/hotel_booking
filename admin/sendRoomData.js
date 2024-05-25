@@ -50,8 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
     xhr.onerror = function () {
       console.error("Network requuest Failed");
     };
-
-    //send formData object
     xhr.send(formData);
   });
 });

@@ -67,22 +67,21 @@ function autoSlide() {
   nextSlide();
 }
 
-// // Set the interval for automatic sliding (e.g., every 3 seconds)
-// const interval = setInterval(autoSlide, 3000); // 5000 milliseconds (5 seconds)
+// Set the interval for automatic sliding (e.g., every 3 seconds)
+const interval = setInterval(autoSlide, 3000); // 5000 milliseconds (5 seconds)
 
-// // Stop automatic sliding when the user interacts with the slider
-// slider.addEventListener("mouseenter", () => {
-//   clearInterval(interval);
-// });
+// Stop automatic sliding when the user interacts with the slider
+slider.addEventListener("mouseenter", () => {
+  clearInterval(interval);
+});
 
-// // Resume automatic sliding when the user leaves the slider
-// slider.addEventListener("mouseleave", () => {
-//   interval = setInterval(autoSlide, 3000);
-// });
+// Resume automatic sliding when the user leaves the slider
+slider.addEventListener("mouseleave", () => {
+  interval = setInterval(autoSlide, 3000);
+});
 
 
 // -------------------------------------------------Booking Form validation---------------------------------------------------------
-  // Function to validate the entire form
   // Function to validate the entire form
 function validateForm(checkInId,checkOutId, errorId,formerror) {
   // Validate check-in and check-out dates

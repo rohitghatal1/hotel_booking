@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($checkIn < $today || $checkOut < $today || $checkOut < $checkIn) {
         echo "<script>alert('Invalid date selection. Please select valid dates.')</script>";
         echo "<script>window.history.back()</script>";
-        exit; // stop further execution
+        exit;
     }
 
     $bookingDetails = $conn->prepare("INSERT INTO bookings (userId, Name, roomId, roomNo, checkInDate, checkOutDate, bookedDate) VALUES (?,?,?,?,?,?,?);");

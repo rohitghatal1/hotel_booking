@@ -17,7 +17,7 @@ session_start();
 
 //check if user is already logged in
 if (isset($_SESSION['admin_username'])) {
-    header("location: a_adminDashboard.php"); //redirectin to dashboard
+    header("location: a_adminDashboard.php"); //redirecting to dashboard
     exit();
 }
 ?>
@@ -37,8 +37,8 @@ if (isset($_SESSION['admin_username'])) {
 
 
 <script>
+    
     // code for toggling password visibility
-
     var passwordField = document.getElementById("admin-pass");
     var visibilityToggler = document.getElementById("toggle-password");
     var passwordFieldInput = visibilityToggler.querySelector("input");

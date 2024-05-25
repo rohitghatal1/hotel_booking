@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $checkInDate = $_POST['checkInDate'];
     $checkOutDate = $_POST['checkOutDate'];
 
-    // Prepare and execute the booking insertion query
     $bookingDetails = $conn->prepare("INSERT INTO bookings (userId, roomId, checkInDate, checkOutDate, bookedDate) VALUES (?,?,?,?, NOW());");
     $bookingDetails->bind_param("iiss", $userId, $roomId, $checkInDate, $checkOutDate);
     if ($bookingDetails->execute()) {
