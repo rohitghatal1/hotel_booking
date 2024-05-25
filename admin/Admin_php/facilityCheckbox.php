@@ -10,9 +10,8 @@ if (!$result) {
     die("Error fetching features: " . $conn->error);
 }
 
-// Iterate over fetched features and display checkboxes
 while ($row = $result->fetch_assoc()) {
-    $facilityName = $row['facilityName']; // Use htmlspecialchars to prevent XSS
+    $facilityName = $row['facilityName'];
     echo '<input type="checkbox" name="selected_facilities[]" value="' . $facilityName . '">';
     echo $facilityName;
     echo '<br>';

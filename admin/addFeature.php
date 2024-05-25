@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         die("Error: " . $sql . "<br>. $conn->error());</script>");
     }
-    //close connection
+   
     $stmt->close();
     $conn->close();
 }

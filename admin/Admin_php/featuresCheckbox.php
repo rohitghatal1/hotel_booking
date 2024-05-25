@@ -9,7 +9,6 @@ if (!$result) {
     die("Error fetching features: " . $conn->error);
 }
 
-// Iterate over fetched features and display checkboxes
 while ($row = $result->fetch_assoc()) {
     $featureName = $row['featureName'];
     echo '<input type="checkbox" name="selected_features[]" value="' . $featureName . '">';

@@ -146,8 +146,6 @@ getContactDetails();
                             <option value="Receptionist">Receptionist</option>
                             <option value="Staff">Staff</option>
                         </select>
-                        <!-- <label for="Des">Description</label>
-                        <textarea name="memeberdes" id="" cols="30" rows="10"></textarea> -->
                         <label for="photo">Picture:</label>
                         <input type="file" name="memberPhoto" accept=".jpg,.jpeg,.png" placeholder="Select a photo"/>
                         <input type="submit" value="Submit" class="submitBtn">

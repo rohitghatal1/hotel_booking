@@ -16,7 +16,7 @@
 
 <body>
 
-    <!-- to retrive required data to display  -->
+    <!-- to retrive required data to display on dashboard -->
     <?php require '../database/databaseConnection.php';
         $getAllRooms = "SELECT count(*) AS totalRooms FROM rooms";
         $noOfRooms = $conn->query($getAllRooms);
@@ -46,7 +46,7 @@
 
     <div class="dashboard-container">
 
-        <!-- code to inclde common admin dashboard part -->
+    <!-- code to inclde common admin dashboard part -->
     <?php require 'common/adminSidebarMenu.php'?>
 
         <div class="dashboard-content">

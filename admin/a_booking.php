@@ -82,7 +82,6 @@ else{
                 if (xhr.status === 200) {
                    location.reload();
                 } else {
-                    // Handle error response
                     console.error('Error: ' + xhr.status);
                 }
             }

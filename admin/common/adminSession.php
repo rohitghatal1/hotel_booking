@@ -1,15 +1,13 @@
 <?php
-session_start(); // Start the PHP session
+session_start();
 
 if (!isset($_SESSION['admin_username'])) {
-    header("location: adminLoginPage.php"); // Redirect to login page if not logged in
+    header("location: adminLoginPage.php");
     exit();
 }
 
-//retreve teh loggen-in username
-
 $loggedInUsername = $_SESSION['admin_username'];
 
-//extract the first letter of the username for avatar
+//extracting the first letter of the username for avatar
 $firstLetter = strtoupper(substr($loggedInUsername, 0, 1));
 ?>

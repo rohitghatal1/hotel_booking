@@ -26,5 +26,4 @@ roomDisplay;
     echo "<tr><td colspan='7'>No results found</td></tr>";
 }
 
-// Close the database connection
 $conn->close();

@@ -1,6 +1,6 @@
 <?php require '../database/databaseConnection.php'?>
 <?php
-// to save photos and details of room to database
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //setting parameters for image upload
     $target_dir = "../ourRooms/";
@@ -17,15 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $img3_uploaded = move_uploaded_file($_FILES["img3"]["tmp_name"], $img3_path);
     $img4_uploaded = move_uploaded_file($_FILES["img4"]["tmp_name"], $img4_path);
 
+    // to check if All images uploaded successfully
     if ($displayImage_uploaded && $img1_uploaded && $img2_uploaded && $img3_uploaded && $img4_uploaded) {
-        // All images uploaded successfully
-
+        
         //getting other data
         $room_detail = $_POST["roomDetail"];
         $roomId = $_POST['roomID'];
         echo $roomId;
 
-        // update table query with prepared statement
         $update = $conn->prepare("UPDATE rooms SET imagePath=?, photo1=?, photo2=?, photo3=?, photo4=?, detailedInfo=? WHERE roomId =?");
         $update->bind_param("ssssssi", $displayImage_path, $img1_path, $img2_path, $img3_path, $img4_path, $room_detail, $roomId);
         if ($update->execute()) {
@@ -37,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $update->close();
     } else {
-        // One or more images failed to upload
         echo "Image upload failed";
     }
 
