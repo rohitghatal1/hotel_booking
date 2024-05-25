@@ -86,8 +86,6 @@ getContactDetails(); //function call to retrieve data from the databases
     <!-- to embed common javascript code  -->
     <script src = "../common/commonJS.js"></script>
 
-    <!-- to inlcude code to validate form  -->
-    <script src="../JS/formValidation.js"></script>
     <!-- to include code for getting form data and send it to php to store in database  -->
     <script src = "../JS/sendRegisterDataToDb.js"></script>
 

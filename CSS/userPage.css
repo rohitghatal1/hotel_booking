@@ -124,3 +124,15 @@ header {
     margin-top: 5px;
     font-weight: bold;
 }
+
+.noBookinsMessage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: #101720;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
+    /* border-radius: 10px; */
+}

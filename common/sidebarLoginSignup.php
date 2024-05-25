@@ -60,6 +60,7 @@
                 <span id="passwordError" class="error-message"></span><br>
                 <span class="toggle-password-visibility" id="show-password" onclick="togglePasswordVisibility1()"><input type="checkbox" class="text-font">Show Password </span><br><br>
 
+                <div id="generalError" class="error-message text-font" style="color:red"></div>
                 <button type="submit" class="button-inside-form">Register</button>
 
                 <div class="switch-login-signup">

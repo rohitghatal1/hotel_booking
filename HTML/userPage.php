@@ -86,7 +86,7 @@
                         echo "</div></div>";
                     }
                 } else {
-                    echo "no rooms booked yet";
+                    echo "<div class='noBookinsMessage'>no rooms booked yet</div>";
                 }
             } else {
                 echo "User Not logged in";
