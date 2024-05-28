@@ -69,12 +69,12 @@ getContactDetails();
     <!-- image slider section  -->
     <div class="slider-container">
         <div class="slider">
-            <div class="slide"><img src="../rooms/room1.jpg" alt="room1"></div>
-            <div class="slide"><img src="../rooms/room2.jpg" alt="room2"></div>
-            <div class="slide"><img src="../rooms/room3.jpg" alt="room3"></div>
+            <div class="slide fade"><img src="../rooms/room1.jpg" alt="room1"></div>
+            <div class="slide fade"><img src="../rooms/room2.jpg" alt="room2"></div>
+            <div class="slide fade"><img src="../rooms/room3.jpg" alt="room3"></div>
         </div>
-        <button class="prev-button"><i class="fa-solid fa-angle-left"></i></button>
-        <button class="next-button"><i class="fa-solid fa-angle-right"></i></button>
+        <button class="prev-button">&#10094;</button>
+        <button class="next-button">&#10095;</button>
     </div>
 
     <!-- booking availability check form  -->

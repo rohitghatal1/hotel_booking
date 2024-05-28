@@ -1,3 +1,4 @@
+// form validation 
 document.addEventListener("DOMContentLoaded", function () {
   let fnameInput = document.getElementById("fname");
   let lnameInput = document.getElementById("lname");
@@ -122,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById(elementId).textContent = "";
   }
 
+  
   // function to submit form via AJAX
   function submitForm() {
     let form = document.getElementById("registerForm");
