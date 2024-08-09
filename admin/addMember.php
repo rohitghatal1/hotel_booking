@@ -21,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         die("Error: " . $sql . "<br>" . $conn->error());
     }
-
     $stmt->close();
     $conn->close();
 }
